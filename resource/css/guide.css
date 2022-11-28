@@ -907,6 +907,17 @@
   margin-top: -1rem;
   background-image: url(../image/sub/icon/icon-home.png);
 }
+.ui-button__icon-left {
+  line-height: 100%;
+}
+.ui-button__icon-left::before {
+  width: 2.9rem;
+  height: 5.3rem;
+  margin: 0;
+  background-image: url(../image/sub/icon/icon-right.png);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .ui-button__icon-right {
   line-height: 100%;
 }
@@ -1145,18 +1156,6 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.board-table__list .td-title .icon-secret {
-  display: inline-block;
-  width: 1.3rem;
-  height: 2rem;
-  margin-left: 1rem;
-  vertical-align: top;
-  background: url(../image/common/icon/icon-secret.png) no-repeat center;
-  background-size: 1.3rem 2rem;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-}
 .board-table__list .td-titlelink {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1196,11 +1195,6 @@
 }
 .board-table__list--press thead .press {
   width: 8.6%;
-}
-.board-table__list--press .td-titlelink {
-  padding-left: 3rem;
-  background: url(../image/common/icon/icon-pressLink.png) no-repeat left center;
-  background-size: 1.7rem;
 }
 .board-table__list--qna thead .num, .board-table__list--qna thead .process, .board-table__list--qna thead .author {
   width: 8.572%;
@@ -1818,23 +1812,6 @@
 }
 .attach-file__name {
   line-height: normal;
-}
-.attach-file__item {
-  display: -webkit-box;
-  display: flex;
-  -ms-display: flexbox;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0.2rem 0 0.2rem 2.5rem;
-  font-size: 1.6rem;
-  background: url(../image/common/icon/icon-file__list.png) no-repeat left center;
-  background-size: 1.5rem 1.8rem;
-}
-.attach-file__item + .attach-file__item {
-  margin-top: 1rem;
 }
 
 .form-title {
