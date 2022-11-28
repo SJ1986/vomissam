@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <!-- //공통 css -->
+
+    <!-- 개별 페이지 css -->
+    <link rel="stylesheet" href="../resource/css/enroll.css">
+    <!-- //개별 페이지 css -->
+
+
+    
+    
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/sub.js"></script>
+    
+    
+    
+</head>
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <!-- [include] header -->
+        <header>
+            <div class="header__inner">
+                <div class="page-back">
+                    <div class="page-back__inner">
+                        <button type="button" class="ui-button ui-button__page--back"></button>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <div class="header-title__inner">
+                        간병신청하기
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-alarm">
+                        <div class="header-alarm__inner">
+                            <button type="button" class="header-alarm__button"></button>
+                        </div>
+                    </div>
+                    <div class="header-hamberger">
+                        <div class="header-hamberger__inner">
+                            <button type="button" class="header-hamberger__button"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </header>
+        <!-- //[include] header -->
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container container__sub container__sub--enroll container__sub--pb-0">
+            <div class="container__inner">
+                <div class="container-core">
+                    <div class="container-core__inner container-core__flex">
+                        <section class="sub-content">
+                            <div class="enroll-box">
+                                <div class="enroll-box__inner">
+                                    <div class="enroll-title">간병 형태</div>
+                                    <div class="ui-buttons">
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__icon ui-button__icon-calendar ui-button__font-xs ui-button__check">기간제</button>
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__icon ui-button__icon-clock ui-button__font-xs ui-button__check">시간제</button>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                            <div class="enroll-box">
+                                <div class="enroll-box__inner">
+                                    <div class="enroll-title">병원 선택</div>
+                                    <div class="ui-form ui-form__button ui-form__flex--row">
+                                        <input type="text" class="ui-input" value="" placeholder="병원이름을 입력하세요">
+                                        <button type="submit" class="ui-button ui-button__certi ui-button__width-280 ui-button__font-xs">검색하기</button>
+                                    </div>
+    
+                                    <div class="hospital-list mt-60">
+                                        <div class="hospital-list__inner">
+                                            <ul class="hospital-list__list">
+                                                <li class="hospital-list__item"><span class="hospital-list__text">신촌세브란스병원(서울 마포구)</span> <button type="button" class="ui-button__badge">위치보기</button></li>
+                                                <li class="hospital-list__item"><span class="hospital-list__text">삼성서울병원(서울 강남구)</span><button type="button" class="ui-button__badge">위치보기</button></li>
+                                                <li class="hospital-list__item"><span class="hospital-list__text">서울성모병원(서울 서초구)</span><button type="button" class="ui-button__badge">위치보기</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+
+
+                        <section class="page-bottom">
+                            <div class="page-bottom__inner ui-buttons">
+                                <button type="button" class="ui-button ui-button__border-gray ui-button__color-gray font-weight__m">이전</button>
+                                <button type="button" class="ui-button ui-button__border-blue font-weight__m" onclick="location.href='./careEnrollPeriodStep02.html'">다음</button>
+                            </div>
+                        </section>
+
+
+                    </div>
+                </div><!-- //container-core -->
+            </div>
+
+        </div>
+        <!-- //container -->
+
+        <!-- quick-menu -->
+        <section class="quick-menu">
+            <div class="quick-menu__inner">
+                <!-- 전달사항 :: 선택 항목에 클래스 is-active 붙습니다. -->
+                <button type="button" class="quick-menu__button quick-menu__button--enroll ">
+                    <i></i>
+                    <span class="quick-menu__button-text">간병신청</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--pay is-active">
+                    <i></i>
+                    <span class="quick-menu__button-text">결제관리</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--customer">
+                    <i></i>
+                    <span class="quick-menu__button-text">고객센터</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--my">
+                    <i></i>
+                    <span class="quick-menu__button-text">내정보관리</span>
+                </button>
+            </div>
+        </section>
+        <!-- //quick-menu -->
+
+
+
+        <!-- footer -->
+        <!-- [include] footer -->
+        <footer data-include-file="../include/footer.html" class="footer-wrap js-include"></footer>
+        <!-- //[include] footer -->
+        <!-- //footer -->
+
+       
+        
+
+    </div>
+
+</body>
+<script>
+   
+</script>
+</html>

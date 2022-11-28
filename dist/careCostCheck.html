@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <!-- //공통 css -->
+
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="../resource/css/enroll.css">
+    <!-- //각 페이지 css -->
+
+
+
+
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/sub.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <!-- [include] header -->
+        <header>
+            <div class="header__inner">
+                <div class="page-back">
+                    <div class="page-back__inner">
+                        <button type="button" class="ui-button ui-button__page--back"></button>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <div class="header-title__inner">
+                        간병신청하기
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-alarm">
+                        <div class="header-alarm__inner">
+                            <button type="button" class="header-alarm__button"></button>
+                        </div>
+                    </div>
+                    <div class="header-hamberger">
+                        <div class="header-hamberger__inner">
+                            <button type="button" class="header-hamberger__button"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //[include] header -->
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container container__sub container__sub--enroll container__sub--pb-0">
+            <div class="container__inner">
+                <div class="container-core">
+                    <div class="container-core__inner container-core__flex">
+                        <section class="sub-content">
+
+                            <div class="care-cost__box top-image text-center">
+                                <div class="img-wrap">
+                                    <img src="../resource/image/sub/icon/icon-calc.png"
+                                        style="width:26.4rem; height:30.5rem;" alt="">
+                                </div>
+                                <div class="care-cost__text">
+                                    <em class="care-cost__name">이일화</em>님께서 신청하신 내역에 대한 간병 비용은 <br>
+                                    다음과 같습니다.
+                                </div>
+                            </div>
+                            <div class="line-gray line-gray__large"></div>
+
+                            <div class="care-cost__box">
+                                <div class="sub-title__underline">예상 간병비 보기</div>
+
+                                <div class="care-enroll-info  care-enroll-info__margin-l">
+                                    <div class="care-enroll-info__inner">
+                                        <dl class="care-enroll-info__list">
+                                            <dt class="care-enroll-info__title">기본 간병비</dt>
+                                            <dd class="care-enroll-info__text">149,000원 (1일당)</dd>
+                                        </dl>
+                                        <dl class="care-enroll-info__list">
+                                            <dt class="care-enroll-info__title">보미쌤 식사비용<br><span
+                                                    class="care-enroll-info__title--des">(공기밥 3개, 별도협의)</span></dt>
+                                            <dd class="care-enroll-info__text">6,600원 (1일당)</dd>
+                                        </dl>
+                                        <dl class="care-enroll-info__list">
+                                            <dt class="care-enroll-info__title">총 간병 기간 </dt>
+                                            <dd class="care-enroll-info__text">10일 0시간</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <div class="total-cost__box ">
+                                    <div class="total-cost__box--inner">
+                                        <dl class="total-cost__list">
+                                            <dt class="total-cost__title">총 합계 금액</dt>
+                                            <dd class="total-cost__text">1,556,000원</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <div class="des-text mt-95">
+                                    <div class="des-text__inner">
+                                        하단의 ‘확인’ 버튼을 클릭하시면, 위의 금액으로 간병신청이 완료됩니다.
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="line-gray line-gray__large"></div>
+
+                            <div class="care-cost__box">
+                                <div class="sub-title3 font-size__s">간병비를 직접 입력하실 수 있습니다.</div>
+
+                                <div class="care-enroll-info">
+                                    <div class="care-enroll-info__inner">
+
+                                        <dl class="care-enroll-info__list">
+                                            <dt class="care-enroll-info__title care-enroll-info__title--width-505">희망 간병비</dt>
+                                            <dd class="care-enroll-info__text">
+                                                <div class="ui-form ui-form__flex--row">
+                                                    <div class="ui-form__cell ui-form__cell--s width-195">1일당</div>
+                                                    <div class="ui-form__cell ui-form__cell--s ml-0">
+                                                        <input type="text" class="ui-input"
+                                                            placeholder="150,000">
+                                                    </div>
+                                                    <div class="ui-form__cell ui-form__cell--s">원</div>
+                                                </div>
+                                            </dd>
+                                        </dl>
+
+                                        <dl class="care-enroll-info__list">
+                                            <dt class="care-enroll-info__title care-enroll-info__title--width-505"></dt>
+                                            <dd class="care-enroll-info__text">
+                                                <div class="ui-form ui-form__flex--row">
+                                                    <div class="ui-form__cell ui-form__cell--s width-195">식사비</div>
+                                                    <div class="ui-form__cell ml-0">
+                                                        <div class="ui-radio__list">
+                                                            <div class="ui-radio__inner">
+                                                                <div class="ui-radio-block mr-120">
+                                                                    <input type="radio" class="ui-radio" id="radio1"
+                                                                    name="include" checked="">
+                                                                    <label for="radio1" class="ui-label">
+                                                                        <span class="ui-radio-object"></span>
+                                                                        <span class="ui-label__text">포함</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="ui-radio-block">
+                                                                    <input type="radio" class="ui-radio" id="radio2"
+                                                                        name="include">
+                                                                    <label for="radio2" class="ui-label">
+                                                                        <span class="ui-radio-object"></span>
+                                                                        <span class="ui-label__text">불포함</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <div class="total-cost__box ">
+                                    <div class="total-cost__box--inner">
+                                        <dl class="total-cost__list">
+                                            <dt class="total-cost__title">총 합계 금액</dt>
+                                            <dd class="total-cost__text">1,500,000원</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </section>
+                        <section class="page-bottom">
+                            <div class="page-bottom__inner ui-buttons">
+                                <button type="button"
+                                    class="ui-button ui-button__border-gray ui-button__color-gray font-weight__m">이전</button>
+
+                                <button type="button" class="ui-button ui-button__border-blue font-weight__m">입력 완료</button>
+                            </div>
+                        </section>
+                    </div>
+                </div><!-- //container-core -->
+            </div>
+
+        </div>
+        <!-- //container -->
+
+        <!-- quick-menu -->
+        <section class="quick-menu">
+            <div class="quick-menu__inner">
+                <!-- 전달사항 :: 선택 항목에 클래스 is-active 붙습니다. -->
+                <button type="button" class="quick-menu__button quick-menu__button--enroll ">
+                    <i></i>
+                    <span class="quick-menu__button-text">간병신청</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--pay is-active">
+                    <i></i>
+                    <span class="quick-menu__button-text">결제관리</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--customer">
+                    <i></i>
+                    <span class="quick-menu__button-text">고객센터</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--my">
+                    <i></i>
+                    <span class="quick-menu__button-text">내정보관리</span>
+                </button>
+            </div>
+        </section>
+        <!-- //quick-menu -->
+
+
+
+        <!-- footer -->
+        <!-- [include] footer -->
+        <footer data-include-file="../include/footer.html" class="footer-wrap js-include"></footer>
+        <!-- //[include] footer -->
+        <!-- //footer -->
+
+
+
+
+    </div>
+
+</body>
+<script>
+
+</script>
+
+</html>

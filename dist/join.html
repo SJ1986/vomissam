@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+
+    <link rel="stylesheet" href="../resource/css/join.css">
+
+
+    
+    
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/main.js"></script>
+    
+    
+    
+</head>
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <!-- [include] header -->
+        <header>
+            <div class="header__inner">
+                <div class="page-back">
+                    <div class="page-back__inner">
+                        <button type="button" class="ui-button ui-button__page--back"></button>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <div class="header-title__inner">
+                        회원가입
+                    </div>
+                </div>
+
+            </div>            
+        </header>
+        <!-- //[include] header -->
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container container-join container__sub">
+
+            <div class="container__inner">
+
+                <div class="container-core">
+                    <div class="container-core__inner container-core__flex">
+                        <section class="join-top">
+                            <div class="img-wrap">
+                                <img src="../resource/image/common/img-join.png" alt="" style="width:34.7rem; height:50.5rem;">
+                            </div>
+                            <div class="sub-title">
+                                본인 인증
+                            </div>
+                        </section>
+                        <section class="join-bottom">
+                            <div class="form-item">
+                                <div class="form-title">이름</div>
+                                <div class="ui-form">
+                                    <input type="text" class="ui-input" value="이일화">
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <div class="form-title">휴대전화번호(필수)</div>
+                                <div class="ui-form ui-form__button">
+                                    <input type="text" class="ui-input" value="010-1234-5678">
+                                    <button type="submit" class="ui-button ui-button__certi ui-button__font-s" data-toggle="modal" data-target="#modalCerti">인증요청</button>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="page-bottom">
+                            <button type="button" class="ui-button ui-button__bg-blue">다음</button>
+                        </section>
+
+
+
+                        <!-- 모달 -->
+                        <div class="modal fade" id="modalCerti" tabindex="-1" aria-labelledby="modalCertiLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-auto ">
+                                <div class="modal-content modal-content__s modal-content__email">
+                                    <div class="modal-body">
+                                        
+                                        <!-- 본인 인증 성공일때 case -->
+                                        <div class="modal-core">
+                                            <div class="modal-text text-center mb-90">
+                                                본인 인증이 완료되었습니다.
+                                            </div>
+                                            <div class="modal-text__small text-center">
+                                                ‘확인’ 버튼을 누르시면  <br>
+                                                회원가입 화면으로 이동합니다.
+                                            </div>
+                                        </div>
+                                        <!-- //본인 인증 성공일때 case -->
+
+                                        <!-- 본인 인증 실패일때 case -->
+                                        <div class="modal-core" style="display: none;">
+                                            <div class="modal-text text-center mb-90">
+                                                본인 인증에 실패하였습니다. <br>
+                                                이름과 전화번호를 확인하신 후 <br>
+                                                다시 시도해 주세요.
+                                            </div>
+                                            <div class="modal-text__small text-center">
+                                                ‘확인‘ 버튼을 누르시면  <br>
+                                                이전 화면으로 돌아 갑니다.
+
+                                            </div>
+                                        </div>
+                                        <!-- //본인 인증 실패일때 case -->
+
+                                        <div class="modal-buttons">
+                                            <button type="button" class="ui-button ui-button__bg-blue" data-dismiss="modal">확인</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //모달 -->
+
+
+                    </div>
+                </div>
+
+                
+            </div>
+
+        </div>
+        <!-- //container -->
+
+       
+        
+
+    </div>
+
+</body>
+<script>
+   
+</script>
+</html>

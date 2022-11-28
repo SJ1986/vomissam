@@ -1,0 +1,416 @@
+@import './helper/mixin';
+
+/* button */ 
+.ui-button {
+    width:100%;
+    height: 20rem;
+    font: {
+        size: 7rem;
+        weight:500;
+    };
+    color:#000000;
+    border-radius: 2rem;
+    line-height: 20.1rem;
+    &:disabled{
+        background-color:#f2f2f2 !important;
+        color:#b2b2b2 !important;
+    }
+    &+&{
+        margin-left: 2rem;
+    }
+    &s{
+        display: flex;
+        &__thirds{
+            flex-wrap: wrap;
+            margin: -1rem;
+            .ui-button{
+                max-width: calc(100% / 3 - 2rem);
+                margin: 1rem;
+                // &+&{
+                //     margin: 1rem;
+                // }
+            }
+        }
+        &--faq{
+            .ui-button{
+                &.is-active{
+                    background-color:#4b62c3;
+                    color:#fff;
+                }
+            }
+        }
+    }
+    &__page {
+        &--back {
+            width: 12.9rem;
+            height: 100%;
+            // margin-right: 7rem;
+            background-image: url("../image/common/icon/icon_arrowBack.png");
+            background-size: 5.9rem 4rem;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+    }
+    &__certi {
+        width: 42rem;
+        margin-left: 2rem;
+        background: #666666;
+        color: #ffffff;
+        flex:none;
+    }
+    &__bg{
+        &-blue{
+            background: #4b62c3;
+            color:#ffffff;
+        }
+    }
+    &__border{
+        &-gray{
+            border: .4rem solid #e9eaec; 
+        }
+        &-blue{
+            border: .4rem solid #4b62c3; 
+            background: #ffffff;
+            color:#3c50a2;
+        }
+    }
+    &__width{
+        &-xs{
+            width: 42rem;
+            flex:none;
+        }
+        &-s{
+            width: 44rem;
+            flex:none;
+        }
+        &-m{
+            width: 66rem;
+            flex:none;
+        }
+        &-auto{
+            width: auto;
+            padding: 0 4.8rem;
+        }
+        &-280{
+            width:28rem;
+        }
+    }
+    &__height{
+        &-s{
+            height:12.5rem;
+            font-size: 6rem;
+            line-height: 12.6rem;
+        }
+        &-m{
+            height:15rem;
+            font-size: 6rem;
+            line-height: 15.1rem;
+        }
+        &-135{
+            height:13.5rem;
+            line-height: 13.6rem;
+        }
+    }
+    &__font{
+        &-xxs{
+            font-size: 4.6rem;
+        }
+        &-xs{
+            font-size: 5.5rem;
+        }
+        &-s{
+            font-size: 6rem;
+        }
+    }
+    &__color{
+        &-gray{
+            color:#777777;
+        }
+    }
+    &__radius{
+        &-s{
+            border-radius: 1rem;
+        }
+    }
+    &-modify{
+        position: relative;
+        font-size: 5.4rem;
+        color:#228ff8;
+        &::before{
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height:.6rem;
+            background: #228ff8;
+            content:""
+        }
+    }
+    &__icon{
+        &::before{
+            display: inline-block;
+            margin-right: 4.5rem;
+            background-size: cover;
+            background-position: center;
+            vertical-align: middle;
+            content:"";
+        }
+        &-male{
+            &::before{
+                width: 8.4rem;
+                height: 9.5rem;
+                background-image: url(../image/sub/icon/icon-male.png);
+            }
+        }
+        &-female{
+            &::before{
+                width: 8.4rem;
+                height: 9.2rem;
+                background-image: url(../image/sub/icon/icon-female.png);
+            }
+        }
+        &-calendar{
+            &::before{
+                width: 6.6rem;
+                height: 6.5rem;
+                margin-top: -1rem;
+                background-image: url(../image/sub/icon/icon-calendar.png);
+            }
+        }
+        &-clock{
+            &::before{
+                width: 6.5rem;
+                height: 6.5rem;
+                margin-top: -1rem;
+                background-image: url(../image/sub/icon/icon-clock.png);
+            }
+        }
+        &-hospital{
+            &::before{
+                width: 7.9rem;
+                height: 7.6rem;
+                margin-top: -1rem;
+                background-image: url(../image/sub/icon/icon-hospital.png);
+            }
+        }
+        &-home{
+            &::before{
+                width: 6.6rem;
+                height: 6.6rem;
+                margin-top: -1rem;
+                background-image: url(../image/sub/icon/icon-home.png);
+            }
+        }
+        &-left{
+            line-height: 100%;
+            &::before{
+                width: 2.9rem;
+                height: 5.3rem;
+                margin: 0;
+                background-image: url(../image/sub/icon/icon-right.png);
+                transform:rotate(180deg);
+            }
+        }
+        &-right{
+            line-height: 100%;
+            &::before{
+                width: 2.9rem;
+                height: 5.3rem;
+                margin: 0;
+                background-image: url(../image/sub/icon/icon-right.png);
+            }
+        }
+        &-payAll{
+            &::before{
+                width: 7.2rem;
+                height: 7.3rem;
+                margin-right: 5.5rem;
+                background-image: url(../image/sub/icon/icon-pay__all.png);
+            }
+        }
+        &-paySep{
+            &::before{
+                width: 6.6rem;
+                height: 6.6rem;
+                margin-right: 5.5rem;
+                background-image: url(../image/sub/icon/icon-pay__sep.png);
+            }
+        }
+    }
+    &__left{
+        padding: 0 4rem ;
+        text-align: left;
+    }
+    &__check{
+        &.is-active{
+            font-weight: 500;
+            color:#3c50a2;
+            border-color: #4b62c3;
+            background: url(../image/common/icon/icon-check__blue.png) no-repeat right 5.8rem center;
+            background-size: 4.5rem 3.1rem;
+            box-shadow: 1rem 1rem 3.3rem rgba(0,0,0,.13);
+        }
+        &--multi{
+            &.is-active{
+                font-weight: 500;
+                color:#3c50a2;
+                border-color: #4b62c3;
+                background: url(../image/common/icon/icon-check__blue.png) no-repeat right 5.8rem center;
+                background-size: 4.5rem 3.1rem;
+                box-shadow: 1rem 1rem 3.3rem rgba(0,0,0,.13);
+            }
+        }
+    }
+    &__click{
+        &.is-active{
+            font-weight: 500;
+            color:#3c50a2;
+            border-color: #4b62c3;
+            box-shadow: 1rem 1rem 3.3rem rgba(0,0,0,.13);
+        }
+        &Full{
+            &.is-active{
+                color:#fff;
+                background-color:#3c50a2;
+            }
+        }
+    }
+    &__badge{
+        padding: 1.7rem 2.8rem;
+        font : {
+            size: 4rem;
+            weight:500;
+        }
+        background: #4b62c3;
+        color:#ffffff;
+        border-radius: 3.5rem;
+        line-height: 100%;
+    }    
+}
+.button{
+    &-joinSocial{
+        width:100%;
+        height:20rem;
+        border-radius: 2rem;
+        font-size: 6rem;
+        color:#000000;
+        background-repeat: no-repeat ;
+        background-position: left 9.2rem center;
+        border:.3rem solid;
+        &__naver{
+            border-color: #06be34;
+            background-image: url(../image/common/icon-naver__colored.png) ;
+            background-size: 5.6rem 5.1rem;
+        }
+        &__google{
+            // border-color: #06be34;
+            background-image: url(../image/common/icon-google__colored.png);
+            background-size: 5.3rem 5.5rem;
+        }
+        // &__kakao{
+        //     border-color: #fae100;
+        //     // background-image: url(../image/common/icon-naver__colored.png) ;
+        //     // background-size: 5.6rem 5.1rem;
+        // }
+        
+    }
+    &-kakao{
+        width:100%;
+        height:20rem;
+        font : {
+            size: 6rem;
+            weight:500;
+        }
+        background: #fae100 url(../image/common/icon-kakao.png) no-repeat left 7rem center ;
+        background-size: 9.9rem 9.1rem;
+        border-radius: 2rem;
+        color:#000000;
+    }
+    &-naver{
+        &::before{
+            display: inline-block;
+            width: 5.6rem;
+            height: 5.1rem;
+            margin-right: 4rem;
+            background: url(../image/common/icon-naver__colored.png);
+            background-size: 5.6rem 5.1rem;
+            vertical-align: middle;
+            content:""
+        }
+    }
+    &-google{   
+        &::before{
+            display: inline-block;
+            flex: none;
+            width: 5.3rem;
+            height: 5.5rem;
+            margin-right: 4rem;
+            background: url(../image/common/icon-google__colored.png);
+            background-size: 5.3rem 5.5rem;
+            vertical-align: middle;
+            content:""
+        }
+    }
+    &-plus{
+        &-card{
+            @include d-flex-center;
+            width:100%;
+            height:15rem;
+            font-size: 4.8rem;
+            color:#9196a5;
+            background: #eff0f5;
+            border-radius: 1rem;
+            line-height: 15.1rem;
+            i{
+                display: inline-block;
+                width: 3rem;
+                height: 3rem;
+                margin-right: 2rem;
+                background: url(../image/common/icon/icon-plus__blue.png) no-repeat center;
+                background-size: cover;
+            }
+        }
+    }
+    &-more{
+        padding:3rem 4rem;
+        font-size: 5rem;
+        color:#9196a5;
+        background: #eff0f5;
+        border-radius: 2rem;
+    }
+}
+
+
+
+
+
+@include media-breakpoint-down(n-md) {
+
+    //1024
+    .btn {
+        &--download {
+            width: 11.7rem;
+            height: 4rem;
+            padding-left: 3rem;
+            font-size: 1.6rem;
+            background-size: 1.8rem 1.8rem;
+            background-position: 2rem center;
+        }
+
+        &--list {
+            width: 13.2rem;
+            height: 5.4rem;
+            font-size: 1.8rem;
+        }
+
+    }
+}
+
+@include media-breakpoint-down(n-sm) {
+
+    //768px
+    .btn-wrap .btn {
+        font-size: 14px;
+    }
+}

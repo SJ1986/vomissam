@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'notokr';
+    src: url('../font/notokr-light.eot');
+    src: url('../font/notokr-light.eot?#iefix') format('embedded-opentype'),
+    url('../font/notokr-light.woff2') format('woff2'),
+    url('../font/notokr-light.woff') format('woff'),
+    url('../font/notokr-light.ttf') format('truetype'),
+    url('../font/notokr-light.svg#notokr-light') format('svg');
+    font-weight: 200;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'notokr';
+    src: url('../font/notokr-demilight.eot');
+    src: url('../font/notokr-demilight.eot?#iefix') format('embedded-opentype'),
+    url('../font/notokr-demilight.woff2') format('woff2'),
+    url('../font/notokr-demilight.woff') format('woff'),
+    url('../font/notokr-demilight.ttf') format('truetype'),
+    url('../font/notokr-demilight.svg#notokr-demilight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'notokr';
+    src: url('../font/notokr-regular.eot');
+    src: url('../font/notokr-regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/notokr-regular.woff2') format('woff2'),
+    url('../font/notokr-regular.woff') format('woff'),
+    url('../font/notokr-regular.ttf') format('truetype'),
+    url('../font/notokr-regular.svg#notokr-regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'notokr';
+    src: url('../font/notokr-medium.eot');
+    src: url('../font/notokr-medium.eot?#iefix') format('embedded-opentype'),
+    url('../font/notokr-medium.woff2') format('woff2'),
+    url('../font/notokr-medium.woff') format('woff'),
+    url('../font/notokr-medium.ttf') format('truetype'),
+    url('../font/notokr-medium.svg#notokr-medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'notokr';
+    src: url('../font/notokr-bold.eot');
+    src: url('../font/notokr-bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/notokr-bold.woff2') format('woff2'),
+    url('../font/notokr-bold.woff') format('woff'),
+    url('../font/notokr-bold.ttf') format('truetype'),
+    url('../font/notokr-bold.svg#notokr-bold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    
+}
+
+@font-face {
+    font-family: 'GyeonggiTitle';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GyeonggiTitle';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleMedium.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GyeonggiTitle';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gyeonggi/GyeonggiTitleBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Noto Serif CJK KR'), local('Source Han Serif K'), local('Source Han Serif'), local('Noto Serif CJK'), local('Noto Serif'), url(../font/NotoSerifCJKkr-Light.woff) format('woff');
+}
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Noto Serif CJK KR'), local('Source Han Serif K'), local('Source Han Serif'), local('Noto Serif CJK'), local('Noto Serif'), url(../font/NotoSerifCJKkr-Medium.woff) format('woff');
+}
+@font-face {
+    font-family: 'Noto Serif KR';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Noto Serif CJK KR'), local('Source Han Serif K'), local('Source Han Serif'), local('Noto Serif CJK'), local('Noto Serif'), url(../font/NotoSerifCJKkr-Bold.woff) format('woff');
+}

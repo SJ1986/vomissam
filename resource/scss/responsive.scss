@@ -1,0 +1,29 @@
+@charset 'utf-8';
+@import './helper/mixin';
+
+//custom
+/* ========== reponsive =========== */
+/*
+* xs: 576px,// Small screen / phone
+* sm: 768px,// Medium screen / tablet
+* md: 1024px,// Large screen / desktop
+* lg: 1280px,// Extra large screen / wide desktop
+* ml: 1400px,// middle screen
+* xl: 1600px,
+* up:min-width / down:max-width / only:(min-width,max-width)
+*/
+
+html{
+    @include mobileS{ //320px
+        font-size:calc(62.5% / 4);
+    }
+    @include mobileL{ //576px
+        font-size:calc(62.5% / 2);
+    }
+    @include tablet{ //768px
+        font-size:calc(62.5% / 1.2);
+    }
+    @include labtop{
+        font-size:62.5%;
+    }
+}

@@ -1,0 +1,6 @@
+@import url(base/_index.scss);
+@import url(./helper/_index.scss);
+@import url(component/_index.scss);
+div {
+  display: block;
+}

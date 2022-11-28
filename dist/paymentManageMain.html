@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <!-- //공통 css -->
+
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="../resource/css/payment.css">
+    <!-- //각 페이지 css -->
+
+
+
+
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/sub.js"></script>
+    
+    
+    
+</head>
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <header>
+            <div class="header__inner">
+                <div class="page-back">
+                    <div class="page-back__inner">
+                        <button type="button" class="ui-button ui-button__page--back"></button>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <div class="header-title__inner">
+                        결제 관리
+                    </div>
+                </div>
+
+            </div>            
+        </header>
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container">
+
+            <div class="container__inner">
+
+                <div class="container-core">
+                    <div class="container-core__inner container-core__flex">
+                        <section class="sub-content">
+                            <section class="sub-items">
+                                <div class="sub-item sub-item__gray">
+                                    <p class="sub-item__title">나의 결제 수단</p>
+                                    <div class="card-list-box">
+                                        <ul class="card-list__list">
+                                            <li class="card-list__item">
+                                                <div class="card-img"><img src="../resource/image/sub/img-card.png" alt=""></div>
+                                                <div class="card-info">
+                                                    <p class="card-name">신한 SKT Light Plan Big Plus</p>
+                                                    <p class="card-num">본인 41234564********1111</p>
+                                                </div>
+                                            </li>
+                                            <li class="card-list__item">
+                                                <div class="card-img"><img src="../resource/image/sub/img-card2.png" alt=""></div>
+                                                <div class="card-info">
+                                                    <p class="card-name">우리카드 아이사랑카드</p>
+                                                    <p class="card-num">본인 12345678********1234</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+
+                                        <div class="plus-card mt-120">
+                                            <button type="button" class="button-plus-card"><i></i>카드 신규(추가) 등록하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sub-item">
+                                    <p class="sub-item__title">나의 결제 예정 금액</p>
+                                    <div class="sub-item__box sub-item__box--gray">
+                                        <div class="sub-list__dl">
+                                            <dl class="sub-dl">
+                                                <dt class="sub-dt">결제 예정일자</dt>
+                                                <dd class="sub-dd sub-dd__right">2022. 09. 30</dd>
+                                            </dl>
+                                            <dl class="sub-dl">
+                                                <dt class="sub-dt">결제 예정금액</dt>
+                                                <dd class="sub-dd sub-dd__right font-weight__m">880,000<span class="sub-dd__span"> 원</span></dd>
+                                            </dl>
+                                            <dl class="sub-dl">
+                                                <dt class="sub-dt">결제 회차</dt>
+                                                <dd class="sub-dd sub-dd__right">2회차</dd>
+                                            </dl>
+                                            <dl class="sub-dl">
+                                                <dt class="sub-dt">다음 결제예정일</dt>
+                                                <dd class="sub-dd sub-dd__right">2022. 10. 05</dd>
+                                            </dl>                                                    
+                                        </div>
+                                        <div class="ui-buttons mt-80">
+                                            <button type="button" class="ui-button ui-button__bg-blue ui-button__height-m ui-button__radius-s">결제하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sub-item">
+                                    <p class="sub-item__title">나의 결제 내역<span class="sub-item__title--des">(최근 1개월)</span></p>
+                                    <div class="sub-item__box sub-item__box--border">
+                                        <div class="sub-item__box--flex">
+                                            <div class="sub-item__box--left">
+                                                <div class="sub-list__dl">
+                                                    <dl class="sub-dl">
+                                                        <dt class="sub-dt sub-dt__width width-290">결제 일자</dt>
+                                                        <dd class="sub-dd">2022. 09. 30</dd>
+                                                    </dl>
+                                                    <dl class="sub-dl">
+                                                        <dt class="sub-dt sub-dt__width width-290">결제 금액</dt>
+                                                        <dd class="sub-dd">880,000 원</dd>
+                                                    </dl>                                               
+                                                </div>
+                                            </div>
+                                            <div class="sub-item__box--right ml-auto">
+                                                <button type="button" class="button-more">더보기</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+                        </section>
+
+                        <!-- <section class="page-bottom">
+                            <div class="ui-buttons">
+                                <button type="button" class="ui-button ui-button__bg-blue">신청 완료</button>
+                            </div>
+                        </section> -->
+
+
+
+
+
+                    </div>
+                </div>
+
+                
+            </div>
+
+        </div>
+        <!-- //container -->
+
+
+
+        <!-- footer -->
+        <!-- [include] footer -->
+        <footer data-include-file="../include/footer.html" class="footer-wrap js-include"></footer>
+        <!-- //[include] footer -->
+        <!-- //footer -->
+
+       
+        
+
+    </div>
+
+</body>
+<script>
+   
+</script>
+</html>

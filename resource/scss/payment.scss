@@ -1,0 +1,243 @@
+@import './helper/index';
+
+.card{
+    &-list{
+        &-box{
+            padding: 10rem 5rem 6.8rem;
+            background: #ffffff;
+            box-shadow: 2rem 2rem 8rem rgba(0,0,0,0.08);
+            border-radius: 3rem;
+            &--payment{
+                box-shadow:none;
+            }
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            padding:0 3rem;
+            &+&{
+                margin-top: 5rem;
+            }
+        }
+    }
+    &-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18.2rem;
+        height: 18.2rem;
+        margin-right: 3.2rem;
+        background: #eff0f5;
+        border-radius: 100%;
+        img{
+            display: block;
+            max-width: 9.1rem;
+            max-height: 100%;
+            margin: 0 auto;
+        }
+    }
+    &-name{
+        font: {
+            size: 5.4rem;
+            weight:500;
+        };
+    }
+    &-num{
+        margin-top: 3.5rem;
+        font: {
+            size:4.8rem;
+        };
+        color:#9196a5;
+    }
+}
+
+.payment{
+    &-process{
+        &__inner{
+            padding:5rem 4rem 7rem 4rem;
+        }
+        &__list{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            &::after{
+                display: inline-block;
+                position: absolute;
+                top: 8.5rem;
+                left: 2rem;
+                width: calc(100% - 12rem);
+                height: 1rem;
+                background: url(../image/sub/line-dashed.png) no-repeat center;
+                background-size: cover;
+                content:"";
+                z-index: -1;
+            }
+            &--step02{
+                &::after{
+                    left: 3rem;
+                    width: calc(100% - 12rem);
+                    background-image: url(../image/sub/line-dashed__half.png);
+                }
+            }
+            &--step03{
+                &::after{
+                    left: 3rem;
+                    width: calc(100% - 12rem);
+                    background-image: url(../image/sub/line-dashed__blue.png);
+                }
+            }
+        }
+        &__text{
+            margin-top: 4rem;
+            font-size: 5rem;
+            text-align: center;
+            color:#9196a5;
+            line-height: 6rem;
+            letter-spacing: -1px;
+        }
+        &__step{
+            .payment-process__img{
+                @include d-flex-center;
+                position: relative;
+                width: 18rem;
+                height: 18rem;
+                &::before{
+                    width: 5rem;
+                    height:5rem;
+                    background-color: #c3c8d5;
+                    background-size: 5rem;    
+                    border-radius: 100%;
+                    content:"";
+                }
+                
+            }
+            &.is-active{
+                .payment-process__img{
+                    background-size: 18rem;
+                    background-position: center;
+                    &::before{
+                        display: none;
+                    }
+                }
+                .payment-process__text{
+                    color:#000000;
+                    font-weight: 500;
+                }
+            }
+            &.is-past{
+                .payment-process__img{
+                    
+                    background-position: center;
+                    background: url(../image/sub/payment-process__past.png) no-repeat center;
+                    background-size: 15.4rem;
+                    &::before{
+                        display: none;
+                    }
+                }
+                .payment-process__text{
+                    color:#000000;
+                    font-weight: 500;
+                }
+            }
+            &__inner{
+                width:18rem;
+            }
+            
+            &01{
+                .payment-process__img{
+                    background-image: url(../image/sub/payment-process__icon01.png);
+                }
+            }
+            &02{
+                &.is-active{
+                    .payment-process__img{
+                        background-image: url(../image/sub/payment-process__icon02.png);
+                    }
+                }
+                
+            }
+            &03{
+                &.is-active{
+                    .payment-process__img{
+                        background-image: url(../image/sub/payment-process__icon03.png);
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.sub-item__box--receipt{
+    position: relative;
+    padding: 10rem 8rem;
+    box-shadow: 2.5rem 2.5rem 5rem rgba(0,0,0,0.15);
+    &::before{
+        position: absolute;
+        left: 0;
+        bottom: -1.3rem;
+        width: 100%;
+        height: 4.4rem;
+        background: url(../image/sub/bg-receipt__bottom.png) no-repeat bottom;
+        background-size: 134rem 4.4rem;
+        content:""
+    }
+    .sub{
+        &-dl{
+            &+.sub-dl{
+                margin-top: 10rem;
+            }
+        }
+        &-list{
+            &__dl{
+                &+.sub-list__dl{
+                    margin-top: 10rem;
+                    padding-top: 10rem;
+                    border-top: 1px dashed #dfe0e2;
+                }
+            }
+        }
+    }       
+}
+.sub{
+    &-item{
+        &--totalPayment{
+            .sub-item{
+                + .sub-item{
+                    margin-top:7rem;
+                }
+                &:first-child{
+                    margin-bottom:13rem;
+                }
+                &__box{
+                    &--border{
+                        border:none;
+                    }
+                }
+            }
+        }
+    }
+}
+.sub-item__box--totalPay{
+    color:#fff;
+    border-radius:3rem;
+    background-image:url('../image/sub/img-totalPay.png');
+    background-position:102% 130%;
+    background-repeat:no-repeat;
+    background-size:42rem 32rem;
+    .totalPay{
+        &__txt{
+            font-size:6rem;
+            span{
+                display:block;
+                margin-top:5rem;
+                font-size:8rem;
+                font-weight:500;
+                em{
+                    font-size:8rem;
+                    font-weight:500;
+                }
+            }
+        }
+    }
+}

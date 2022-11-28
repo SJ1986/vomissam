@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <!-- //공통 css -->
+
+    <!-- 개별 페이지 css -->
+    <link rel="stylesheet" href="../resource/css/mypage.css">
+    <!-- //개별 페이지 css -->
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/sub.js"></script>
+
+</head>
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <!-- [include] header -->
+        <header>
+            <div class="header__inner">
+                <div class="page-back">
+                    <div class="page-back__inner">
+                        <button type="button" class="ui-button ui-button__page--back"></button>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <div class="header-title__inner">
+                        고객센터
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-alarm">
+                        <div class="header-alarm__inner">
+                            <button type="button" class="header-alarm__button"></button>
+                        </div>
+                    </div>
+                    <div class="header-hamberger">
+                        <div class="header-hamberger__inner">
+                            <button type="button" class="header-hamberger__button"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </header>
+        <!-- //[include] header -->
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container container__sub container__sub--custom container__sub--p-0">
+            <div class="container__inner">
+                <div class="container-core">
+                    <div class="container-core__inner container-core__flex">
+                        <section class="sub-content">
+                            <div class="sub-item gradation-bg gradation-bg--white_gray">
+                                <div class="myInfo-box">
+                                    <div class="myInfo-box__top">
+                                        <span class="myInfo-box__img">
+                                            <img src="../resource/image/sub/img-mypage__profile01.png" alt="">
+                                        </span>
+                                        <p class="myInfo-box__tit">
+                                            abcd_2207
+                                            <span>카카오에 연결되어 있습니다.</span>
+                                        </p>
+                                    </div>
+                                    <div class="myInfo-box__bottom myInfo-box__left">
+                                        <p class="myInfo-box__cap">이름</p>
+                                        <p class="myInfo-box__txt">
+                                            이강흥
+                                            <span>네무소프트</span>
+                                        </p>
+                                    </div>
+                                    <div class="myInfo-box__bottom myInfo-box__right">
+                                        <p class="myInfo-box__cap">연락처</p>
+                                        <p class="myInfo-box__txt">
+                                            010-1234-5678
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-item m-0 p-0">
+                                <a href="" class="mypage-link">
+                                    <span class="mypage-link__img">
+                                        <img src="../resource/image/sub/img-mypage__mycard.png" alt="">
+                                    </span>
+                                    <span class="mypage-link__tit">내 카드 정보 관리</span>
+                                </a>
+                                <a href="" class="mypage-link" data-toggle="modal" data-target="#modiMyPatient">
+                                    <span class="mypage-link__img">
+                                        <img src="../resource/image/sub/img-mypage__patient.png" alt="">
+                                    </span>
+                                    <span class="mypage-link__tit">환자 정보 관리</span>
+                                </a>
+                                <a href="" class="mypage-link">
+                                    <span class="mypage-link__img">
+                                        <img src="../resource/image/sub/img-mypage__logout.png" alt="">
+                                    </span>
+                                    <span class="mypage-link__tit">로그아웃</span>
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- 환자 정보 수정 모달 -->
+                        <div class="modal fade" id="modiMyPatient" tabindex="-1" style="z-index: 1050;" aria-labelledby="modiMyPatientLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-auto ">
+                                <div class="modal-content modal-modiMontent__myPatient">
+                                    <div class="modal-body">
+                                        <div class="modal-core2">
+                                            <div class="modal-core2__title">나의 환자 정보</div>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">간병 형태</dt>
+                                                <dd class="care-date__text">기간제 병원</dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">간병 장소</dt>
+                                                <dd class="care-date__text">서울시 구로구 고척동</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">간병 시작일</dt>
+                                                <dd class="care-date__text">2022/11/01 오전10시</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">간병 종료일</dt>
+                                                <dd class="care-date__text">2022/11/31 오후22시</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">환자 정보</dt>
+                                                <dd class="care-date__text">홍길동(남, 23세)</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">진료과(진단명)</dt>
+                                                <dd class="care-date__text">심혈관 내과</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">입원 병실</dt>
+                                                <dd class="care-date__text">일반실 815호</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">신장/몸무게</dt>
+                                                <dd class="care-date__text">171cm / 75kg</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">격리감염질환</dt>
+                                                <dd class="care-date__text">해당없음</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">거동가능여부</dt>
+                                                <dd class="care-date__text">거동 불능</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">화장실 이용</dt>
+                                                <dd class="care-date__text">기저귀</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">환자특이상태</dt>
+                                                <dd class="care-date__text">수면장애, 섬망</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title">보호자 요청</dt>
+                                                <dd class="care-date__text">요청사항</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                        </div>
+                                        
+                                        <div class="modal-buttons modal-buttons__sticky">
+                                            <button type="button" class="ui-button ui-button__border-blue"
+                                                data-dismiss="modal">취소</button>
+                                            <button type="button" class="ui-button ui-button__bg-blue">확인 완료</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //환자 정보 수정 모달 -->
+
+
+                    </div>
+                </div><!-- //container-core -->
+            </div>
+
+        </div>
+        <!-- //container -->
+
+        <!-- quick-menu -->
+        <section class="quick-menu">
+            <div class="quick-menu__inner">
+                <!-- 전달사항 :: 선택 항목에 클래스 is-active 붙습니다. -->
+                <button type="button" class="quick-menu__button quick-menu__button--enroll ">
+                    <i></i>
+                    <span class="quick-menu__button-text">간병신청</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--pay is-active">
+                    <i></i>
+                    <span class="quick-menu__button-text">결제관리</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--customer">
+                    <i></i>
+                    <span class="quick-menu__button-text">고객센터</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--my">
+                    <i></i>
+                    <span class="quick-menu__button-text">내정보관리</span>
+                </button>
+            </div>
+        </section>
+        <!-- //quick-menu -->
+
+
+
+        <!-- footer -->
+        <!-- [include] footer -->
+        <footer data-include-file="../include/footer.html" class="footer-wrap js-include"></footer>
+        <!-- //[include] footer -->
+        <!-- //footer -->
+
+       
+        
+
+    </div>
+
+</body>
+<script>
+   
+</script>
+</html>

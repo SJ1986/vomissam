@@ -1,0 +1,231 @@
+@charset 'utf-8';
+@import './helper/mixin';
+
+
+
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10rem 0;
+    padding-right: 0 !important;
+    &-header {
+        padding: 10rem 6rem 0 6rem;
+    }
+
+    &-body {
+        padding: 0;
+
+        &__main {
+            .modal-core {
+                padding: 10rem 8rem;
+            }
+        }
+    }
+
+    &-dialog {
+        justify-content: center;
+    }
+
+    &-content {
+        max-width: calc(100% - 10rem);
+        max-height: 80%;
+        width: 100%;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        border-radius: 2rem;
+        // overflow: hidden;
+        &__email {
+            .modal {
+                &-tit {
+                    margin-bottom: 3rem;
+                    font-size: 2.4rem;
+                }
+
+                &-img {
+                    display: block;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+            }
+        }
+        &__modifyDateCalendar{
+            .modal-header{
+                margin-top: 10rem;
+                margin-bottom: 9rem;
+                padding: 0 8rem;
+            }
+        }
+        &-chooseCarer{
+            .modal-core{
+                padding-top: 12rem;
+                padding-bottom: 13rem;
+            }
+        }
+        // &-startCare{
+        //     .modal-core{
+        //         padding-top: 11rem;
+        //         padding-bottom: 10rem;
+        //     }
+        // }
+        /* 모달 사이즈 */
+        &__s{
+            width: calc(100% - 32rem);
+        }
+    }
+
+    &-core {
+        padding: 12.5rem 5rem;
+        &2 {
+            padding: 12rem 6rem;
+            &:first-child{
+                margin-top: -2rem;
+            }
+            .modal-core2__title {
+                position: relative;
+                padding-bottom: 6rem;
+                margin-bottom: 7rem;
+                font : {
+                    size: 6rem;
+                    weight:600;
+                }
+                &::before{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: .4rem;
+                    background: #000000;
+                    content: "";
+                }
+                &-s{
+                    margin-bottom: 8rem;
+                    font : {
+                        size: 5rem;
+                        weight:300;
+                    }
+                    line-height: 7rem;
+                }
+            }
+            // &+&{
+            //     border-top:3rem solid;
+            // }
+        }
+        &3{
+            padding-left: 8rem;
+            padding-right: 8rem;
+        }
+        &__p{
+            &y{
+                &-0{
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &-tit {
+        margin-bottom: 2.5rem;
+        font : {
+            size: 2rem;
+            weight: 500;
+        }
+
+        text-align: center;
+    }
+
+    &-title {
+        margin-bottom: 7.5rem;
+        font : {
+            size: 6.5rem;
+            weight: 600;
+        }
+        text-align: center;
+        line-height: 9rem;
+        &2{
+            font : {
+                size: 6rem;
+                weight:500;
+            }
+        }
+        &__font{
+            &-l{
+                font-size: 7.5rem;
+            }
+        }
+    }
+
+    &-text {
+        font-size: 6rem;
+        line-height: normal;
+        word-break: keep-all;
+        &__small {
+            font: {
+                size: 5rem;
+            };
+            line-height: 7rem;
+            &--title{
+                margin-bottom: 4rem;
+                font: {
+                    size: 5rem;
+                };
+            }
+        }
+    }
+
+    &-backdrop {
+        background: transparent;
+    }
+
+    &-buttons {
+        .ui-button {
+            font : {
+                size: 6rem;
+                weight:500;
+            }
+            border-radius: 0 0 2rem 2rem;
+        }
+        &__sticky{
+            display: flex;
+            .ui-button{
+                border-bottom-left-radius: 2rem;
+                border-bottom-right-radius: 0;
+                border : {
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                }
+                &+.ui-button{
+                    margin-left: 0;
+                    border-bottom-left-radius: 0rem;
+                    border-bottom-right-radius: 2rem;
+                }
+            }
+        }
+    }
+
+    &-box {
+        &__gray {
+            padding: 5rem 6rem;
+            background: #f3f5fb;
+            border-radius: 2rem;
+
+            * {
+                font-size: 5rem;
+                line-height: 7rem;
+            }
+        }
+    }
+
+    /* case3 간병시작하기 모달 */ 
+    &-user{
+        margin-bottom: 9rem;
+        font-size: 5rem;
+        &__name{
+            font: {
+                size: 6.5rem;
+                weight:500;
+            };
+        }
+    }
+}

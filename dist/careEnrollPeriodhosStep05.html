@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <!-- //공통 css -->
+
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="../resource/css/enroll.css">
+    <!-- //각 페이지 css -->
+
+
+    
+    
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/sub.js"></script>
+    
+    
+    
+</head>
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <!-- [include] header -->
+        <header>
+            <div class="header__inner">
+                <div class="page-back">
+                    <div class="page-back__inner">
+                        <button type="button" class="ui-button ui-button__page--back"></button>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <div class="header-title__inner">
+                        간병신청하기
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-alarm">
+                        <div class="header-alarm__inner">
+                            <button type="button" class="header-alarm__button"></button>
+                        </div>
+                    </div>
+                    <div class="header-hamberger">
+                        <div class="header-hamberger__inner">
+                            <button type="button" class="header-hamberger__button"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </header>
+        <!-- //[include] header -->
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container container__sub container__sub--enroll container__sub--pb-0">
+            <div class="container__inner">
+                <div class="container-core">
+                    <div class="container-core__inner container-core__flex">
+                        <section class="sub-content">
+
+                            <div class="enroll-box">
+                                <div class="enroll-box__inner">
+                                    <div class="enroll-title">환자의 특이 상태<span class="enroll-title__des">(중복 선택 가능)</span></div>
+                                    <div class="ui-buttons ui-buttons__thirds">
+                                        <button type="button"
+                                        class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi is-active">콧줄</button>
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">뱃줄</button>
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">장루</button>
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">수면장애</button>
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">섬망</button>
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">욕창</button>
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">재활</button>
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">석션</button>
+                                        <button type="button" class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">치매</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="enroll-box">
+                                <div class="enroll-box__inner">
+                                    <div class="enroll-title">주보호자 정보<span class="ui-required">(필수)</span></div>
+                                    <div class="ui-form ui-form__flex--row">
+                                        <div class="ui-form__cell width-370">환자와의 관계</div>
+                                        <div class="ui-form__cell flex">
+                                            <div class="ui-form">
+                                                <select name="" id="" class="ui-select">
+                                                  <option value="">부모</option>
+                                                  <option value="">자녀</option>
+                                                  <option value="">형제</option>
+                                                  <option value="">자매</option>
+                                                  <option value="">배우자</option>
+                                                  <option value="">친인척</option>
+                                                  <option value="">지인</option>
+                                                </select>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="ui-form ui-form__flex--row">
+                                        <div class="ui-form__cell width-370">연락처</div>
+                                        <div class="ui-form__cell flex">
+                                            <input type="text" class="ui-input " placeholder="연락처를 입력해 주세요">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="enroll-box">
+                                <div class="enroll-box__inner">
+                                    <div class="enroll-title">특별히 더 알아야 할 것이 있다면 작성해 주세요<span class="enroll-title__des">(선택)</span></div>
+                                    <div class="ui-form">
+                                        <textarea name="" class="ui-textarea ui-textarea__height-265" placeholder="내용을 입력해 주세요"></textarea>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+                            
+                        </section>
+                        
+                        <section class="page-bottom">
+                            <div class="page-bottom__inner ui-buttons">
+                                <button type="button" class="ui-button ui-button__border-gray ui-button__color-gray font-weight__m">이전</button>
+
+                                <button type="button" class="ui-button ui-button__border-blue font-weight__m">완료</button>
+                            </div>
+                        </section>
+                    </div>
+                </div><!-- //container-core -->
+            </div>
+
+        </div>
+        <!-- //container -->
+
+        <!-- quick-menu -->
+        <section class="quick-menu">
+            <div class="quick-menu__inner">
+                <!-- 전달사항 :: 선택 항목에 클래스 is-active 붙습니다. -->
+                <button type="button" class="quick-menu__button quick-menu__button--enroll ">
+                    <i></i>
+                    <span class="quick-menu__button-text">간병신청</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--pay is-active">
+                    <i></i>
+                    <span class="quick-menu__button-text">결제관리</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--customer">
+                    <i></i>
+                    <span class="quick-menu__button-text">고객센터</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--my">
+                    <i></i>
+                    <span class="quick-menu__button-text">내정보관리</span>
+                </button>
+            </div>
+        </section>
+        <!-- //quick-menu -->
+
+
+
+        <!-- footer -->
+        <!-- [include] footer -->
+        <footer data-include-file="../include/footer.html" class="footer-wrap js-include"></footer>
+        <!-- //[include] footer -->
+        <!-- //footer -->
+
+       
+        
+
+    </div>
+
+</body>
+<script>
+   
+</script>
+</html>

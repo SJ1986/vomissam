@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <!-- //공통 css -->
+
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="../resource/css/custom.css">
+    <!-- //각 페이지 css -->
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/moment.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/sub.js"></script>
+    
+    
+    
+</head>
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <!-- [include] header -->
+        <header>
+            <div class="header__inner">
+                <div class="page-back">
+                    <div class="page-back__inner">
+                        <button type="button" class="ui-button ui-button__page--back"></button>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <div class="header-title__inner">
+                        FAQ
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-alarm">
+                        <div class="header-alarm__inner">
+                            <button type="button" class="header-alarm__button"></button>
+                        </div>
+                    </div>
+                    <div class="header-hamberger">
+                        <div class="header-hamberger__inner">
+                            <button type="button" class="header-hamberger__button"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </header>
+        <!-- //[include] header -->
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container container__sub container__sub--custom container__sub--p-0">
+            <div class="container__inner">
+                <div class="container-core">
+                    <div class="container-core__inner container-core__flex">
+                        <section class="sub-content">
+                            <article class="sub-item">
+                                <div class="ui-buttons ui-buttons--faq">
+                                    <button type="button" class="ui-button ui-button__border-gray ui-button__font-xs ui-button__click is-active">전체</button>
+                                    <button type="button" class="ui-button ui-button__border-gray ui-button__font-xs ui-button__click">간병비용</button>
+                                    <button type="button" class="ui-button ui-button__border-gray ui-button__font-xs ui-button__click">간병취소</button>
+                                    <button type="button" class="ui-button ui-button__border-gray ui-button__font-xs ui-button__click">기타</button>
+                                </div>
+                            </article>
+                            <article class="sub-item">
+                                <div class="sub-title__underline mb-0">자주하는 질문 <span class="ui-txt--blue font-size__m font-weight__m">[전체]</span></div>
+                                <div class="acordion-notice acordion-notice--faq">
+                                    <button type="button" class="acordion-notice__btn">9월 26일 일일 돌봄 내용</button>
+                                    <div class="acordion-notice__view">text</div>
+                                    <button type="button" class="acordion-notice__btn">간병 물품 구매 요청 드립니다.</button>
+                                    <div class="acordion-notice__view">
+                                        아무나 하는 그냥 간병이 아닙니다.<br/><br/>
+                                        전문 교육과 시스템 관리가 접목된 VIP 간병 서비스<br/>
+                                        입니다 VOMISSAM ACADEMY를 수료한 간병 전문가<br/>
+                                        입니다. 간병 생활을 함께 할 고객 전담 매니저가<br/>
+                                        밀착 관리합니다.                                        
+                                    </div>
+                                    <button type="button" class="acordion-notice__btn">보호자님. 요청하신 내용 처리했습니다.</button>
+                                    <div class="acordion-notice__view">text</div>
+                                    <button type="button" class="acordion-notice__btn">간병 생활을 함께 할 고객 전담 매니저가 밀착 관리합니다.</button>
+                                    <div class="acordion-notice__view">text</div>
+                                    <button type="button" class="acordion-notice__btn">보미쌤 매칭부터 민원해결까지 함께합니다.</button>
+                                    <div class="acordion-notice__view">text</div>
+                                    <button type="button" class="acordion-notice__btn">전문교육 프로그램으로 전문가를 양성합니다.</button>
+                                    <div class="acordion-notice__view">text</div>
+                                </div>
+                            </article>
+                            
+                        </section>
+
+
+                    </div>
+                </div><!-- //container-core -->
+            </div>
+
+        </div>
+        <!-- //container -->
+
+        <!-- quick-menu -->
+        <section class="quick-menu">
+            <div class="quick-menu__inner">
+                <!-- 전달사항 :: 선택 항목에 클래스 is-active 붙습니다. -->
+                <button type="button" class="quick-menu__button quick-menu__button--enroll ">
+                    <i></i>
+                    <span class="quick-menu__button-text">간병신청</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--pay is-active">
+                    <i></i>
+                    <span class="quick-menu__button-text">결제관리</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--customer">
+                    <i></i>
+                    <span class="quick-menu__button-text">고객센터</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--my">
+                    <i></i>
+                    <span class="quick-menu__button-text">내정보관리</span>
+                </button>
+            </div>
+        </section>
+        <!-- //quick-menu -->
+
+
+
+        <!-- footer -->
+        <!-- [include] footer -->
+        <footer data-include-file="../include/footer.html" class="footer-wrap js-include"></footer>
+        <!-- //[include] footer -->
+        <!-- //footer -->
+
+       
+        
+
+    </div>
+
+</body>
+<script>
+   
+</script>
+</html>

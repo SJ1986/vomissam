@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <!-- //공통 css -->
+
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="../resource/css/payment.css">
+    <!-- //각 페이지 css -->
+
+
+
+
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/sub.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <header>
+            <div class="header__inner">
+                <div class="page-back">
+                    <div class="page-back__inner">
+                        <button type="button" class="ui-button ui-button__page--back"></button>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <div class="header-title__inner">
+                        결제 관리
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container">
+
+            <div class="container__inner">
+
+                <div class="container-core">
+                    <div class="container-core__inner container-core__flex">
+                        <section class="sub-content">
+                            <section class="sub-items">
+                                <div class="sub-item">
+                                    <div class="payment-process">
+                                        <div class="payment-process__inner">
+                                            <ul class="payment-process__list payment-process__list--step02">
+                                                <!-- 해당 진행상태에선 .is-active, 지난 상태는 .is-past 붙습니다. -->
+                                                <li class="payment-process__step payment-process__step01 is-past">
+                                                    <div class="payment-process__step--inner">
+                                                        <div class="payment-process__img"></div>
+                                                        <div class="payment-process__text">결제정보<br>확인</div>
+                                                    </div>
+                                                </li>
+                                                <li class="payment-process__step payment-process__step02 is-active">
+                                                    <div class="payment-process__step--inner">
+                                                        <div class="payment-process__img"></div>
+                                                        <div class="payment-process__text">결제금액<br>확인</div>
+                                                    </div>
+                                                </li>
+                                                <li class="payment-process__step payment-process__step03">
+                                                    <div class="payment-process__step--inner">
+                                                        <div class="payment-process__img"></div>
+                                                        <div class="payment-process__text">결제</div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="sub-item">
+                                    <p class="sub-item__title">결제금액</p>
+                                    <div class="sub-item__box sub-item__box--receipt">
+                                        <div class="sub-list__dl">
+                                            <dl class="sub-dl">
+                                                <dt class="sub-dt">일 간병비</dt>
+                                                <dd class="sub-dd sub-dd__right">137,800 원</dd>
+                                            </dl>
+                                            <dl class="sub-dl">
+                                                <dt class="sub-dt">총 간병비</dt>
+                                                <dd class="sub-dd sub-dd__right ">2,342,600 원 (16일)</dd>
+                                            </dl>
+                                            <dl class="sub-dl sub-dl__center mt-60">
+                                                <dt class="sub-dt">적립금</dt>
+                                                <dd class="sub-dd sub-dd__right">
+                                                    <div class="ui-form ui-form__flex--row ui-form__flex--right">
+                                                        <div class="ui-form__cell ui-form__cell--s ml-0">
+                                                            <input type="text"
+                                                                class="ui-input ui-input__width-430 ui-input__height-s"
+                                                                placeholder="150,000">
+                                                        </div>
+                                                        <div class="ui-form__cell ml-20">
+                                                            <button type="button"
+                                                                class="ui-button  ui-button__width-auto ui-button__height-135  ui-button__bg-blue ui-button__font-xxs">전액사용</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="des-text2 mt-40">사용가능한 적립금 0원</div>
+                                                </dd>
+                                            </dl>
+                                        </div>
+
+                                        <div class="sub-list__dl">
+                                            <dl class="sub-dl">
+                                                <dt class="sub-dt">총 간병 비용</dt>
+                                                <dd class="sub-dd sub-dd__right"> 2,342,600 원</dd>
+                                            </dl>
+                                            <dl class="sub-dl">
+                                                <dt class="sub-dt">적립금 사용</dt>
+                                                <dd class="sub-dd sub-dd__right ">0 원</dd>
+                                            </dl>
+                                        </div>
+
+                                        <div class="total-cost__box ">
+                                            <div class="total-cost__box--inner">
+                                                <dl class="total-cost__list">
+                                                    <dt class="total-cost__title">총 합계 금액</dt>
+                                                    <dd class="total-cost__text">1,556,000원</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="sub-item">
+                                    <p class="sub-item__title">결제 방법 선택</p>
+                                    <div class="sub-item__box">
+                                        <div class="ui-buttons">
+                                            <button type="button"
+                                                class="ui-button  ui-button__border-gray ui-button__icon ui-button__icon-payAll ui-button__font-xs ui-button__check is-active">간병비 일괄
+                                                결제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sub-item">
+                                    <p class="sub-item__title sub-item__title--subs">
+                                        구독형 결제를 이용하시겠습니까?
+                                        <button type="button" class="sub-item__btn--view"  data-toggle="modal" data-target="#detailServiceSubs">내용보기</button>
+                                    </p>
+                                    <div class="sub-item__box">
+                                        <div class="ui-buttons">
+                                            <button type="button"
+                                                class="ui-button  ui-button__border-gray ui-button__icon ui-button__icon-paySep ui-button__font-xs ui-button__check">구독형<span
+                                                    class="font-size__xxs">(분할결제)</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </section>
+                        </section>
+
+
+                        <section class="page-bottom page-bottom__padding">
+                            <div class="page-bottom__inner">
+                                <div class="ui-buttons">
+                                    <button type="button" class="ui-button ui-button__border-gray">이전</button>
+                                    <button type="button" class="ui-button ui-button__border-blue">다음</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 구독형 서비스에 대한 상세 내용 모달 -->
+                        <div class="modal fade" id="detailServiceSubs" tabindex="-1" style="z-index: 1050;" aria-labelledby="detailServiceSubsLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-auto ">
+                            <div class="modal-content modal-content__detailServiceSubs">
+                                <div class="modal-header">
+                                    <div class="modal-title modal-title__font-l text-left mb-0">구독형 서비스에 대한 상세 내용</div>
+                                </div>
+                                <div class="modal-body">
+                                    구독형 서비스에 대한 상세 내용
+                                </div>
+
+                            </div>
+                        </div>
+                        </div>
+                        <!-- //구독형 서비스에 대한 상세 내용 모달 -->
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- //container -->
+
+
+
+
+
+
+    </div>
+
+</body>
+<script>
+
+</script>
+
+</html>

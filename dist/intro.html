@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <link rel="stylesheet" href="../resource/css/intro.css">
+
+
+
+
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/main.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+
+
+
+        <!-- container -->
+        <div class="container container-intro">
+
+            <div class="container__inner">
+
+                <div class="loading">
+                    <div class="loading__inner">
+                        <div class="loading__bg"></div>
+                        <div class="loading-logo">
+                            <div class="img-wrap">
+                                <img src="../resource/image/common/logo-gradient.png" alt="">
+                            </div>
+                            <div class="loading-logo__text">
+                                VIP 간병 서비스 <span>보미쌤</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loading-footer__logo">
+
+                    </div>
+                </div>
+
+                <div class="intro-slide swiper-container">
+                    <div class="intro-fixed">
+                        <h1 class="intro-title">간병문화<span>를 바꾸는</span> <br> <span>사람들</span> 보미쌤</h1>
+                        <div class="intro-fixed__bottom">
+                            <div class="button-wrap button-wrap__intro">
+                                <button type="button">회원가입/로그인</button>
+                            </div>
+                            <div class="intro-tel">전화상담 : <a href="tel:1877- 2782" class="intro-tel__num">1877- 2782</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="intro-slide01"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="intro-slide02"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- //container -->
+
+
+
+
+
+
+    </div>
+
+</body>
+<script type="text/javascript">
+    window.onbeforeunload = function () {
+        //현재 페이지에서 다른 페이지로 넘어갈 때 표시해주는 기능
+        $('.loading').show(); 
+    } 
+    $(window).load(function () { 
+        //페이지가 로드 되면 로딩 화면을 없애주는 것
+        
+        setTimeout(function(){
+            $('.loading').fadeOut(300);
+        },2000)
+
+
+        
+    });
+</script>
+
+</html>

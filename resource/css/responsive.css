@@ -1,0 +1,30 @@
+/* ========== reponsive =========== */
+/*
+* xs: 576px,// Small screen / phone
+* sm: 768px,// Medium screen / tablet
+* md: 1024px,// Large screen / desktop
+* lg: 1280px,// Extra large screen / wide desktop
+* ml: 1400px,// middle screen
+* xl: 1600px,
+* up:min-width / down:max-width / only:(min-width,max-width)
+*/
+@media (min-width: 320px) {
+  html {
+    font-size: 15.625%;
+  }
+}
+@media (min-width: 576px) {
+  html {
+    font-size: 31.25%;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 52.0833333333%;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 62.5%;
+  }
+}

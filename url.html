@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>보미쌤</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+
+  <!-- style -->
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .is-emphasis {
+      font-weight: 700;
+      color: #ff706e;
+    }
+
+    .index-wrap {
+      box-sizing: border-box;
+      /* min-width: 1900px; */
+      width: 100%;
+      padding: 20px;
+    }
+
+    .index-title {
+      font-size: 30px;
+      line-height: 40px;
+      margin: 0 0 20px;
+    }
+
+    .index-links:before {
+      content: '';
+      display: table;
+    }
+
+    .index-links__inner {
+      margin: -10px 0 0 -10px;
+    }
+
+    .index-links__inner:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .index-links a {
+      display: block;
+      margin: 10px 0 0 10px;
+      float: left;
+      padding: 5px 15px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      background: #666;
+    }
+
+    .index-gnb {
+      margin: 20px 0;
+    }
+
+    .index-bottom {
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      min-width: 1900px;
+      box-sizing: border-box;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    .index-bottom a {
+      background-color: #3c50a2;
+    }
+
+    .index-section {
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    .index-section+.index-section {
+      margin-top: 20px;
+    }
+
+    .index-section--clicked {
+      -webkit-animation: index-section-clicked 0.8s linear;
+      animation: index-section-clicked 0.8s linear;
+    }
+
+    @-webkit-keyframes index-section-clicked {
+      0% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      30% {
+        background-color: rgba(255, 202, 222, 1);
+      }
+
+      70% {
+        background-color: rgba(255, 202, 222, 1);
+      }
+
+      100% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    @keyframes index-section-clicked {
+      0% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      30% {
+        background-color: rgba(255, 202, 222, 1);
+      }
+
+      70% {
+        background-color: rgba(255, 202, 222, 1);
+      }
+
+      100% {
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .index-section__title {
+      margin: 0;
+      padding: 5px 15px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #000;
+      border-radius: 5px 5px 0 0;
+      background: #ededed;
+    }
+
+    .index-table>table {
+      width: 100%;
+      /* table-layout: fixed; */
+      table-layout: auto;
+      margin: 0;
+      padding: 0;
+      border-spacing: 0;
+      box-sizing: border-box;
+    }
+
+    .index-table>table>thead>tr>th,
+    .index-table>table>tbody>tr>th,
+    .index-table>table>tbody>tr>td {
+      box-sizing: border-box;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: left;
+      padding: 5px 15px;
+      border: 0 solid #cdcdcd;
+      border-width: 0 1px 1px 0;
+      background: none;
+      word-break: keep-all;
+      word-wrap: break-word;
+    }
+
+    .index-table>table>tbody>tr:hover>th,
+    .index-table>table>tbody>tr:hover>td {
+      background-color: #f6f6f6;
+    }
+
+    .index-table>table>thead>tr>th:first-child,
+    .index-table>table>tbody>tr>th:first-child,
+    .index-table>table>tbody>tr>td:first-child {
+      border-left-width: 1px;
+    }
+
+    .index-table>table>thead>tr>th {
+      border-top-width: 1px;
+    }
+
+    .index-table>table>thead>tr>th,
+    .index-table>table>tbody>tr>th {
+      background-color: #e8e8e8;
+    }
+
+    .index-table>table>tbody>tr:last-child>td:first-child {
+      border-radius: 0 0 0 5px;
+    }
+
+    .index-table>table>tbody>tr:last-child>td:last-child {
+      border-radius: 0 0 5px 0;
+    }
+
+    .index-status {
+      display: inline-block;
+      vertical-align: top;
+      padding: 3px 8px;
+      margin: -3px 0;
+      background: #999;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    .index-status--ing {
+      background-color: #ffb01a;
+    }
+
+    .index-status--end {
+      background-color: #4b62c3;
+    }
+
+    .index-status--design {
+      background-color: orange;
+    }
+
+    .index-status--moding {
+      background-color: #ff4594;
+    }
+
+    .index-status--moding {
+      background-color: #ff4594;
+    }
+
+    .index-log {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .index-log__item {
+      position: relative;
+      padding-left: 80px;
+    }
+
+    .index-log__item__date {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .index-text {
+      margin-bottom: 20px;
+    }
+
+    .index-type {
+      color: #2b5cd9;
+    }
+  </style>
+  <!-- //style -->
+</head>
+
+<body>
+  <div class="index-wrap">
+    <h1 class="index-title"></h1>
+    <div class="index-gnb">
+      <div class="index-links">
+        <div class="index-links__inner">
+          <a href="./guide.html" target="_blank">컴포넌트 가이드</a>
+        </div>
+      </div>
+    </div>
+    <div class="index-bottom">
+      <div class="index-links">
+        <div class="index-links__inner" id="nav"></div>
+      </div>
+    </div>
+
+    <div class="index-datas" id="indexTable"></div>
+  </div>
+
+  <div class="index-fake-botttom"></div>
+
+  <!-- script -->
+  <script type="text/javascript" src="./resource/js/lib/jquery-1.12.4.min.js"></script>
+  <script>
+    var title = '보미쌤';
+    var tableData = [
+
+      {
+        depth1: '공통',
+        data: [{
+            num: '1.1.1',
+            depth2: '초기화면',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'intro.html',
+            status: 'end',
+            create: '2022.11.04',
+            log: [
+              //{ date: '2022.11.12', text: '오타 수정' }
+            ],
+          },
+          {
+            num: '1.2.1',
+            depth2: '회원가입/로그인',
+            depth3: '회원가입 메인 페이지',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'login.html',
+            status: 'end',
+            create: '2022.11.07',
+            log: [
+              //{ date: '2022.11.12', text: '오타 수정' }
+            ],
+          },
+          {
+            num: '1.2.1',
+            depth2: '회원가입',
+            depth3: '본인 인증 (가입 여부 확인)',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'join.html',
+            status: 'end',
+            create: '2022.11.07',
+            log: [
+              //{ date: '2022.11.12', text: '오타 수정' }
+            ],
+          },
+          {
+            num: '1.2.1',
+            depth2: '회원가입',
+            depth3: '다른 소셜 계정으로 가입한 경우',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'joinOtherSocial.html',
+            status: 'end',
+            create: '2022.11.08',
+            log: [{
+              date: '2022.11.08',
+              text: 'D. 구글, 카카오의 경우 버튼 필요'
+            }],
+          },
+
+        ],
+      },
+      {
+        depth1: '로그인 후 메인화면',
+        data: [{
+            num: '1.1',
+            depth2: 'Case 1. 간병 서비스 이용 전 상태인 고객',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'index.html',
+            status: 'end',
+            create: '',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '1.2',
+            depth2: 'Case 2. 간병 서비스 신청 중 (매칭 중)',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'indexCase2.html',
+            status: 'end',
+            create: '2022.11.09',
+            log: [
+
+            ],
+          },
+          {
+            num: '1.4',
+            depth2: 'Case 3. 간병 대기 중 (매칭 완료)',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'indexCase3.html',
+            status: 'end',
+            create: '2022.11.09',
+            log: [{
+              date: '2022.11.09',
+              text: 'Q. 보미쌤 정보보기 클릭시 팝업, 여러명 나오는 경우?',
+            }, ],
+          },
+          {
+            num: '1.4',
+            depth2: 'Case 4. 간병 시작, 간병 중 (매칭 완료)',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'indexCase4.html',
+            status: 'end',
+            create: '2022.11.09',
+            log: [
+              // { date: '2022.11.09', text: '보미쌤 정보보기 클릭시 팝업',},
+            ],
+          },
+          {
+            num: '1.4',
+            depth2: 'Case 5. 간병 종료',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'indexCase5.html',
+            status: 'end',
+            create: '2022.11.09',
+            log: [
+              // { date: '2022.11.09', text: '보미쌤 정보보기 클릭시 팝업',},
+            ],
+          },
+
+
+        ],
+      },
+
+      {
+        depth1: '간병 신청하기',
+        data: [{
+            num: '2.1 p.28',
+            depth2: '간병신청하기',
+            depth3: '기간제/병원',
+            depth4: ' 간병 형태, 병원 선택',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollPeriodhosStep01.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '2.1 p.29',
+            depth2: '간병신청하기',
+            depth3: '기간제/병원',
+            depth4: '환자 이름·성별·연령, 간병 기간',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollPeriodhosStep02.html',
+            status: 'end',
+            create: '2022.11.09',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '2.1 p.32, p.45,',
+            depth2: '간병신청하기',
+            depth3: '기간제/병원\n기간제/자택\n시간제/자택',
+            depth4: '질환 정보, 입원 병실',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollPeriodhosStep03.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '2.1 p.33, p.40, p.46, p.52',
+            depth2: '간병신청하기',
+            depth3: '기간제/병원\n기간제/자택\n시간제/자택',
+            depth4: '안전한 간병을 위한 추가 입력',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollPeriodhosStep04.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '2.1 p.34, p.50, p.47, p.53',
+            depth2: '간병신청하기',
+            depth3: '기간제/병원\n기간제/자택\n시간제/자택',
+            depth4: '환자 특이 상태, 주보호자 정보, 더 알아야 할 점',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollPeriodhosStep05.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '2.2 p.35',
+            depth2: '간병신청하기',
+            depth3: '기간제/자택',
+            depth4: ' 간병 선택, 자택 주소, 간병 기간',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollPeriodHomeStep01.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '2.2 p.39, p.51',
+            depth2: '간병신청하기',
+            depth3: '기간제/자택\n시간제/자택',
+            depth4: '환자 이름·성별·연령, 진단 정보',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollPeriodHomeStep02.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+
+          {
+            num: '2.3 p.42',
+            depth2: '간병신청하기',
+            depth3: '시간제/병원',
+            depth4: ' 간병 형태, 병원 선택',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollTimeHosStep01.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '2.3 p.43~44',
+            depth2: '간병신청하기',
+            depth3: '시간제/병원',
+            depth4: '환자 이름·성별·연령, 진단 정보',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollTimeHosStep02.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+
+          {
+            num: '2.4 p.48',
+            depth2: '간병신청하기',
+            depth3: '시간제/자택',
+            depth4: '환자 이름·성별·연령, 진단 정보',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollTimeHomeStep01.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+
+          {
+            num: '2.4 p.54',
+            depth2: '간병비 확인/입력하기',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'careCostCheck.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+
+          {
+            num: '2.5 p.55~58',
+            depth2: '간병 신청 정보 확인(기간제/병원, 기간제/자택, 시간제/병원, 시간제/자택)',
+            depth3: '정보확인/신청완료',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollInfoCheck.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: 'p.59',
+            depth2: '간병 신청 정보 확인',
+            depth3: '정보확인/신청완료',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'careEnrollEnd.html',
+            status: 'end',
+            create: '2022.11.10',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+
+
+
+
+
+        ],
+      },
+      {
+        depth1: '결제 관리',
+        data: [
+          {
+            num: '3.1 p.61',
+            depth2: '메인',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'paymentManageMain.html',
+            status: 'end',
+            create: '2022.11.11',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '3.2 p.62',
+            depth2: '결제하기-(정보 확인)',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'paymentManageInfoCheck.html',
+            status: 'end',
+            create: '2022.11.11',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '3.2 p.63',
+            depth2: '결제하기(결제금액 확인, 일괄 결제)',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'paymentManageCostCheckAll.html',
+            status: 'end',
+            create: '2022.11.11',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '3.2 p.64',
+            depth2: '결제하기(결제하기, 일괄 결제)',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'paymentManagePayAll.html',
+            status: 'end',
+            create: '2022.11.15',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '3.2 p.65',
+            depth2: '결제하기(결제금액 확인, 구독형 결제)',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'paymentManageCostCheckSubs.html',
+            status: 'end',
+            create: '2022.11.15',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '3.2 p.66',
+            depth2: '결제하기(결제하기, 구독형 결제)',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'paymentManagePaySubs.html',
+            status: 'end',
+            create: '2022.11.15',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '3.3 p.68',
+            depth2: '결제하기(결제 내역)',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'paymentManageDetail.html',
+            status: 'end',
+            create: '2022.11.15',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+        ],
+      },
+      {
+        depth1: '고객 센터',
+        data: [
+          {
+            num: '4.1 p.70',
+            depth2: '메인',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'customCenter.html',
+            status: 'end',
+            create: '2022.11.18',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '4.2 p.71',
+            depth2: '보미노트',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'customCenterBomiNote.html',
+            status: 'end',
+            create: '2022.11.18',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '4.3 p.72',
+            depth2: '커뮤니티',
+            depth3: '1:1문의',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'customCenterCommunityAsk.html',
+            status: 'end',
+            create: '2022.11.18',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '4.3 p.73',
+            depth2: '커뮤니티',
+            depth3: 'FAQ',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'customCenterCommunityFaq.html',
+            status: 'end',
+            create: '2022.11.18',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '4.3 p.74',
+            depth2: '커뮤니티',
+            depth3: '이용안내',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'customCenterCommunityGuide.html',
+            status: 'end',
+            create: '2022.11.18',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+        ]
+      },
+      {
+        depth1: '내 정보 관리',
+        data: [
+          {
+            num: '5.1 p.76',
+            depth2: '메인',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'myPage.html',
+            status: 'end',
+            create: '2022.11.20',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '5.2 p.77',
+            depth2: '내 카드정보 관리',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'myPageCardInfo.html',
+            status: 'end',
+            create: '2022.11.20',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+          {
+            num: '5.3 p.78',
+            depth2: '내 카드정보 관리-카드신규등록',
+            depth3: '',
+            depth4: '',
+            depth5: '',
+            depth6: '',
+            path: 'myPageCardAdmit.html',
+            status: 'end',
+            create: '2022.11.20',
+            log: [
+              //{ date: '2022.08.12', text: '',},
+            ],
+          },
+        ]
+      },
+    ];
+
+    var html = '';
+    var navHTML = '';
+    var totalIndex = 0;
+    var dates = (function () {
+      var array = [];
+
+      function add(date) {
+        if (typeof date === 'string' && date.length && array.indexOf(date) === -1) {
+          array.push(date);
+        }
+      }
+
+      $.each(tableData, function (i) {
+        var sectionData = tableData[i].data;
+        $.each(sectionData, function (j) {
+          add(this.create);
+          $.each(sectionData[j].log, function (l) {
+            add(this.date);
+          });
+        });
+      });
+
+      array.sort();
+
+      return array;
+    })();
+    var latestDate = dates[dates.length - 1];
+
+    $.each(tableData, function (i) {
+      var sectionIndex = i;
+      var sectionData = tableData[i].data;
+      var tableHTML = '';
+
+      $.each(sectionData, function (j) {
+        var returnVal = function (key, secondTestKey) {
+          var val = sectionData[j][key];
+          var secondTestVal = sectionData[j][secondTestKey];
+          var prevIndex = j - 1;
+          var isPrint = true;
+          if (prevIndex >= 0) {
+            if (sectionData[prevIndex][key] === val) {
+              isPrint = false;
+            }
+            if (typeof secondTestKey === 'string' && secondTestKey.length && !sectionData[j].depthOnly) {
+              if (sectionData[prevIndex][key] === val && sectionData[prevIndex][secondTestKey] ===
+                secondTestVal) {
+                isPrint = false;
+              } else {
+                isPrint = true;
+              }
+            }
+          }
+          return isPrint ? val.replace(/\n/g, '<br>') : '';
+        };
+        var num = returnVal('num');
+        //var type = returnVal('type', 'depth2');
+        var depth2 = returnVal('depth2');
+        var depth3 = returnVal('depth3');
+        var depth4 = returnVal('depth4');
+        var depth5 = returnVal('depth5');
+        var depth6 = returnVal('depth6');
+        var path = (function () {
+          var val = sectionData[j].path;
+          var href = '';
+          if (val.match(/^\.\//g)) {
+            href = val;
+          } else {
+            href = './dist/' + val;
+          }
+          return val.length ? '<a href="' + href + '" target="_blank">' + val + '</a>' : '';
+        })();
+        var status = (function () {
+          var val = sectionData[j].status;
+          var text = '';
+          if (val === 'ing') {
+            text = '작업중';
+          } else if (val === 'end') {
+            text = '작업완료';
+          } else if (val === 'design') {
+            text = '디자인필요';
+          }
+
+          return val.length ? '<span class="index-status index-status--' + val + '">' + text + '</span>' :
+            '';
+        })();
+        var create = this.create;
+        var update = '';
+        var log = (function () {
+          var val = sectionData[j].log;
+          var length = val.length;
+          var html = '<ul class="index-log">';
+          $.each(val, function (l) {
+            var date = this.date;
+            html += '<li class="index-log__item' + (date === latestDate ? ' is-emphasis' : '') +
+              '"><div class="index-log__item__date">[' + date + ']</div>' + this.text.replace(/\n/g,
+                '<br>') + '</li>';
+            if (length - 1 === l) {
+              update = date;
+            }
+          });
+          html += '</ul>';
+
+          return html;
+        })();
+
+        tableHTML +=
+          '<tr>' +
+          '<td>' +
+          (j + 1) +
+          '</td>' +
+          '<td>' +
+          num +
+          '</td>' +
+          //'<td class="index-type">' +
+          //type +
+          //'</td>' +
+          '<td>' +
+          depth2 +
+          '</td>' +
+          '<td>' +
+          depth3 +
+          '</td>' +
+          '<td>' +
+          depth4 +
+          '</td>' +
+          '<td>' +
+          depth5 +
+          '</td>' +
+          '<td>' +
+          depth6 +
+          '</td>' +
+          '<td>' +
+          path +
+          '</td>' +
+          '<td>' +
+          status +
+          '</td>' +
+          '<td class="' +
+          (create === latestDate ? ' is-emphasis' : '') +
+          '">' +
+          create +
+          '</td>' +
+          '<td class="' +
+          (update === latestDate ? ' is-emphasis' : '') +
+          '">' +
+          update +
+          '</td>' +
+          '<td>' +
+          log +
+          '</td>' +
+          '</tr>';
+
+        totalIndex++;
+      });
+
+      navHTML += '<a href="#section' + i + '">' + tableData[i].depth1 + '</a>';
+
+      html +=
+        '<div class="index-section" id="section' +
+        i +
+        '">' +
+        '<h2 class="index-section__title">' +
+        tableData[i].depth1 +
+        status +
+        '</h2>' +
+        '<div class="index-table">' +
+        '<table>' +
+        '<colgroup>' +
+        '<col width="50px" />' +
+        '<col width="160px" />' +
+        //'<col width="80px" />' +
+        '<col width="160px" />' +
+        '<col width="160px" />' +
+        '<col width="160px" />' +
+        '<col width="120px" />' +
+        '<col width="120px" />' +
+        '<col width="" />' +
+        '<col width="100px" />' +
+        '<col width="110px" />' +
+        '<col width="110px" />' +
+        '<col width="300px" />' +
+        '</colgroup>' +
+        '<thead>' +
+        '<tr>' +
+        '<th>No</th>' +
+        '<th>ID</th>' +
+        //'<th>type</th>' +
+        '<th>depth2</th>' +
+        '<th>depth3</th>' +
+        '<th>depth4</th>' +
+        '<th>depth5</th>' +
+        '<th>depth6</th>' +
+        '<th>path</th>' +
+        '<th>status</th>' +
+        '<th>create</th>' +
+        '<th>update</th>' +
+        '<th>log</th>' +
+        '</tr>' +
+        '</thead>' +
+        '<tbody>' +
+        tableHTML +
+        '</tbody>' +
+        '</table>' +
+        '</div>' +
+        '</div>';
+    });
+
+    $('title, .index-title').text(title);
+    $('#nav').append(navHTML);
+    $('#indexTable').append(html);
+
+    var $nav = $('.index-bottom');
+    var $doc = $(document);
+    var $win = $(window);
+
+    function paddingBottom() {
+      $('.index-fake-botttom').css('height', $nav.outerHeight());
+    }
+
+    var clickedTimer = null;
+
+    $doc.on('click', '#nav a', function () {
+      var $this = $(this);
+      var href = $this.attr('href');
+      var $target = $(href);
+      var $sections = $('.index-section');
+
+      $sections.removeClass('index-section--clicked');
+
+      clearTimeout(clickedTimer);
+
+      clickedTimer = setTimeout(function () {
+        $target.addClass('index-section--clicked');
+      }, 100);
+    });
+
+    $win
+      .on('scroll', function () {
+        var scrollLeft = $win.scrollLeft();
+        $nav.css('margin-left', -scrollLeft);
+      })
+      .on('resize', function () {
+        paddingBottom();
+      })
+      .on('load', function () {
+        paddingBottom();
+      });
+  </script>
+  <!-- //script -->
+</body>
+
+</html>

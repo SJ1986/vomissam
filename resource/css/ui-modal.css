@@ -1,0 +1,167 @@
+@charset "UTF-8";
+.modal {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10rem 0;
+  padding-right: 0 !important;
+  /* case3 간병시작하기 모달 */
+}
+.modal-header {
+  padding: 10rem 6rem 0 6rem;
+}
+.modal-body {
+  padding: 0;
+}
+.modal-body__main .modal-core {
+  padding: 10rem 8rem;
+}
+.modal-dialog {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.modal-content {
+  max-width: calc(100% - 10rem);
+  max-height: 80%;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 2rem;
+  /* 모달 사이즈 */
+}
+.modal-content__email .modal-tit {
+  margin-bottom: 3rem;
+  font-size: 2.4rem;
+}
+.modal-content__email .modal-img {
+  display: block;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.modal-content__modifyDateCalendar .modal-header {
+  margin-top: 10rem;
+  margin-bottom: 9rem;
+  padding: 0 8rem;
+}
+.modal-content-chooseCarer .modal-core {
+  padding-top: 12rem;
+  padding-bottom: 13rem;
+}
+.modal-content__s {
+  width: calc(100% - 32rem);
+}
+.modal-core {
+  padding: 12.5rem 5rem;
+}
+.modal-core2 {
+  padding: 12rem 6rem;
+}
+.modal-core2:first-child {
+  margin-top: -2rem;
+}
+.modal-core2 .modal-core2__title {
+  position: relative;
+  padding-bottom: 6rem;
+  margin-bottom: 7rem;
+  font-size: 6rem;
+  font-weight: 600;
+}
+.modal-core2 .modal-core2__title::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.4rem;
+  background: #000000;
+  content: "";
+}
+.modal-core2 .modal-core2__title-s {
+  margin-bottom: 8rem;
+  font-size: 5rem;
+  font-weight: 300;
+  line-height: 7rem;
+}
+.modal-core3 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+.modal-core__py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.modal-tit {
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+.modal-title {
+  margin-bottom: 7.5rem;
+  font-size: 6.5rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 9rem;
+}
+.modal-title2 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+.modal-title__font-l {
+  font-size: 7.5rem;
+}
+.modal-text {
+  font-size: 6rem;
+  line-height: normal;
+  word-break: keep-all;
+}
+.modal-text__small {
+  font-size: 5rem;
+  line-height: 7rem;
+}
+.modal-text__small--title {
+  margin-bottom: 4rem;
+  font-size: 5rem;
+}
+.modal-backdrop {
+  background: transparent;
+}
+.modal-buttons .ui-button {
+  font-size: 6rem;
+  font-weight: 500;
+  border-radius: 0 0 2rem 2rem;
+}
+.modal-buttons__sticky {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal-buttons__sticky .ui-button {
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+.modal-buttons__sticky .ui-button + .ui-button {
+  margin-left: 0;
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 2rem;
+}
+.modal-box__gray {
+  padding: 5rem 6rem;
+  background: #f3f5fb;
+  border-radius: 2rem;
+}
+.modal-box__gray * {
+  font-size: 5rem;
+  line-height: 7rem;
+}
+.modal-user {
+  margin-bottom: 9rem;
+  font-size: 5rem;
+}
+.modal-user__name {
+  font-size: 6.5rem;
+  font-weight: 500;
+}

@@ -1,0 +1,40 @@
+@import './helper/index';
+
+
+.join{
+    &-top{
+        margin-top: 14rem;
+        margin-bottom: 13rem;
+        .img-wrap{
+            text-align: center;
+        }
+    }
+}
+
+
+/** 회원 가입 – 다른 소셜 계정으로 가입한 경우 */ 
+.joinSocial{
+    &-top{
+        .img-wrap{
+            margin-top: 18rem;
+            margin-bottom: 22rem;
+            text-align: center;
+        }
+    }
+    &-name{
+        font: {
+            size: 8.2rem;
+            weight:500;
+        }
+    }
+    &-login{
+        margin-top: 21.5rem;
+        padding: 0 3rem;
+    }
+    &-text{
+        margin-top: 22rem;
+        font-size: 6rem;
+        line-height: 9.8rem;
+        text-align: center;
+    }
+}

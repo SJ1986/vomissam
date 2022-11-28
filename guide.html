@@ -1,0 +1,4880 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>컴포넌트 가이드</title>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- favicon -->
+
+  <!-- //favicon -->
+
+  <link rel="stylesheet" href="./resource/css/reset.css">
+  <link rel="stylesheet" href="./resource/css/font.css">
+  <link rel="stylesheet" href="./resource/css/lib/bootstrap.min.css">
+
+  <link rel="stylesheet" href="./resource/css/common.css">
+
+  <link rel="stylesheet" href="./resource/css/ux-common.css">
+
+  <link rel="stylesheet" href="./resource/css/ui-modal.css"><!-- 모달 css -->
+
+  <!-- style -->
+
+  <style>
+    b {
+      margin-left: 10px;
+    }
+
+    h1.test-title {
+      font-size: 30px;
+      margin: 50px 50px;
+    }
+
+    h2.test-title {
+      margin: 0 0 20px;
+      font-size: 22px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #888;
+    }
+
+    h3.test-title {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .guide-section {
+      border-top: 2px solid #ddd;
+      padding: 50px;
+    }
+
+    .guide-section-sub+.guide-section-sub {
+      margin-top: 20px;
+      border-top: 1px dashed #ddd;
+      padding-top: 20px;
+    }
+
+    .test-code {
+      border: 2px solid #ddd;
+      margin: 10px 0;
+      background: #101737;
+      padding: 10px;
+    }
+
+    .test-code:before {
+      content: 'ex.';
+      display: block;
+      font-size: 12px;
+    }
+
+    .test-description {
+      margin: 10px 0;
+      padding: 0 12px;
+    }
+
+    .test-links {
+      margin-left: -20px;
+    }
+
+    .test-links:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .test-links a {
+      display: block;
+      margin: 20px 0 0 20px;
+      float: left;
+      padding: 5px 15px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      background: #333;
+    }
+
+    .test-links+h2.test-title {
+      margin-top: 20px;
+    }
+  </style>
+  <!-- //style -->
+</head>
+
+<body>
+  <div id="wrap">
+    <div style="display: table"></div>
+
+    <h1 class="test-title">Component</h1>
+
+
+
+
+
+    <div class="guide-section guide-section--title">
+      <style>
+        .guide-section--button .ui-basic-button {
+          display: inline-flex;
+          vertical-align: top;
+          margin: 10px;
+        }
+
+        .guide-section--button .ui-basic-button:not(.ui-basic-button--icon-only) {
+          width: auto;
+        }
+      </style>
+      <h2 class="test-title">title</h2>
+
+      
+
+      <div class="guide-section-sub">
+        <h3 class="test-title">font-size: 8rem; font-weight: 500; text-align: center;</h3>
+        <div class="sub-title">sub-title</div>
+      </div>
+
+      <div class="guide-section-sub">
+        <h3 class="test-title">font-size: 6.6rem; line-height: 10.2rem; text-align: center;</h3>
+        <div class="sub-title2">sub-title2</div>
+      </div>
+
+      <div class="guide-section-sub">
+        <h3 class="test-title">font-size: 5.5rem;</h3>
+        <div class="sub-title3">sub-title3</div>
+      </div>
+
+      <div class="guide-section-sub">
+        <h3 class="test-title">font-size: 4.6rem;</h3>
+        <div class="sub-title4">sub-title4</div>
+      </div>
+
+    </div>
+
+
+
+    <div class="guide-section guide-section--button">
+      <style>
+        button {
+          margin: 2rem;
+        }
+
+        .login-first__bottom--bottom {
+          display: flex;
+        }
+
+        .login-first__bottom--bottom button {
+          display: flex;
+          -ms-display: flexbox;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          align-items: center;
+          justify-content: center;
+          flex: 1;
+          height: 18.5rem;
+          margin-top: 10px;
+          font-size: 5rem;
+          color: #333333;
+          border-radius: 2rem;
+          border: 0.3rem solid #e9eaec;
+          background: #ffffff;
+        }
+
+        .login-first__bottom--bottom button+button {
+          margin-left: 4rem;
+        }
+      </style>
+      <h2 class="test-title">button</h2>
+      <div class="guide-section-sub">
+        <h3 class="test-title">Default</h3>
+        <button type="button" class="ui-button ui-button__bg-blue">다음</button>
+        <button type="button" class="ui-button ui-button__border-gray">취소</button>
+        <button type="submit" class="ui-button ui-button__certi">인증요청</button>
+      </div>
+      <div class="guide-section-sub">
+        <h3 class="test-title">ui-button__width-xs :: 42rem</h3>
+        <button type="button" class="ui-button ui-button__border-gray ui-button__width-xs">button</button>
+      </div>
+      <div class="guide-section-sub">
+        <h3 class="test-title">ui-button__width-s :: 44rem</h3>
+        <button type="button" class="ui-button ui-button__border-gray ui-button__width-s">button</button>
+      </div>
+      <div class="guide-section-sub">
+        <h3 class="test-title">ui-button__width-m :: 66rem</h3>
+        <button type="button" class="ui-button  ui-button__width-m ui-button__border-blue">button</button>
+      </div>
+
+      <div class="guide-section-sub">
+        <h3 class="test-title">ui-button__height-s :: 12.5rem</h3>
+        <button type="button" class="ui-button  ui-button__height-s ui-button__border-blue">button</button>
+      </div>
+      <div class="guide-section-sub">
+        <h3 class="test-title">ui-button__height-m :: 15rem</h3>
+        <button type="button" class="ui-button  ui-button__height-m ui-button__border-blue">button</button>
+      </div>
+
+      <div class="guide-section-sub">
+        <h3 class="test-title">ui-button__check</h3>
+        <div class="ui-buttons">
+          <button type="button"
+            class="ui-button ui-button__left ui-button__border-gray ui-button__icon ui-button__icon-hospital ui-button__font-xs ui-button__check is-active">병원</button>
+          <button type="button"
+            class="ui-button ui-button__left ui-button__border-gray ui-button__icon ui-button__icon-home ui-button__font-xs ui-button__check">자택</button>
+        </div>
+      </div>
+
+      <div class="guide-section-sub">
+        <h3 class="test-title">ui-button__click</h3>
+        <div class="ui-buttons">
+          <button type="button"
+            class="ui-button ui-button__border-gray ui-button__font-xs ui-button__click is-active">button</button>
+          <button type="button"
+            class="ui-button ui-button__border-gray ui-button__font-xs ui-button__click">button</button>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="guide-section-sub">
+        <h3 class="test-title">login</h3>
+        <button type="button" class="button-kakao">카카오톡으로 시작하기</button>
+        <div class="login-first__bottom--bottom">
+          <button type="button" class="button-naver">네이버로 시작하기</button>
+          <button type="button" class="button-google">구글로 시작하기</button>
+        </div>
+      </div>
+
+      <div class="guide-section-sub">
+        <h3 class="test-title">joinSocial</h3>
+        <button class="button-joinSocial button-joinSocial__naver">네이버 계정으로 로그인</button>
+        <button class="button-joinSocial button-joinSocial__google">구글 계정으로 로그인</button>
+        <button class="button-joinSocial button-joinSocial__kakao">카카오 계정으로 로그인</button>
+      </div>
+
+      <div class="guide-section-sub">
+        <h3 class="test-title"> 모달 최하단 버튼 :: .modal-buttons__sticky</h3>
+        <div class="modal-buttons modal-buttons__sticky">
+          <button type="button" class="ui-button ui-button__border-blue" data-dismiss="modal">취소</button>
+          <button type="button" class="ui-button ui-button__bg-blue">간병 종료</button>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <!-- form -->
+  <div class="guide-section guide-section--form">
+    <style>
+      .ui-form .ui-button {
+        margin-top: 0px;
+      }
+    </style>
+
+    <h2 class="test-title">form</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">input</h3>
+      <div class="form-item">
+        <div class="form-title">이름</div>
+        <div class="ui-form">
+          <input type="text" class="ui-input" value="이일화">
+        </div>
+      </div>
+      <div class="form-item">
+        <div class="form-title">휴대전화번호(필수)</div>
+        <div class="ui-form ui-form__button">
+          <input type="text" class="ui-input" value="010-1234-5678">
+          <button type="submit" class="ui-button ui-button__certi ui-button__font-s" data-toggle="modal"
+            data-target="#modalCerti">인증요청</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">가로형</h3>
+      <div class="ui-form ui-form__flex--row">
+        <div class="ui-form__cell width-170">나이</div>
+        <div class="ui-form__cell flex">
+          <input type="text" class="ui-input ">
+        </div>
+        <div class="ui-form__cell width-80">세</div>
+      </div>
+
+    </div>
+
+
+    <div class="guide-section-sub">
+      <h2 class="test-title">select</h2>
+      <div class="ui-form">
+        <select name="" id="" class="ui-select">
+          <option value=""></option>
+        </select>
+      </div>
+    </div>
+
+    <div class="guide-section-sub">
+      <h2 class="test-title">checkbox</h2>
+      <div class="ui-checkbox__list">
+        <div class="ui-checkbox__inner">
+            <div class="ui-checkbox-block">
+                <input type="checkbox" class="ui-checkbox" id="checkbox1" checked="">
+                <label for="checkbox1" class="ui-label">
+                  <span class="ui-checkbox-object"></span>
+                  <span class="ui-label__text">약관 전체동의</span>
+                </label>
+              </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <!-- form -->
+
+  <!-- modal -->
+  <div class="guide-section guide-section--modal">
+    <style>
+      .modal-buttons .ui-button {
+        margin: 0;
+      }
+    </style>
+    <h2 class="test-title">modal</h2>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <button type="submit" class="ui-button ui-button__certi" data-toggle="modal" data-target="#test1">인증요청</button>
+      <!-- 모달 -->
+      <div class="modal fade" id="test1" tabindex="-1" aria-labelledby="test1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-auto ">
+          <div class="modal-content modal-content__email">
+            <div class="modal-body">
+
+              <!-- 본인 인증 성공일때 case -->
+              <div class="modal-core">
+                <div class="modal-text text-center mb-90">
+                  본인 인증이 완료되었습니다.
+                </div>
+                <div class="modal-text__small text-center">
+                  ‘확인’ 버튼을 누르시면 <br>
+                  회원가입 화면으로 이동합니다.
+                </div>
+              </div>
+              <!-- //본인 인증 성공일때 case -->
+
+              <!-- 본인 인증 실패일때 case -->
+              <div class="modal-core" style="display: none;">
+                <div class="modal-text text-center mb-90">
+                  본인 인증에 실패하였습니다. <br>
+                  이름과 전화번호를 확인하신 후 <br>
+                  다시 시도해 주세요.
+                </div>
+                <div class="modal-text__small text-center">
+                  ‘확인‘ 버튼을 누르시면 <br>
+                  이전 화면으로 돌아 갑니다.
+
+                </div>
+              </div>
+              <!-- //본인 인증 실패일때 case -->
+
+              <div class="modal-buttons">
+                <button type="button" class="ui-button ui-button__bg-blue" data-dismiss="modal">확인</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- //모달 -->
+    </div>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">small :: 클래스 modal-content에 modal-content__s 추가</h3>
+      <button type="submit" class="ui-button ui-button__certi" data-toggle="modal"
+        data-target="#modal-content__s">인증요청</button>
+      <!-- 모달 -->
+      <div class="modal fade" id="modal-content__s" tabindex="-1" aria-labelledby="modalCertiLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-auto ">
+          <div class="modal-content modal-content__s modal-content__email">
+            <div class="modal-body">
+
+              <!-- 본인 인증 성공일때 case -->
+              <div class="modal-core">
+                <div class="modal-text text-center mb-90">
+                  본인 인증이 완료되었습니다.
+                </div>
+                <div class="modal-text__small text-center">
+                  ‘확인’ 버튼을 누르시면 <br>
+                  회원가입 화면으로 이동합니다.
+                </div>
+              </div>
+              <!-- //본인 인증 성공일때 case -->
+
+              <!-- 본인 인증 실패일때 case -->
+              <div class="modal-core" style="display: none;">
+                <div class="modal-text text-center mb-90">
+                  본인 인증에 실패하였습니다. <br>
+                  이름과 전화번호를 확인하신 후 <br>
+                  다시 시도해 주세요.
+                </div>
+                <div class="modal-text__small text-center">
+                  ‘확인‘ 버튼을 누르시면 <br>
+                  이전 화면으로 돌아 갑니다.
+
+                </div>
+              </div>
+              <!-- //본인 인증 실패일때 case -->
+
+              <div class="modal-buttons modal-buttons__sticky">
+                <button type="button" class="ui-button ui-button__border-blue" data-dismiss="modal">취소</button>
+                <button type="button" class="ui-button ui-button__bg-blue">간병 종료</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- //모달 -->
+    </div>
+
+
+
+  </div>
+  <!-- //modal -->
+
+
+
+  <div class="guide-section guide-section--date">
+    <style>
+      .guide-section--date .guide-section-sub>.ui-input-block,
+      .guide-section--date .guide-section-sub>.form-flex {
+        margin-top: 20px;
+      }
+    </style>
+    <h2 class="test-title">ETC</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">line-gray</h3>
+
+      <div class="line-gray"></div>
+
+      
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--phone">
+    <style>
+      .guide-section--phone .guide-section-sub>.ui-input-block,
+      .guide-section--phone .guide-section-sub>.form-flex {
+        margin-top: 20px;
+      }
+    </style>
+    <h2 class="test-title">Phone Form</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+
+      <div class="form-flex">
+        <div class="form-flex-cell">
+          <div class="ui-select-block input-width-75">
+            <select class="ui-select" title="전화번호 1">
+              <option value="">010</option>
+              <option value="">option 2</option>
+              <option value="">option 3</option>
+              <option value="">option 4</option>
+              <option value="">option 5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+        <div class="form-flex-cell">
+          <div class="ui-input-block input-width-75">
+            <input type="number" class="ui-input" title="전화번호 2" />
+          </div>
+        </div>
+        <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+        <div class="form-flex-cell">
+          <div class="ui-input-block input-width-75">
+            <input type="number" class="ui-input" title="전화번호 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--select">
+    <style>
+      .guide-section--select .ui-select-block+.ui-select-block {
+        margin-top: 10px;
+      }
+    </style>
+    <h2 class="test-title">Select</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="ui-select-block">
+        <select class="ui-select" title="title">
+          <option value="-1" disabled selected>placeholder</option>
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+          <option value="">option 4</option>
+          <option value="">option 5</option>
+        </select>
+      </div>
+      <div class="ui-select-block">
+        <select class="ui-select" title="title" disabled>
+          <option value="-1" disabled>disabled placeholder</option>
+          <option value="" selected>disabled option 1</option>
+          <option value="">disabled option 2</option>
+          <option value="">disabled option 3</option>
+          <option value="">disabled option 4</option>
+          <option value="">disabled option 5</option>
+        </select>
+      </div>
+      <div class="ui-select-block ui-select-block--disabled">
+        <select class="ui-select" title="title">
+          <option value="-1" disabled selected>입력은 되지만 스타일만 disabled</option>
+          <option value="">option 1</option>
+          <option value="">option 2</option>
+          <option value="">option 3</option>
+          <option value="">option 4</option>
+          <option value="">option 5</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--dropdown">
+    <h2 class="test-title">Dropdown (링크, 버튼 용)</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+
+      <div class="ui-dropdown js-ui-dropdown">
+        <div class="ui-dropdown__head">
+          <div class="ui-dropdown__text">link 1</div>
+          <button type="button" class="ui-button ui-dropdown__opener js-ui-dropdown__opener">
+            <span class="for-a11y">
+              menu
+              <span class="open-text">open</span>
+              <span class="close-text">close</span>
+            </span>
+          </button>
+        </div>
+        <div class="ui-dropdown__layer js-ui-dropdown__layer">
+          <div class="ui-dropdown__contents ui-scroller">
+            <ul class="ui-dropdown__list">
+              <li class="ui-dropdown__item">
+                <a href="" class="ui-dropdown__link">link 1</a>
+              </li>
+              <li class="ui-dropdown__item">
+                <a href="" class="ui-dropdown__link">link 2</a>
+              </li>
+              <li class="ui-dropdown__item">
+                <button type="button" class="ui-button ui-dropdown__link">link 3</button>
+              </li>
+              <li class="ui-dropdown__item">
+                <button type="button" class="ui-button ui-dropdown__link">link 4</button>
+              </li>
+              <li class="ui-dropdown__item">
+                <button type="button" class="ui-button ui-dropdown__link">link 5</button>
+              </li>
+              <li class="ui-dropdown__item">
+                <button type="button" class="ui-button ui-dropdown__link">link 6</button>
+              </li>
+              <li class="ui-dropdown__item">
+                <button type="button" class="ui-button ui-dropdown__link">link 7</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--file-input">
+    <style>
+      .guide-section--file-input .ui-file-input+.ui-file-input {
+        margin-top: 10px;
+      }
+    </style>
+    <h2 class="test-title">File input</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="ui-file-input">
+        <div class="ui-file-input__inner">
+          <input type="file" class="ui-file-input__input" id="file1" />
+          <label for="file1" class="ui-file-input__label">찾아보기</label>
+        </div>
+      </div>
+      <div class="ui-file-input">
+        <div class="ui-file-input__inner">
+          <input type="file" class="ui-file-input__input" id="file2" disabled />
+          <label for="file2" class="ui-file-input__label">찾아보기</label>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">텍스트 박스</h3>
+      <div class="ui-file-input ui-file-input--text">
+        <div class="ui-file-input__inner">
+          <input type="file" class="ui-file-input__input" id="file3" data-file-watch="file3" />
+          <div class="ui-input ui-file-input__watch" data-file-watch-target="file3"></div>
+          <label for="file3" class="ui-file-input__label">파일 선택</label>
+        </div>
+      </div>
+      <div class="ui-file-input ui-file-input--text">
+        <div class="ui-file-input__inner">
+          <input type="file" class="ui-file-input__input" id="file4" data-file-watch="file4" disabled />
+          <div class="ui-input ui-file-input__watch" data-file-watch-target="file4"></div>
+          <label for="file4" class="ui-file-input__label">파일 선택</label>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">아이콘 없음</h3>
+      <div class="ui-file-input">
+        <div class="ui-file-input__inner">
+          <input type="file" class="ui-file-input__input" id="file5" />
+          <label for="file5" class="ui-file-input__label ui-file-input__label--no-icon">찾아보기</label>
+        </div>
+      </div>
+      <div class="ui-file-input">
+        <div class="ui-file-input__inner">
+          <input type="file" class="ui-file-input__input" id="file6" disabled />
+          <label for="file6" class="ui-file-input__label ui-file-input__label--no-icon">찾아보기</label>
+        </div>
+      </div>
+      <div class="ui-file-input ui-file-input--text">
+        <div class="ui-file-input__inner">
+          <input type="file" class="ui-file-input__input" id="file7" data-file-watch="file3" />
+          <div class="ui-input ui-file-input__watch" data-file-watch-target="file3"></div>
+          <label for="file7" class="ui-file-input__label ui-file-input__label--no-icon">파일 선택</label>
+        </div>
+      </div>
+      <div class="ui-file-input ui-file-input--text">
+        <div class="ui-file-input__inner">
+          <input type="file" class="ui-file-input__input" id="file8" data-file-watch="file4" disabled />
+          <div class="ui-input ui-file-input__watch" data-file-watch-target="file4"></div>
+          <label for="file8" class="ui-file-input__label ui-file-input__label--no-icon">파일 선택</label>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Button</h3>
+      <div class="ui-file-input ui-file-input--button">
+        <div class="ui-file-input__inner">
+          <input type="file" class="ui-file-input__input" id="excel" />
+          <label for="excel" class="ui-basic-button ui-basic-button--secondary">엑셀 업로드</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--input-width">
+    <style>
+      .guide-section--input-width .ui-input-block+.ui-input-block {
+        margin-top: 10px;
+      }
+    </style>
+    <h2 class="test-title">Input width</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">mini</h3>
+      <div class="ui-input-block input-width-mini">
+        <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">small mini</h3>
+      <div class="ui-input-block input-width-small-mini">
+        <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">small</h3>
+      <div class="ui-input-block input-width-small">
+        <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">small regular</h3>
+      <div class="ui-input-block input-width-small-regular">
+        <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">regular</h3>
+      <div class="ui-input-block input-width-regular">
+        <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">medium</h3>
+      <div class="ui-input-block input-width-medium">
+        <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">large</h3>
+      <div class="ui-input-block input-width-large">
+        <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">input-width-숫자 : 필요한 너비값이 없으면 css에 클래스 추가하여 사용</h3>
+      <div class="ui-input-block input-width-60">
+        <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--input-height">
+    <style>
+      .guide-section--input-height .ui-input-block+.ui-input-block {
+        margin-top: 10px;
+      }
+    </style>
+    <h2 class="test-title">Input height</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">mini</h3>
+      <div class="ui-input-block">
+        <textarea class="ui-input input-height-mini" title="title" placeholder="placeholder"></textarea>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">small</h3>
+      <div class="ui-input-block">
+        <textarea class="ui-input input-height-small" title="title" placeholder="placeholder"></textarea>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">small-regular</h3>
+      <div class="ui-input-block">
+        <textarea class="ui-input input-height-small-regular" title="title" placeholder="placeholder"></textarea>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">small-medium</h3>
+      <div class="ui-input-block">
+        <textarea class="ui-input input-height-small-medium" title="title" placeholder="placeholder"></textarea>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">small-large</h3>
+      <div class="ui-input-block">
+        <textarea class="ui-input input-height-small-large" title="title" placeholder="placeholder"></textarea>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">regular</h3>
+      <div class="ui-input-block">
+        <textarea class="ui-input input-height-regular" title="title" placeholder="placeholder"></textarea>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">large</h3>
+      <div class="ui-input-block">
+        <textarea class="ui-input input-height-large" title="title" placeholder="placeholder"></textarea>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">input-height-숫자 : 필요한 높이값이 없으면 css에 클래스 추가하여 사용</h3>
+      <div class="ui-input-block">
+        <textarea class="ui-input input-height-76" title="title" placeholder="placeholder"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--checkbox">
+    <style>
+      .guide-section--checkbox .ui-checkbox-block {
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px;
+      }
+    </style>
+    <h2 class="test-title">Checkbox</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="ui-checkbox-block">
+        <input type="checkbox" class="ui-checkbox" id="checkbox1" />
+        <label for="checkbox1" class="ui-label">
+          <span class="ui-checkbox-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-checkbox-block">
+        <input type="checkbox" class="ui-checkbox" id="checkbox2" checked />
+        <label for="checkbox2" class="ui-label">
+          <span class="ui-checkbox-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-checkbox-block">
+        <input type="checkbox" class="ui-checkbox" id="checkbox3" disabled />
+        <label for="checkbox3" class="ui-label">
+          <span class="ui-checkbox-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-checkbox-block">
+        <input type="checkbox" class="ui-checkbox" id="checkbox4" checked disabled />
+        <label for="checkbox4" class="ui-label">
+          <span class="ui-checkbox-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default - align top</h3>
+      <div class="ui-checkbox-block ui-checkbox-block--align-top">
+        <input type="checkbox" class="ui-checkbox" id="checkbox5" />
+        <label for="checkbox5" class="ui-label">
+          <span class="ui-checkbox-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-checkbox-block ui-checkbox-block--align-top">
+        <input type="checkbox" class="ui-checkbox" id="checkbox6" checked />
+        <label for="checkbox6" class="ui-label">
+          <span class="ui-checkbox-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-checkbox-block ui-checkbox-block--align-top">
+        <input type="checkbox" class="ui-checkbox" id="checkbox7" disabled />
+        <label for="checkbox7" class="ui-label">
+          <span class="ui-checkbox-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-checkbox-block ui-checkbox-block--align-top">
+        <input type="checkbox" class="ui-checkbox" id="checkbox8" checked disabled />
+        <label for="checkbox8" class="ui-label">
+          <span class="ui-checkbox-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+
+
+
+    </div>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">Disabled</h3>
+
+      <div class="ck_item">
+        <label><input type="checkbox" disabled> <span>ck_item</span></label>
+      </div>
+
+    </div>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">width 15</h3>
+      <ul class="ui-check-list__list ui-check-list__width-15">
+        <li class="ui-check-list__item ui-check-list__item--full">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="checkList7-1">
+            <label for="checkList7-1" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">담당만</span>
+            </label>
+          </div>
+        </li>
+        <li class="ui-check-list__item ui-check-list__item--full">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="checkList7-2">
+            <label for="checkList7-2" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">관심 대상자</span>
+            </label>
+          </div>
+        </li>
+        <li class="ui-check-list__item ui-check-list__item--full">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="checkList7-3">
+            <label for="checkList7-3" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">미귀가자</span>
+            </label>
+          </div>
+        </li>
+        <li class="ui-check-list__item ui-check-list__item--full">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="checkList7-4">
+            <label for="checkList7-4" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">범죄지도</span>
+            </label>
+          </div>
+        </li>
+        <li class="ui-check-list__item ui-check-list__item--full">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="checkList7-5">
+            <label for="checkList7-5" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">여성안심존</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--radio">
+    <style>
+      .guide-section--radio .ui-radio-block {
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px;
+      }
+    </style>
+    <h2 class="test-title">Radio</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="ui-radio-block">
+        <input type="radio" class="ui-radio" id="radio1" />
+        <label for="radio1" class="ui-label">
+          <span class="ui-radio-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-radio-block">
+        <input type="radio" class="ui-radio" id="radio2" checked />
+        <label for="radio2" class="ui-label">
+          <span class="ui-radio-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-radio-block">
+        <input type="radio" class="ui-radio" id="radio3" disabled />
+        <label for="radio3" class="ui-label">
+          <span class="ui-radio-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-radio-block">
+        <input type="radio" class="ui-radio" id="radio4" checked disabled />
+        <label for="radio4" class="ui-label">
+          <span class="ui-radio-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default - align top</h3>
+      <div class="ui-radio-block ui-radio-block--align-top">
+        <input type="radio" class="ui-radio" id="radio5" />
+        <label for="radio5" class="ui-label">
+          <span class="ui-radio-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-radio-block ui-radio-block--align-top">
+        <input type="radio" class="ui-radio" id="radio6" checked />
+        <label for="radio6" class="ui-label">
+          <span class="ui-radio-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-radio-block ui-radio-block--align-top">
+        <input type="radio" class="ui-radio" id="radio7" disabled />
+        <label for="radio7" class="ui-label">
+          <span class="ui-radio-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+      <div class="ui-radio-block ui-radio-block--align-top">
+        <input type="radio" class="ui-radio" id="radio8" checked disabled />
+        <label for="radio8" class="ui-label">
+          <span class="ui-radio-object"></span>
+          <span class="ui-label__text">label<br />2 line label</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--check-list">
+    <h2 class="test-title">check list</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="ui-check-list">
+        <ul class="ui-check-list__list">
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList1-1" />
+              <label for="checkList1-1" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 1</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList1-2" />
+              <label for="checkList1-2" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 2</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList1-3" />
+              <label for="checkList1-3" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 3</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList1-4" />
+              <label for="checkList1-4" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 4</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList1-5" />
+              <label for="checkList1-5" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 5</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList1-6" />
+              <label for="checkList1-6" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 6</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList1-7" />
+              <label for="checkList1-7" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 7</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">인풋과 함께 사용할 때</h3>
+      <div class="ui-check-list ui-check-list--with-input">
+        <ul class="ui-check-list__list">
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList2-0" />
+              <label for="checkList2-0" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">그룹</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-select-block input-width-small-mini">
+              <select class="ui-select" title="그룹" disabled>
+                <option value="">4명</option>
+                <option value="">option 2</option>
+                <option value="">option 3</option>
+                <option value="">option 4</option>
+                <option value="">option 5</option>
+              </select>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList2-1" />
+              <label for="checkList2-1" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 1</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList2-2" />
+              <label for="checkList2-2" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 2</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList2-3" />
+              <label for="checkList2-3" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 3</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList2-4" />
+              <label for="checkList2-4" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 4</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList2-5" />
+              <label for="checkList2-5" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 5</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList2-6" />
+              <label for="checkList2-6" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 6</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList2-7" />
+              <label for="checkList2-7" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 7</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Full</h3>
+      <div class="ui-check-list">
+        <ul class="ui-check-list__list">
+          <li class="ui-check-list__item ui-check-list__item--full">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList7-1" />
+              <label for="checkList7-1" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 1</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item ui-check-list__item--full">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList7-2" />
+              <label for="checkList7-2" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 2</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item ui-check-list__item--full">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList7-3" />
+              <label for="checkList7-3" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 3</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">no top margin</h3>
+      <div class="ui-check-list ui-check-list--no-top-margin">
+        <ul class="ui-check-list__list">
+          <li class="ui-check-list__item ui-check-list__item--full">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList8-1" />
+              <label for="checkList8-1" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 1</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item ui-check-list__item--full">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList8-2" />
+              <label for="checkList8-2" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 2</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item ui-check-list__item--full">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList8-3" />
+              <label for="checkList8-3" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 3</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">2분할</h3>
+      <div class="ui-check-list ui-check-list--bipartite">
+        <ul class="ui-check-list__list">
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList6-1" />
+              <label for="checkList6-1" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 1</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList6-2" />
+              <label for="checkList6-2" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 2</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList6-3" />
+              <label for="checkList6-3" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 3</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList6-4" />
+              <label for="checkList6-4" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 4</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList6-5" />
+              <label for="checkList6-5" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 5</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList6-6" />
+              <label for="checkList6-6" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 6</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList6-7" />
+              <label for="checkList6-7" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 7</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">3분할</h3>
+      <div class="ui-check-list ui-check-list--tripartition">
+        <ul class="ui-check-list__list">
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList4-1" />
+              <label for="checkList4-1" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 1</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList4-2" />
+              <label for="checkList4-2" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 2</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList4-3" />
+              <label for="checkList4-3" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 3</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList4-4" />
+              <label for="checkList4-4" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 4</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList4-5" />
+              <label for="checkList4-5" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 5</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList4-6" />
+              <label for="checkList4-6" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 6</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList4-7" />
+              <label for="checkList4-7" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 7</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">4분할</h3>
+      <div class="ui-check-list ui-check-list--quarter">
+        <ul class="ui-check-list__list">
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList5-1" />
+              <label for="checkList5-1" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 1</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList5-2" />
+              <label for="checkList5-2" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 2</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList5-3" />
+              <label for="checkList5-3" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 3</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList5-4" />
+              <label for="checkList5-4" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 4</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList5-5" />
+              <label for="checkList5-5" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 5</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList5-6" />
+              <label for="checkList5-6" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 6</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList5-7" />
+              <label for="checkList5-7" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 7</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">6분할</h3>
+      <div class="ui-check-list ui-check-list--sexpartite">
+        <ul class="ui-check-list__list">
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList3-1" />
+              <label for="checkList3-1" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 1</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList3-2" />
+              <label for="checkList3-2" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 2</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList3-3" />
+              <label for="checkList3-3" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 3</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList3-4" />
+              <label for="checkList3-4" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 4</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList3-5" />
+              <label for="checkList3-5" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 5</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList3-6" />
+              <label for="checkList3-6" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 6</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList3-7" />
+              <label for="checkList3-7" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">label 7</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.ui-check-list--width-숫자 : px값 너비가 필요한 경우 이용. 필요한 사이즈 없으면 css 에 클래스 추가하여 이용</h3>
+      <div class="ui-check-list ui-check-list--width-60">
+        <ul class="ui-check-list__list">
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList9-1" />
+              <label for="checkList9-1" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">1</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList9-2" />
+              <label for="checkList9-2" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">2</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList9-3" />
+              <label for="checkList9-3" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">3</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList9-4" />
+              <label for="checkList9-4" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">4</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList9-5" />
+              <label for="checkList9-5" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">5</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList9-6" />
+              <label for="checkList9-6" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">6</span>
+              </label>
+            </div>
+          </li>
+          <li class="ui-check-list__item">
+            <div class="ui-checkbox-block">
+              <input type="checkbox" class="ui-checkbox" id="checkList9-7" />
+              <label for="checkList9-7" class="ui-label">
+                <span class="ui-checkbox-object"></span>
+                <span class="ui-label__text">7</span>
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--radio-tab">
+    <style>
+      .guide-section--radio-tab .radio-tab+.radio-tab {
+        margin-top: 10px;
+      }
+    </style>
+    <h2 class="test-title">Radio Tab</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="radio-tab">
+        <ul class="radio-tab__list">
+          <li class="radio-tab__item">
+            <div class="ui-radio-block">
+              <input type="radio" class="ui-radio" name="radioTab1" id="radioTab1-1" checked />
+              <label for="radioTab1-1" class="radio-tab__button">Tab 1</label>
+            </div>
+          </li>
+          <li class="radio-tab__item">
+            <div class="ui-radio-block">
+              <input type="radio" class="ui-radio" name="radioTab1" id="radioTab1-2" />
+              <label for="radioTab1-2" class="radio-tab__button">Tab 2</label>
+            </div>
+          </li>
+          <li class="radio-tab__item">
+            <div class="ui-radio-block">
+              <input type="radio" class="ui-radio" name="radioTab1" id="radioTab1-3" />
+              <label for="radioTab1-3" class="radio-tab__button">Tab 3</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="radio-tab">
+        <ul class="radio-tab__list">
+          <li class="radio-tab__item">
+            <div class="ui-radio-block">
+              <input type="radio" class="ui-radio" name="radioTab2" id="radioTab2-1" disabled checked />
+              <label for="radioTab2-1" class="radio-tab__button">Tab 1</label>
+            </div>
+          </li>
+          <li class="radio-tab__item">
+            <div class="ui-radio-block">
+              <input type="radio" class="ui-radio" name="radioTab2" id="radioTab2-2" disabled />
+              <label for="radioTab2-2" class="radio-tab__button">Tab 2</label>
+            </div>
+          </li>
+          <li class="radio-tab__item">
+            <div class="ui-radio-block">
+              <input type="radio" class="ui-radio" name="radioTab2" id="radioTab2-3" disabled />
+              <label for="radioTab2-3" class="radio-tab__button">Tab 3</label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--row">
+    <h2 class="test-title">row</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">form row</h3>
+      <div class="form-row">
+        <div class="ui-input-block">
+          <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="ui-select-block">
+          <select class="ui-select" title="title">
+            <option value="-1" disabled selected>placeholder</option>
+            <option value="">option 1</option>
+            <option value="">option 2</option>
+            <option value="">option 3</option>
+            <option value="">option 4</option>
+            <option value="">option 5</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="ui-input-block">
+          <textarea class="ui-input" title="title" placeholder="placeholder"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">input row</h3>
+      <div class="input-row">
+        <div class="ui-input-block">
+          <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="ui-select-block">
+          <select class="ui-select" title="title">
+            <option value="-1" disabled selected>placeholder</option>
+            <option value="">option 1</option>
+            <option value="">option 2</option>
+            <option value="">option 3</option>
+            <option value="">option 4</option>
+            <option value="">option 5</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-row">
+        <div class="ui-input-block">
+          <textarea class="ui-input" title="title" placeholder="placeholder"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--form-flex">
+    <h2 class="test-title">Form flex</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="form-flex">
+        <div class="form-flex-cell">
+          <div class="ui-select-block">
+            <select class="ui-select" title="title">
+              <option value="-1" disabled selected>placeholder</option>
+              <option value="">option 1</option>
+              <option value="">option 2</option>
+              <option value="">option 3</option>
+              <option value="">option 4</option>
+              <option value="">option 5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="form-flex-hr"></div>
+        </div>
+        <div class="form-flex-cell form-flex-cell--flexible">
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="formFlexCheckbox1" />
+            <label for="formFlexCheckbox1" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">Button</a>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Medium</h3>
+      <div class="form-flex form-flex--medium">
+        <div class="form-flex-cell">
+          <div class="ui-select-block">
+            <select class="ui-select" title="title">
+              <option value="-1" disabled selected>placeholder</option>
+              <option value="">option 1</option>
+              <option value="">option 2</option>
+              <option value="">option 3</option>
+              <option value="">option 4</option>
+              <option value="">option 5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="form-flex-hr"></div>
+        </div>
+        <div class="form-flex-cell form-flex-cell--flexible">
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="formFlexCheckbox2" />
+            <label for="formFlexCheckbox2" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">Button</a>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Medium large</h3>
+      <div class="form-flex form-flex--medium-large">
+        <div class="form-flex-cell">
+          <div class="ui-select-block">
+            <select class="ui-select" title="title">
+              <option value="-1" disabled selected>placeholder</option>
+              <option value="">option 1</option>
+              <option value="">option 2</option>
+              <option value="">option 3</option>
+              <option value="">option 4</option>
+              <option value="">option 5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="form-flex-hr"></div>
+        </div>
+        <div class="form-flex-cell form-flex-cell--flexible">
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="formFlexCheckbox3" />
+            <label for="formFlexCheckbox3" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">Button</a>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Large</h3>
+      <div class="form-flex form-flex--large">
+        <div class="form-flex-cell">
+          <div class="ui-select-block">
+            <select class="ui-select" title="title">
+              <option value="-1" disabled selected>placeholder</option>
+              <option value="">option 1</option>
+              <option value="">option 2</option>
+              <option value="">option 3</option>
+              <option value="">option 4</option>
+              <option value="">option 5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="form-flex-hr"></div>
+        </div>
+        <div class="form-flex-cell form-flex-cell--flexible">
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="formFlexCheckbox4" />
+            <label for="formFlexCheckbox4" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">Button</a>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">align top</h3>
+      <div class="form-flex form-flex--align-top">
+        <div class="form-flex-cell">
+          <div class="ui-select-block">
+            <select class="ui-select" title="title">
+              <option value="-1" disabled selected>placeholder</option>
+              <option value="">option 1</option>
+              <option value="">option 2</option>
+              <option value="">option 3</option>
+              <option value="">option 4</option>
+              <option value="">option 5</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="form-flex-hr"></div>
+        </div>
+        <div class="form-flex-cell form-flex-cell--flexible">
+          <div class="ui-input-block">
+            <input type="text" class="ui-input" title="title" placeholder="placeholder" />
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <div class="ui-checkbox-block">
+            <input type="checkbox" class="ui-checkbox" id="formFlexCheckbox5" />
+            <label for="formFlexCheckbox5" class="ui-label">
+              <span class="ui-checkbox-object"></span>
+              <span class="ui-label__text">label</span>
+            </label>
+          </div>
+        </div>
+        <div class="form-flex-cell">
+          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">Button</a>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">cell 각각 추가 클래스</h3>
+      <div class="form-flex">
+        <div class="form-flex-cell">
+          <a href="" class="ui-basic-button ui-basic-button--small ui-basic-button--quinary">Default</a>
+        </div>
+        <div class="form-flex-cell form-flex-cell--button">
+          <a href="" class="ui-basic-button ui-basic-button--quinary">form-flex-cell--button</a>
+        </div>
+        <div class="form-flex-cell form-flex-cell--medium">
+          <a href="" class="ui-basic-button ui-basic-button--quinary">form-flex-cell--medium</a>
+        </div>
+        <div class="form-flex-cell form-flex-cell--medium-large">
+          <a href="" class="ui-basic-button ui-basic-button--quinary">form-flex-cell--medium-large</a>
+        </div>
+        <div class="form-flex-cell form-flex-cell--large">
+          <a href="" class="ui-basic-button ui-basic-button--quinary">form-flex-cell--large</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--search-bar">
+    <h2 class="test-title">.form-block</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default - 창사이즈 줄어들면 자동 줄바꿈</h3>
+      <div class="form-block js-datepicker-range">
+        <div class="form-block__inner">
+          <div class="form-block__cell">
+            <div class="form-flex">
+              <div class="form-flex-cell">
+                <div class="ui-input-block ui-input-block--date input-width-date">
+                  <input type="text" class="ui-input js-datepicker-range__min" title="시작 날짜" value="2021-12-08" />
+                </div>
+              </div>
+              <div class="form-flex-cell form-flex-cell--date-medium">
+                <div class="ui-select-block input-width-date-select">
+                  <select class="ui-select js-datepicker-range__hour-select-min" title="시작 시간">
+                    <option value="" data-option="0">00</option>
+                    <option value="" data-option="1">01</option>
+                    <option value="" data-option="2">02</option>
+                    <option value="" data-option="3">03</option>
+                    <option value="" data-option="4">04</option>
+                    <option value="" data-option="5">05</option>
+                    <option value="" data-option="6">06</option>
+                    <option value="" data-option="7">07</option>
+                    <option value="" data-option="8">08</option>
+                    <option value="" data-option="9">09</option>
+                    <option value="" data-option="10">10</option>
+                    <option value="" data-option="11">11</option>
+                    <option value="" data-option="12">12</option>
+                    <option value="" data-option="13">13</option>
+                    <option value="" data-option="14">14</option>
+                    <option value="" data-option="15">15</option>
+                    <option value="" data-option="16">16</option>
+                    <option value="" data-option="17">17</option>
+                    <option value="" data-option="18">18</option>
+                    <option value="" data-option="19">19</option>
+                    <option value="" data-option="20">20</option>
+                    <option value="" data-option="21">21</option>
+                    <option value="" data-option="22">22</option>
+                    <option value="" data-option="23">23</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-flex-cell">시</div>
+              <div class="form-flex-cell form-flex-cell--date-medium">
+                <div class="ui-select-block input-width-date-select">
+                  <select class="ui-select js-datepicker-range__minute-select-min" title="시작 분">
+                    <option value="" data-option="0">00</option>
+                    <option value="" data-option="1">01</option>
+                    <option value="" data-option="2">02</option>
+                    <option value="" data-option="3">03</option>
+                    <option value="" data-option="4">04</option>
+                    <option value="" data-option="5">05</option>
+                    <option value="" data-option="6">06</option>
+                    <option value="" data-option="7">07</option>
+                    <option value="" data-option="8">08</option>
+                    <option value="" data-option="9">09</option>
+                    <option value="" data-option="10">10</option>
+                    <option value="" data-option="11">11</option>
+                    <option value="" data-option="12">12</option>
+                    <option value="" data-option="13">13</option>
+                    <option value="" data-option="14">14</option>
+                    <option value="" data-option="15">15</option>
+                    <option value="" data-option="16">16</option>
+                    <option value="" data-option="17">17</option>
+                    <option value="" data-option="18">18</option>
+                    <option value="" data-option="19">19</option>
+                    <option value="" data-option="20">20</option>
+                    <option value="" data-option="21">21</option>
+                    <option value="" data-option="22">22</option>
+                    <option value="" data-option="23">23</option>
+                    <option value="" data-option="24">24</option>
+                    <option value="" data-option="25">25</option>
+                    <option value="" data-option="26">26</option>
+                    <option value="" data-option="27">27</option>
+                    <option value="" data-option="28">28</option>
+                    <option value="" data-option="29">29</option>
+                    <option value="" data-option="30">30</option>
+                    <option value="" data-option="31">31</option>
+                    <option value="" data-option="32">32</option>
+                    <option value="" data-option="33">33</option>
+                    <option value="" data-option="34">34</option>
+                    <option value="" data-option="35">35</option>
+                    <option value="" data-option="36">36</option>
+                    <option value="" data-option="37">37</option>
+                    <option value="" data-option="38">38</option>
+                    <option value="" data-option="39">39</option>
+                    <option value="" data-option="40">40</option>
+                    <option value="" data-option="41">41</option>
+                    <option value="" data-option="42">42</option>
+                    <option value="" data-option="43">43</option>
+                    <option value="" data-option="44">44</option>
+                    <option value="" data-option="45">45</option>
+                    <option value="" data-option="46">46</option>
+                    <option value="" data-option="47">47</option>
+                    <option value="" data-option="48">48</option>
+                    <option value="" data-option="49">49</option>
+                    <option value="" data-option="50">50</option>
+                    <option value="" data-option="51">51</option>
+                    <option value="" data-option="52">52</option>
+                    <option value="" data-option="53">53</option>
+                    <option value="" data-option="54">54</option>
+                    <option value="" data-option="55">55</option>
+                    <option value="" data-option="56">56</option>
+                    <option value="" data-option="57">57</option>
+                    <option value="" data-option="58">58</option>
+                    <option value="" data-option="59">59</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-flex-cell">분</div>
+              <div class="form-flex-cell form-flex-cell--date-hyphen">-</div>
+            </div>
+          </div>
+          <div class="form-block__cell">
+            <div class="form-flex">
+              <div class="form-flex-cell">
+                <div class="ui-input-block ui-input-block--date input-width-date">
+                  <input type="text" class="ui-input js-datepicker-range__max" title="마지막 날짜" value="2021-12-10" />
+                </div>
+              </div>
+              <div class="form-flex-cell form-flex-cell--date-medium">
+                <div class="ui-select-block input-width-date-select">
+                  <select class="ui-select js-datepicker-range__hour-select-max" title="마지막 시간">
+                    <option value="" data-option="0">00</option>
+                    <option value="" data-option="1">01</option>
+                    <option value="" data-option="2">02</option>
+                    <option value="" data-option="3">03</option>
+                    <option value="" data-option="4">04</option>
+                    <option value="" data-option="5">05</option>
+                    <option value="" data-option="6">06</option>
+                    <option value="" data-option="7">07</option>
+                    <option value="" data-option="8">08</option>
+                    <option value="" data-option="9">09</option>
+                    <option value="" data-option="10">10</option>
+                    <option value="" data-option="11">11</option>
+                    <option value="" data-option="12">12</option>
+                    <option value="" data-option="13">13</option>
+                    <option value="" data-option="14">14</option>
+                    <option value="" data-option="15">15</option>
+                    <option value="" data-option="16">16</option>
+                    <option value="" data-option="17">17</option>
+                    <option value="" data-option="18">18</option>
+                    <option value="" data-option="19">19</option>
+                    <option value="" data-option="20">20</option>
+                    <option value="" data-option="21">21</option>
+                    <option value="" data-option="22">22</option>
+                    <option value="" data-option="23">23</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-flex-cell">시</div>
+              <div class="form-flex-cell form-flex-cell--date-medium">
+                <div class="ui-select-block input-width-date-select">
+                  <select class="ui-select js-datepicker-range__minute-select-max" title="마지막 분">
+                    <option value="" data-option="0">00</option>
+                    <option value="" data-option="1">01</option>
+                    <option value="" data-option="2">02</option>
+                    <option value="" data-option="3">03</option>
+                    <option value="" data-option="4">04</option>
+                    <option value="" data-option="5">05</option>
+                    <option value="" data-option="6">06</option>
+                    <option value="" data-option="7">07</option>
+                    <option value="" data-option="8">08</option>
+                    <option value="" data-option="9">09</option>
+                    <option value="" data-option="10">10</option>
+                    <option value="" data-option="11">11</option>
+                    <option value="" data-option="12">12</option>
+                    <option value="" data-option="13">13</option>
+                    <option value="" data-option="14">14</option>
+                    <option value="" data-option="15">15</option>
+                    <option value="" data-option="16">16</option>
+                    <option value="" data-option="17">17</option>
+                    <option value="" data-option="18">18</option>
+                    <option value="" data-option="19">19</option>
+                    <option value="" data-option="20">20</option>
+                    <option value="" data-option="21">21</option>
+                    <option value="" data-option="22">22</option>
+                    <option value="" data-option="23">23</option>
+                    <option value="" data-option="24">24</option>
+                    <option value="" data-option="25">25</option>
+                    <option value="" data-option="26">26</option>
+                    <option value="" data-option="27">27</option>
+                    <option value="" data-option="28">28</option>
+                    <option value="" data-option="29">29</option>
+                    <option value="" data-option="30">30</option>
+                    <option value="" data-option="31">31</option>
+                    <option value="" data-option="32">32</option>
+                    <option value="" data-option="33">33</option>
+                    <option value="" data-option="34">34</option>
+                    <option value="" data-option="35">35</option>
+                    <option value="" data-option="36">36</option>
+                    <option value="" data-option="37">37</option>
+                    <option value="" data-option="38">38</option>
+                    <option value="" data-option="39">39</option>
+                    <option value="" data-option="40">40</option>
+                    <option value="" data-option="41">41</option>
+                    <option value="" data-option="42">42</option>
+                    <option value="" data-option="43">43</option>
+                    <option value="" data-option="44">44</option>
+                    <option value="" data-option="45">45</option>
+                    <option value="" data-option="46">46</option>
+                    <option value="" data-option="47">47</option>
+                    <option value="" data-option="48">48</option>
+                    <option value="" data-option="49">49</option>
+                    <option value="" data-option="50">50</option>
+                    <option value="" data-option="51">51</option>
+                    <option value="" data-option="52">52</option>
+                    <option value="" data-option="53">53</option>
+                    <option value="" data-option="54">54</option>
+                    <option value="" data-option="55">55</option>
+                    <option value="" data-option="56">56</option>
+                    <option value="" data-option="57">57</option>
+                    <option value="" data-option="58">58</option>
+                    <option value="" data-option="59">59</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-flex-cell">분</div>
+            </div>
+          </div>
+          <div class="form-block__cell">
+            <div class="form-flex">
+              <div class="form-flex-cell">
+                <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary"
+                  data-datepicker-range="-1day">1일</button>
+              </div>
+              <div class="form-flex-cell">
+                <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary"
+                  data-datepicker-range="-7days">1주</button>
+              </div>
+              <div class="form-flex-cell">
+                <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary"
+                  data-datepicker-range="-1month">1개월</button>
+              </div>
+              <div class="form-flex-cell">
+                <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary"
+                  data-datepicker-range="-2months">2개월</button>
+              </div>
+              <div class="form-flex-cell">
+                <button type="button" class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--denary"
+                  data-datepicker-range="-3months">3개월</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--search-bar">
+    <h2 class="test-title">Search bar</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <form action="">
+        <section class="search-bar">
+          <h2 class="for-a11y">검색</h2>
+          <div class="search-bar__left">
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">50분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">1분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">구분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="search-bar__right">
+            <div class="ui-buttons ui-buttons--center">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="submit"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">여러줄일 때</h3>
+      <form action="">
+        <section class="search-bar search-bar--fix-width-key">
+          <h2 class="for-a11y">검색</h2>
+          <div class="search-bar__left">
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">N</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">50분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">1분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">구분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="search-bar__right">
+            <div class="ui-buttons ui-buttons--full">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="submit"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">여러줄일 때 - 타이틀 너비 small</h3>
+      <form action="">
+        <section class="search-bar search-bar--fix-width-key-small">
+          <h2 class="for-a11y">검색</h2>
+          <div class="search-bar__left">
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">N</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">50분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">1분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">구분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="search-bar__right">
+            <div class="ui-buttons ui-buttons--full">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="submit"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">여러줄일 때 - 타이틀 너비 medium</h3>
+      <form action="">
+        <section class="search-bar search-bar--fix-width-key-medium">
+          <h2 class="for-a11y">검색</h2>
+          <div class="search-bar__left">
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">N</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">50분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">1분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">구분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="search-bar__right">
+            <div class="ui-buttons ui-buttons--full">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="submit"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">여러줄일 때 - 타이틀 너비 large</h3>
+      <form action="">
+        <section class="search-bar search-bar--fix-width-key-large">
+          <h2 class="for-a11y">검색</h2>
+          <div class="search-bar__left">
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">N</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">50분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">1분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">구분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="search-bar__right">
+            <div class="ui-buttons ui-buttons--full">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="button"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--quinary ui-basic-button--icon ui-basic-button--icon-reset">초기화</button>
+                </li>
+                <li class="ui-buttons__item">
+                  <button type="submit"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">팝업</h3>
+      <form action="">
+        <section class="search-bar search-bar--popup">
+          <h2 class="for-a11y">검색</h2>
+          <div class="search-bar__left">
+            <div class="search-bar__row">
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">50분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">1분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+              <dl class="search-bar__item search-bar__item--flexible">
+                <dt class="search-bar__key">title</dt>
+                <dd class="search-bar__val">
+                  <div class="ui-select-block">
+                    <select class="ui-select" title="title">
+                      <option value="">구분</option>
+                      <option value="">option 2</option>
+                      <option value="">option 3</option>
+                      <option value="">option 4</option>
+                      <option value="">option 5</option>
+                    </select>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </div>
+          <div class="search-bar__right">
+            <div class="ui-buttons ui-buttons--center">
+              <ul class="ui-buttons__list">
+                <li class="ui-buttons__item">
+                  <button type="submit"
+                    class="ui-button ui-basic-button ui-basic-button--small ui-basic-button--secondary ui-basic-button--icon ui-basic-button--icon-search">조회</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--setting-board">
+    <h2 class="test-title">Setting board</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Type 1</h3>
+      <div class="setting-board">
+        <div class="setting-board__row">
+          <div class="ui-check-list">
+            <ul class="ui-check-list__list">
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter1-1" />
+                  <label for="filter1-1" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">전체</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter1-2" />
+                  <label for="filter1-2" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">교정그룹</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter1-3" />
+                  <label for="filter1-3" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">집중관제</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="setting-board__row mt-20 pt-10">
+          <div class="ui-check-list ui-check-list--with-input">
+            <ul class="ui-check-list__list">
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2-0" />
+                  <label for="filter2-0" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">중앙(권역)</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-select-block">
+                  <select class="ui-select" title="중앙(권역)">
+                    <option value="">8</option>
+                    <option value="">option 2</option>
+                    <option value="">option 3</option>
+                    <option value="">option 4</option>
+                    <option value="">option 5</option>
+                  </select>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2-1" />
+                  <label for="filter2-1" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">1</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2-2" />
+                  <label for="filter2-2" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">2</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2-3" />
+                  <label for="filter2-3" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">3</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2-4" />
+                  <label for="filter2-4" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">4</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2-5" />
+                  <label for="filter2-5" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">5</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2-6" />
+                  <label for="filter2-6" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">6</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2-7" />
+                  <label for="filter2-7" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">7</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter2-8" />
+                  <label for="filter2-8" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">8</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="ui-check-list ui-check-list--with-input">
+            <ul class="ui-check-list__list">
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter3-0" />
+                  <label for="filter3-0" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">대전(권역)</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-select-block">
+                  <select class="ui-select" title="대전(권역)">
+                    <option value="">7</option>
+                    <option value="">option 2</option>
+                    <option value="">option 3</option>
+                    <option value="">option 4</option>
+                    <option value="">option 5</option>
+                  </select>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter3-1" />
+                  <label for="filter3-1" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">9</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter3-2" />
+                  <label for="filter3-2" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">10</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter3-3" />
+                  <label for="filter3-3" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">11</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter3-4" />
+                  <label for="filter3-4" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">12</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter3-5" />
+                  <label for="filter3-5" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">13</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter3-6" />
+                  <label for="filter3-6" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">14</span>
+                  </label>
+                </div>
+              </li>
+              <li class="ui-check-list__item">
+                <div class="ui-checkbox-block">
+                  <input type="checkbox" class="ui-checkbox" id="filter3-7" />
+                  <label for="filter3-7" class="ui-label">
+                    <span class="ui-checkbox-object"></span>
+                    <span class="ui-label__text">15</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Type 2</h3>
+      <div class="setting-board">
+        <div class="setting-board__info">
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">집중관제</dt>
+            <dd class="setting-board__info-val">
+              집중중앙그룹<br />
+              집중대전그룹
+            </dd>
+          </dl>
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">그룹 및 권역</dt>
+            <dd class="setting-board__info-val">
+              중앙그룹[전체]<br />
+              대전그룹[전체]
+            </dd>
+          </dl>
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">보호관찰소</dt>
+            <dd class="setting-board__info-val">
+              <span class="color-red">강릉 대구 서울</span>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Type 2 - popup</h3>
+      <p class="test-text">아이템과 아이템 사이의 여백이 다름</p>
+      <div class="setting-board setting-board--popup">
+        <div class="setting-board__info">
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">집중관제</dt>
+            <dd class="setting-board__info-val">
+              집중중앙그룹<br />
+              집중대전그룹
+            </dd>
+          </dl>
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">그룹 및 권역</dt>
+            <dd class="setting-board__info-val">
+              중앙그룹[전체]<br />
+              대전그룹[전체]
+            </dd>
+          </dl>
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">보호관찰소</dt>
+            <dd class="setting-board__info-val">
+              <span class="color-red">강릉 대구 서울</span>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Type 2 - no margin</h3>
+      <p class="test-text">상/하 여백이 다름</p>
+      <div class="setting-board">
+        <div class="setting-board__info setting-board__info--no-margin">
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">집중관제</dt>
+            <dd class="setting-board__info-val">
+              집중중앙그룹<br />
+              집중대전그룹
+            </dd>
+          </dl>
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">그룹 및 권역</dt>
+            <dd class="setting-board__info-val">
+              중앙그룹[전체]<br />
+              대전그룹[전체]
+            </dd>
+          </dl>
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">보호관찰소</dt>
+            <dd class="setting-board__info-val">
+              <span class="color-red">강릉 대구 서울</span>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Type 3</h3>
+      <div class="setting-board">
+        <dl class="setting-board__item">
+          <dt class="setting-board__key">타이머 시간설정</dt>
+          <dd class="setting-board__val">
+            <div class="form-flex">
+              <div class="form-flex-cell">
+                <div class="ui-input-block input-width-mini">
+                  <input type="number" class="ui-input" title="타이머 시간" value="20" pattern="\d*" />
+                </div>
+              </div>
+              <div class="form-flex-cell">sec</div>
+              <div class="form-flex-cell form-flex-cell--button">
+                <button type="button" class="ui-button ui-basic-button ui-basic-button--small">적용</button>
+              </div>
+            </div>
+          </dd>
+        </dl>
+        <dl class="setting-board__item">
+          <dt class="setting-board__key">선택</dt>
+          <dd class="setting-board__val">
+            <div class="ui-check-list">
+              <ul class="ui-check-list__list">
+                <li class="ui-check-list__item">
+                  <div class="ui-checkbox-block">
+                    <input type="checkbox" class="ui-checkbox" id="alertStatusAction1" />
+                    <label for="alertStatusAction1" class="ui-label">
+                      <span class="ui-checkbox-object"></span>
+                      <span class="ui-label__text">내용잠그기</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="ui-check-list__item">
+                  <div class="ui-checkbox-block">
+                    <input type="checkbox" class="ui-checkbox" id="alertStatusAction2" />
+                    <label for="alertStatusAction2" class="ui-label">
+                      <span class="ui-checkbox-object"></span>
+                      <span class="ui-label__text">음소거</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="ui-check-list__item">
+                  <div class="ui-checkbox-block">
+                    <input type="checkbox" class="ui-checkbox" id="alertStatusAction3" />
+                    <label for="alertStatusAction3" class="ui-label">
+                      <span class="ui-checkbox-object"></span>
+                      <span class="ui-label__text">GIS잠그기</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="ui-check-list__item">
+                  <div class="ui-checkbox-block">
+                    <input type="checkbox" class="ui-checkbox" id="alertStatusAction4" />
+                    <label for="alertStatusAction4" class="ui-label">
+                      <span class="ui-checkbox-object"></span>
+                      <span class="ui-label__text">생활패턴 포함</span>
+                    </label>
+                  </div>
+                </li>
+                <li class="ui-check-list__item">
+                  <div class="ui-checkbox-block">
+                    <input type="checkbox" class="ui-checkbox" id="alertStatusAction5" />
+                    <label for="alertStatusAction5" class="ui-label">
+                      <span class="ui-checkbox-object"></span>
+                      <span class="ui-label__text">효과 ON</span>
+                    </label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </dd>
+        </dl>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Type 4</h3>
+      <div class="setting-board">
+        <div class="setting-board__info setting-board__info--vertical">
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">집중관제</dt>
+            <dd class="setting-board__info-val setting-board__info-val--hr">
+              집중중앙그룹<br />
+              집중대전그룹
+            </dd>
+          </dl>
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">그룹 및 권역</dt>
+            <dd class="setting-board__info-val setting-board__info-val--hr">
+              중앙그룹[전체]<br />
+              대전그룹[전체]
+            </dd>
+          </dl>
+          <dl class="setting-board__info-item">
+            <dt class="setting-board__info-key">보호관찰소</dt>
+            <dd class="setting-board__info-val setting-board__info-val--hr">
+              <div class="ui-check-list">
+                <ul class="ui-check-list__list">
+                  <li class="ui-check-list__item">
+                    <div class="basic-text">보호관찰소</div>
+                  </li>
+                  <li class="ui-check-list__item">
+                    <div class="basic-text color-red">강릉 대구 서울</div>
+                  </li>
+                </ul>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">White</h3>
+      <div class="setting-board setting-board--white">
+        <!-- // -->
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--require-message">
+    <h2 class="test-title">Require mark</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <span class="ui-require"><span class="for-a11y">(필수)</span></span>
+      <span class="ui-require ui-require--medium"><span class="for-a11y">(필수)</span></span>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--require-message">
+    <h2 class="test-title">Require message</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <p class="ui-require-message">유효성 메시지입니다.</p>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--require-check">
+    <h2 class="test-title">Require check</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+
+      <!-- 입력 전 -->
+      <div class="ui-require-check">
+        <div class="ui-input-block">
+          <input type="text" class="ui-input" title="title" />
+        </div>
+        <p class="ui-require-check__message">나이를 입력해주세요.</p>
+      </div>
+
+      <!-- 사용가능 값 .ui-require-check 에 is-valid 클래스 값 추가 -->
+      <div class="ui-require-check is-valid">
+        <div class="ui-input-block">
+          <input type="text" class="ui-input" title="title" />
+        </div>
+        <p class="ui-require-check__message">사용가능한 이름입니다.</p>
+      </div>
+
+      <!-- 인풋 에러시 .ui-require-check 에 is-error 클래스 값 추가 -->
+      <div class="ui-require-check is-error">
+        <div class="ui-input-block">
+          <input type="text" class="ui-input" title="title" />
+        </div>
+        <p class="ui-require-check__message">나이를 입력해주세요.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--require-message">
+    <h2 class="test-title">maxlength & count</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="form-row">
+        <div class="ui-input-block">
+          <textarea class="ui-input input-height-small-large" title="내용" data-maxlength="50"
+            data-text-count="#discriptionCount1">입력된 내용이 출력됩니다.</textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="basic-text color-gray align-right"><span id="discriptionCount1">0</span>/50자</div>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">byte</h3>
+      <div class="form-row">
+        <div class="ui-input-block">
+          <textarea class="ui-input input-height-small-large" title="내용" data-maxbyte="1000"
+            data-byte-count="#discriptionCount2">입력된 내용이 출력됩니다.</textarea>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="basic-text color-gray align-right"><span id="discriptionCount2">0</span>/1000byte</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--list">
+    <h2 class="test-title">List</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Dot</h3>
+      <div class="dot-list">
+        <ul class="dot-list__list">
+          <li class="dot-list__item">내용</li>
+          <li class="dot-list__item">내용</li>
+          <li class="dot-list__item">내용</li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Dot - Primary color</h3>
+      <div class="dot-list dot-list--primary-color">
+        <ul class="dot-list__list">
+          <li class="dot-list__item">내용</li>
+          <li class="dot-list__item">내용</li>
+          <li class="dot-list__item">내용</li>
+        </ul>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Hyphen</h3>
+      <div class="hyphen-list">
+        <ul class="hyphen-list__list">
+          <li class="hyphen-list__item">내용</li>
+          <li class="hyphen-list__item">내용</li>
+          <li class="hyphen-list__item">내용</li>
+        </ul>
+      </div>
+    </div>
+    <!--
+        <div class="guide-section-sub">
+          <h3 class="test-title">Key - Value</h3>
+          <div class="dot-list">
+            <ul class="dot-list__list">
+              <li class="dot-list__item dot-list__item--define">
+                <div class="dot-list__key">Key</div>
+                <div class="dot-list__val">Value</div>
+              </li>
+              <li class="dot-list__item dot-list__item--define">
+                <div class="dot-list__key">Key</div>
+                <div class="dot-list__val">Value</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        -->
+  </div>
+
+  <div class="guide-section guide-section--tooltip">
+    <h2 class="test-title">Tooltip</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+
+      <div class="tooltip js-ui-dropdown">
+        <div class="tooltip__head">
+          <button type="button" class="ui-button tooltip__opener js-ui-dropdown__opener">
+            <span class="info-icon">
+              <span class="for-a11y">(도움말)</span>
+            </span>
+          </button>
+        </div>
+        <div class="tooltip__layer js-ui-dropdown__layer">
+          <section class="ui-layer ui-layer--tooltip">
+            <div class="ui-layer__head">
+              <div class="ui-layer-header">
+                <h3 class="ui-layer-header__title">어린이보호구역이란?</h3>
+                <button type="button" class="ui-button ui-layer-header__close js-ui-dropdown__closer">
+                  <span class="for-a11y">도움말 닫기</span>
+                </button>
+              </div>
+            </div>
+            <div class="ui-layer__body">
+              <div class="ui-layer__body-inner">
+                <p class="regular-text">초등학교, 특수학교, 유치원, 구립어린이집, 아동 복지시설을 의미합니다.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--scroller">
+    <h2 class="test-title">Scroller</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="ui-scroller" style="height: 400px">
+        <div style="width: 1000px; height: 1000px; border: 10px dotted blue"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--status">
+    <h2 class="test-title">status</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <span class="status">답변 완료</span>
+      <span class="status status--dark-navy">미 답변</span>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--info-cell">
+    <h2 class="test-title">Info cell</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">Default</h3>
+      <div class="board-detail-table">
+        <table>
+          <tbody>
+            <tr>
+              <th>특이사항</th>
+              <td>
+                <div class="info-cell">
+                  <div class="info-cell__inner">
+                    없는 뼈 목숨이 쓸쓸한 인간은 그들은 오아이스도 이상을 황금시대의 황금시대다. 역사를 하였으며, 고행을 가지에 얼음에 얼음이 별과 피다. 찾아 놀이 그들의 대고, 피어나는
+                    무엇을 살
+                    보라. 품으며, 얼마나 주는 되는 끓는 되려니와, 힘차게 행복스럽고 뿐이다. 있으며, 그들은 피어나기 끓는 꽃이 위하여서 싸인 못하다 황금시대다. 동산에는 싸인 꽃이 있는가?
+                    날카로우나
+                    이상을 끝에 가치를 있는가? 천고에 그들에게 실현에 보내는 같은 방황하여도, 너의 쓸쓸하랴? 청춘의 봄날의 타오르고 천고에 영락과 이것이다. 고행을 꽃이 물방아 청춘 무엇이
+                    피에
+                    기쁘며, 가지에 황금시대다. 뜨거운지라, 그들은 이상을 천지는 고행을 그와 쓸쓸하랴?<br /><br />
+
+                    일월과 공자는 살 밝은 밥을 얼마나 피는 방황하였으며, 얼마나 보라. 스며들어 이성은 봄날의 품에 봄바람이다. 아니한 돋고, 이상의 그들은 원질이 우리의 봄바람이다. 우리는
+                    전인
+                    인간의 피부가 부패뿐이다. 끝까지 열락의 무한한 그림자는 없는 주며, 이상 그들에게 미묘한 것이다. 피어나기 이것이야말로 광야에서 말이다. 봄바람을 속에 가는 시들어 보내는
+                    끓는
+                    철환하였는가? 그들에게 우는 오아이스도 천하를 그것은 뼈 말이다. 불어 남는 사랑의 붙잡아 실현에 사막이다.<br /><br />
+
+                    뭇 새가 귀는 희망의 가는 피고 운다. 못할 만물은 긴지라 것이다. 소금이라 그러므로 길지 청춘의 천지는 얼음과 우리 황금시대다. 않는 전인 자신과 청춘 천지는 청춘의 끓는다.
+                    사라지지
+                    구하지 부패를 충분히 풀이 열락의 위하여서. 붙잡아 밥을 군영과 타오르고 피어나는 힘차게 듣는다. 방황하였으며, 든 뜨거운지라, 밥을 없는 청춘 웅대한 교향악이다. 앞이 곧
+                    구하기
+                    끓는 이것이야말로 길지 끓는 끓는다. 밥을 얼음과 만물은 눈에 미묘한 작고 봄바람이다.
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.info-cell--height-숫자 : 필요한 높이값이 없으면 css에 클래스 추가하여 사용</h3>
+      <div class="board-detail-table">
+        <table>
+          <tbody>
+            <tr>
+              <th>특이사항</th>
+              <td>
+                <div class="info-cell info-cell--height-140">
+                  <div class="info-cell__inner">
+                    없는 뼈 목숨이 쓸쓸한 인간은 그들은 오아이스도 이상을 황금시대의 황금시대다. 역사를 하였으며, 고행을 가지에 얼음에 얼음이 별과 피다. 찾아 놀이 그들의 대고, 피어나는
+                    무엇을 살
+                    보라. 품으며, 얼마나 주는 되는 끓는 되려니와, 힘차게 행복스럽고 뿐이다. 있으며, 그들은 피어나기 끓는 꽃이 위하여서 싸인 못하다 황금시대다. 동산에는 싸인 꽃이 있는가?
+                    날카로우나
+                    이상을 끝에 가치를 있는가? 천고에 그들에게 실현에 보내는 같은 방황하여도, 너의 쓸쓸하랴? 청춘의 봄날의 타오르고 천고에 영락과 이것이다. 고행을 꽃이 물방아 청춘 무엇이
+                    피에
+                    기쁘며, 가지에 황금시대다. 뜨거운지라, 그들은 이상을 천지는 고행을 그와 쓸쓸하랴?<br /><br />
+
+                    일월과 공자는 살 밝은 밥을 얼마나 피는 방황하였으며, 얼마나 보라. 스며들어 이성은 봄날의 품에 봄바람이다. 아니한 돋고, 이상의 그들은 원질이 우리의 봄바람이다. 우리는
+                    전인
+                    인간의 피부가 부패뿐이다. 끝까지 열락의 무한한 그림자는 없는 주며, 이상 그들에게 미묘한 것이다. 피어나기 이것이야말로 광야에서 말이다. 봄바람을 속에 가는 시들어 보내는
+                    끓는
+                    철환하였는가? 그들에게 우는 오아이스도 천하를 그것은 뼈 말이다. 불어 남는 사랑의 붙잡아 실현에 사막이다.<br /><br />
+
+                    뭇 새가 귀는 희망의 가는 피고 운다. 못할 만물은 긴지라 것이다. 소금이라 그러므로 길지 청춘의 천지는 얼음과 우리 황금시대다. 않는 전인 자신과 청춘 천지는 청춘의 끓는다.
+                    사라지지
+                    구하지 부패를 충분히 풀이 열락의 위하여서. 붙잡아 밥을 군영과 타오르고 피어나는 힘차게 듣는다. 방황하였으며, 든 뜨거운지라, 밥을 없는 청춘 웅대한 교향악이다. 앞이 곧
+                    구하기
+                    끓는 이것이야말로 길지 끓는 끓는다. 밥을 얼음과 만물은 눈에 미묘한 작고 봄바람이다.
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--etc">
+    <style>
+      .guide-section--input .ui-input-block+.ui-input-block {
+        margin-top: 10px;
+      }
+    </style>
+    <h2 class="test-title">ETC</h2>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.display-block</h3>
+      <span class="display-block">&lt;span class="display-block"&gt;&lt;/span&gt;</span>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.inline-block</h3>
+      <div class="inline-block">&lt;div class="inline-block"&gt;&lt;/div&gt;</div>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.medium-text</h3>
+      <p class="medium-text">더미 텍스트</p>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.basic-text</h3>
+      <p class="basic-text">더미 텍스트</p>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.regular-text</h3>
+      <p class="regular-text">더미 텍스트</p>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.basic-title</h3>
+      <h4 class="basic-title">더미 텍스트</h4>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.font-weight</h3>
+      <p class="font-weight-thin">.font-weight-thin</p>
+      <p class="font-weight-light">.font-weight-light</p>
+      <p class="font-weight-regular">.font-weight-regular</p>
+      <p class="font-weight-medium">.font-weight-medium</p>
+      <p class="font-weight-bold">.font-weight-bold</p>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.basic-link</h3>
+      <a href="" class="basic-link">더미 텍스트</a>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.none-deco-link</h3>
+      <a href="" class="none-deco-link">더미 텍스트</a>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.link-block</h3>
+      <a href="" class="link-block">더미 텍스트</a>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.color</h3>
+      <p class="color-primary">.color-primary</p>
+      <p class="color-gray">.color-gray</p>
+      <p class="color-red">.color-red</p>
+      <p class="color-pastel-red">.color-pastel-red</p>
+      <p class="color-blue">.color-blue</p>
+      <p class="color-charcoal">.color-charcoal</p>
+      <p class="color-deep-gray">.color-deep-gray</p>
+      <p class="color-yellow">.color-yellow</p>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.bg-color</h3>
+      <p class="bg-color-blue" style="height: 100px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)">.bg-color-blue</p>
+      <p class="bg-color-light-blue" style="height: 100px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)">
+        .bg-color-light-blue</p>
+      <p class="bg-color-gray" style="height: 100px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.2)">.bg-color-gray</p>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.align</h3>
+      <p class="align-left">.align-left</p>
+      <p class="align-right">.align-right</p>
+      <p class="align-center">.align-center</p>
+    </div>
+    <div class="guide-section-sub">
+      <h3 class="test-title">.ellipsis</h3>
+      <p class="ellipsis" style="width: 300px">.ellipsis 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미 텍스트 더미
+        텍스트</p>
+    </div>
+  </div>
+
+  <div class="guide-section guide-section--pin">
+    <style>
+      /* 실시간위치표시 마커 */
+      .marker-realtime {
+        min-width: 62px;
+        border: 1px solid #163aab;
+        background-color: #4666ca;
+        box-sizing: border-box;
+        border-radius: 3px 3px 3px 0px;
+        overflow: hidden;
+      }
+
+      .marker-realtime::after {
+        position: absolute;
+        bottom: -16px;
+        right: -4px;
+        width: calc(100% + 3px);
+        height: 64px;
+        background: url(./dist/assets/images/common/marker-shadow.png) no-repeat;
+        background-size: 100% 100%;
+        content: "";
+        z-index: -1;
+      }
+
+      .marker-realtime a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+      }
+
+      .marker-realtime__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 20px;
+        padding: 0 5px;
+        border-bottom: 1px solid #163aab
+      }
+
+      .marker-realtime__header span {
+        font-size: 11px;
+        color: #ffffff;
+        line-height: 100%;
+      }
+
+      .marker-realtime__header span.marker-realtime__header--center {
+        width: 15px;
+        height: 15px;
+        margin: 0 2px;
+        background-color: #fff;
+        font-size: 11px;
+        border-radius: 100%;
+        color: #e32e35;
+        line-height: 15px;
+        text-align: center;
+      }
+
+      .marker-realtime__header--right {
+        font-weight: 600;
+      }
+
+      .marker-realtime__body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 31px;
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: 600;
+        background: #ffffff;
+        border-radius: 0 0 3px 0px;
+        color: #000000;
+      }
+
+      .marker-realtime__normal::before {
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 11px;
+        height: 16px;
+        background: url(./dist/assets/images/icon/marker-realtime__arr.png);
+        content: ""
+      }
+
+      .is-active .marker-realtime__normal .marker-realtime__body {
+        background-color: #4666ca;
+        color: #ffffff;
+      }
+
+      .is-active *,
+      .is-active *::before {
+        animation: none !important;
+      }
+
+
+      .marker-realtime__red {
+        background-color: #e32e35;
+        border-color: #ac0000;
+      }
+
+      .marker-realtime__red .marker-realtime__header {
+        border-color: #ac0000;
+      }
+
+      .marker-realtime__red::before {
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 11px;
+        height: 16px;
+        background: url(./dist/assets/images/icon/marker-realtime_red__arr.png);
+        content: ""
+      }
+
+      .is-active .marker-realtime__red .marker-realtime__body {
+        background-color: #e32e35;
+        color: #ffffff;
+      }
+
+      .marker-home {
+        display: none;
+        position: relative;
+        width: 30px;
+        height: 36px;
+        background: url(./dist/assets/images/icon/marker-home.png);
+      }
+
+      .is-active .marker-home {
+        display: block;
+      }
+
+      .line-dashed {
+        display: none;
+        position: absolute;
+        height: 5px;
+        background: url(./dist/assets/images/icon/line-double.svg);
+        background-size: cover;
+      }
+
+      .line-dashed.is-active {
+        display: block;
+      }
+
+      .is-active .line-dashed {
+        display: block;
+      }
+
+      /* .line-dashed.is-active.final::before{position:absolute;top:-2px;right:-1px;width:6px;height:7px;background: url(./dist/assets/images/icon/line-double__arrow.svg) no-repeat center;content:"";} */
+      .line-dashed.is-active.final {
+        position: absolute;
+        height: 11px;
+        background: url(./dist/assets/images/icon/line-double__arrow.svg);
+        background-size: cover;
+        background-position: right center;
+      }
+
+
+
+
+
+      /* 고축척일때 */
+      .high-scale .marker-realtime {
+        min-width: unset;
+        width: 21px;
+        height: 21px;
+        border-radius: 100%;
+      }
+
+      .high-scale .marker-realtime::after,
+      .high-scale .marker-realtime::before {
+        display: none;
+      }
+
+      .high-scale .marker-realtime__header,
+      .high-scale .marker-realtime__body,
+      .high-scale .marker-realtime__bottom {
+        display: none;
+      }
+
+      /* .high-scale .marker-realtime__link::after{display:inline-block;width:100%;font-size:12px;font-weight: 600;text-align:center;color:#ffffff;line-height: 21px;content:"P"} */
+      .is-active .marker-home .marker-realtime__link::after {
+        display: none;
+      }
+
+      /* 최고축척일때 */
+      .max-scale .marker-realtime {
+        min-width: unset;
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+      }
+
+      .max-scale .marker-realtime::after,
+      .max-scale .marker-realtime::before {
+        display: none;
+      }
+
+      .max-scale .marker-realtime__header,
+      .max-scale .marker-realtime__body,
+      .max-scale .marker-realtime__bottom {
+        display: none;
+      }
+
+      .max-scale .marker-realtime__link::after {
+        display: inline-block;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        line-height: 21px;
+        content: ""
+      }
+
+      .is-active .marker-home .marker-realtime__link::after {
+        display: none;
+      }
+
+      /* 보석조건부 */
+      .marker-realtime__line {
+        background-image: url(./assets/images/etc/bg-line.png);
+      }
+
+      .is-active .marker-realtime__line .marker-realtime__body {
+        background-image: url(./dist/assets/images/etc/bg-line.png);
+        background-position: left 2.5px top;
+      }
+
+      .is-twinkle .marker-realtime__normal {
+        animation-duration: .6s;
+        animation-name: twinkle__normal;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__normal.marker-realtime__line {
+        animation-name: twinkle__normal--line;
+      }
+
+      .is-twinkle .marker-realtime__normal .marker-realtime__header {
+        animation-duration: .6s;
+        animation-name: twinkle__normal-border;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__normal::before {
+        animation-duration: .6s;
+        animation-name: twinkle__normal-arr;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__sapGreen {
+        animation-duration: .6s;
+        animation-name: twinkle__sapGreen;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__sapGreen.marker-realtime__line {
+        animation-name: twinkle__normal--line;
+      }
+
+      .is-twinkle .marker-realtime__sapGreen .marker-realtime__header {
+        animation-duration: .6s;
+        animation-name: twinkle__sapGreen-border;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__sapGreen::before {
+        animation-duration: .6s;
+        animation-name: twinkle__sapGreen-arr;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__hexagon--sapGreen {
+        animation-duration: .6s;
+        animation-name: twinkle__sapGreen-hexa;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime.marker-realtime__hexagonMin.marker-realtime__hexagonMin--sapGreen {
+        animation-duration: .6s;
+        animation-name: twinkle__sapGreen-hexaMin;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__gray {
+        animation-duration: .6s;
+        animation-name: twinkle__gray;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__gray .marker-realtime__header {
+        animation-duration: .6s;
+        animation-name: twinkle__gray-border;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__gray::before {
+        animation-duration: .6s;
+        animation-name: twinkle__gray-arr;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__hexagon--gray {
+        animation-duration: .6s;
+        animation-name: twinkle__gray-hexa;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime.marker-realtime__hexagonMin.marker-realtime__hexagonMin--gray {
+        animation-duration: .6s;
+        animation-name: twinkle__gray-hexaMin;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime.marker-realtime__hexagon.marker-realtime__hexagon--gray.marker-realtime__line {
+        animation-duration: .6s;
+        animation-name: twinkle__gray-hexa-line;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__orange {
+        animation-duration: .6s;
+        animation-name: twinkle__orange;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__orange.marker-realtime__line {
+        animation-name: twinkle__orange--line;
+      }
+
+      .is-twinkle .marker-realtime__orange .marker-realtime__header {
+        animation-duration: .6s;
+        animation-name: twinkle__orange-border;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__orange::before {
+        animation-duration: .6s;
+        animation-name: twinkle__orange-arr;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__hexagon--orange {
+        animation-duration: .6s;
+        animation-name: twinkle__orange-hexa;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime.marker-realtime__hexagonMin.marker-realtime__hexagonMin--orange {
+        animation-duration: .6s;
+        animation-name: twinkle__orange-hexaMin;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes twinkle__normal {
+        from {
+          background-color: #538234;
+          border-color: #376419;
+        }
+
+        to {
+          background: #afd199;
+          border-color: #7dab5f;
+        }
+      }
+
+      @keyframes twinkle__normal--line {
+        from {
+          background-color: #538234;
+          border-color: #376419;
+        }
+
+        to {
+          background: #afd199 url(./dist/assets/images/etc/bg-line.png);
+          ;
+          border-color: #7dab5f;
+        }
+      }
+
+      @keyframes twinkle__normal-border {
+        from {
+          border-color: #376419;
+        }
+
+        to {
+          border-color: #7dab5f;
+        }
+      }
+
+      @keyframes twinkle__normal-arr {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_sapGreen__arr.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_sapGreen__arr-twk.png);
+        }
+      }
+
+      @keyframes twinkle__sapGreen {
+        from {
+          background-color: #538234;
+          border-color: #376419;
+        }
+
+        to {
+          background: #afd199;
+          border-color: #7dab5f;
+        }
+      }
+
+      @keyframes twinkle__sapGreen-border {
+        from {
+          border-color: #376419;
+        }
+
+        to {
+          border-color: #7dab5f;
+        }
+      }
+
+      @keyframes twinkle__sapGreen-arr {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_sapGreen__arr.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_sapGreen__arr-twk.png);
+        }
+      }
+
+      @keyframes twinkle__sapGreen-hexa {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_sapGreen__hexa.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_sapGreen__hexa-twk.png);
+        }
+      }
+
+      @keyframes twinkle__sapGreen-hexaMin {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_sapGreen__hexaMin.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_sapGreen__hexaMin-twk.png);
+        }
+      }
+
+      @keyframes twinkle__gray {
+        from {
+          background-color: #9e9e9e;
+          border-color: #7d7d7d;
+        }
+
+        to {
+          background: #d3d3d3 url(./dist/assets/images/etc/bg-line.png);
+          border-color: #a1a1a1;
+        }
+      }
+
+      @keyframes twinkle__gray-border {
+        from {
+          border-color: #7d7d7d;
+        }
+
+        to {
+          border-color: #a1a1a1;
+        }
+      }
+
+      @keyframes twinkle__gray-arr {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_gray__arr.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_gray__arr-twk.png);
+        }
+      }
+
+      @keyframes twinkle__gray-hexa {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_gray__hexa.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_gray__hexa-twk.png);
+        }
+      }
+
+      @keyframes twinkle__gray-hexaMin {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_gray__hexaMin.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_gray__hexaMin-twk.png);
+        }
+      }
+
+      @keyframes twinkle__gray-hexa-line {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_gray__hexa-line.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_gray__hexa-line-twk.png);
+        }
+      }
+
+      @keyframes twinkle__orange {
+        from {
+          background-color: #ff9934;
+          border-color: #e07306;
+        }
+
+        to {
+          background: #ffcc98;
+          border-color: #e1a467;
+        }
+      }
+
+      @keyframes twinkle__orange--line {
+        from {
+          background-color: #ff9934;
+          border-color: #e07306;
+        }
+
+        to {
+          background: #ffcc98 url(./dist/assets/images/etc/bg-line.png);
+          border-color: #e1a467;
+        }
+      }
+
+      @keyframes twinkle__orange-border {
+        from {
+          border-color: #ffcc98;
+        }
+
+        to {
+          border-color: #e1a467;
+        }
+      }
+
+      @keyframes twinkle__orange-arr {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_orange__arr.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_orange__arr-twk.png);
+        }
+      }
+
+      @keyframes twinkle__orange-hexa {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_orange__hexa.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_orange__hexa-twk.png);
+        }
+      }
+
+      @keyframes twinkle__orange-hexaMin {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_orange__hexaMin.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_orange__hexaMin-twk.png);
+        }
+      }
+
+      .is-twinkle .marker-realtime__red {
+        animation-duration: .6s;
+        animation-name: twinkle__red;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__red.marker-realtime__line {
+        animation-name: twinkle__red--line;
+      }
+
+      .is-twinkle .marker-realtime__red .marker-realtime__header {
+        animation-duration: .6s;
+        animation-name: twinkle__red-border;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__red::before {
+        animation-duration: .6s;
+        animation-name: twinkle__red-arr;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime__hexagon--red {
+        animation-duration: .6s;
+        animation-name: twinkle__red-hexa;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .is-twinkle .marker-realtime.marker-realtime__hexagonMin.marker-realtime__hexagonMin--red {
+        animation-duration: .6s;
+        animation-name: twinkle__red-hexaMin;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes twinkle__red {
+        from {
+          background-color: #e32e35;
+          border-color: #ac0000;
+        }
+
+        to {
+          background: #fcadb1;
+          border-color: #fe7f80;
+        }
+      }
+
+      @keyframes twinkle__red--line {
+        from {
+          background-color: #e32e35;
+          border-color: #ac0000;
+        }
+
+        to {
+          background: #fcadb1 url(./images/etc/bg-line.png);
+          border-color: #fe7f80;
+        }
+      }
+
+      @keyframes twinkle__red-border {
+        from {
+          border-color: #ac0000;
+        }
+
+        to {
+          border-color: #fe7f80;
+        }
+      }
+
+      @keyframes twinkle__red-arr {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_red__arr.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_red__arr-twk.png);
+        }
+      }
+
+      @keyframes twinkle__red-hexa {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_red__hexa.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_red__hexa-twk.png);
+        }
+      }
+
+      @keyframes twinkle__red-hexaMin {
+        from {
+          background: url(./dist/assets/images/icon/marker-realtime_red__hexaMin.png);
+        }
+
+        to {
+          background: url(./dist/assets/images/icon/marker-realtime_red__hexaMin-twk.png);
+        }
+      }
+
+      .marker-realtime__temp {
+        height: 70px;
+      }
+
+      .marker-realtime.marker-realtime__hexagon {
+        width: 25px;
+        height: 23px;
+        border: none;
+        border-radius: 8px;
+        line-height: 25px;
+      }
+
+      .marker-realtime.marker-realtime__hexagon.marker-realtime__hexagon--sapGreen.marker-realtime__line {
+        background: url('./dist/assets/images/icon/marker-realtime_sapGreen__hexa-line.png') no-repeat 0 0;
+      }
+
+      .marker-realtime.marker-realtime__hexagon.marker-realtime__hexagon--orange.marker-realtime__line {
+        background: url('./dist/assets/images/icon/marker-realtime_orange__hexa-line.png') no-repeat 0 0;
+      }
+
+      .marker-realtime.marker-realtime__hexagon.marker-realtime__hexagon--red.marker-realtime__line {
+        background: url('./dist/assets/images/icon/marker-realtime_red__hexa-line.png') no-repeat 0 0;
+      }
+
+      .marker-realtime.marker-realtime__hexagon.marker-realtime__hexagon--gray.marker-realtime__line {
+        background: url('./dist/assets/images/icon/marker-realtime_gray__hexa-line.png') no-repeat 0 0;
+      }
+
+      .marker-realtime.marker-realtime__hexagon.marker-realtime__hexagon--sapGreen {
+        background: url('./dist/assets/images/icon/marker-realtime_sapGreen__hexa.png') no-repeat 0 0;
+      }
+
+      .marker-realtime.marker-realtime__hexagon.marker-realtime__hexagon--orange {
+        background: url('./dist/assets/images/icon/marker-realtime_orange__hexa.png') no-repeat 0 0;
+      }
+
+      .marker-realtime.marker-realtime__hexagon.marker-realtime__hexagon--red {
+        background: url('./dist/assets/images/icon/marker-realtime_red__hexa.png') no-repeat 0 0;
+      }
+
+      .marker-realtime.marker-realtime__hexagon.marker-realtime__hexagon--gray {
+        background: url('./dist/assets/images/icon/marker-realtime_gray__hexa.png') no-repeat 0 0;
+      }
+
+      .max-scale .marker-realtime.marker-realtime__hexagonMin {
+        width: 11px;
+        height: 11px;
+        border-radius: 8px;
+        border: none;
+      }
+
+      .max-scale .marker-realtime__hexagonMin.marker-realtime__hexagonMin--sapGreen {
+        background: url('./dist/assets/images/icon/marker-realtime_sapGreen__hexaMin.png') no-repeat 0 0;
+      }
+
+      .max-scale .marker-realtime__hexagonMin.marker-realtime__hexagonMin--orange {
+        background: url('./dist/assets/images/icon/marker-realtime_orange__hexaMin.png') no-repeat 0 0;
+      }
+
+      .max-scale .marker-realtime__hexagonMin.marker-realtime__hexagonMin--red {
+        background: url('./dist/assets/images/icon/marker-realtime_red__hexaMin.png') no-repeat 0 0;
+      }
+
+      .max-scale .marker-realtime__hexagonMin.marker-realtime__hexagonMin--gray {
+        background: url('./dist/assets/images/icon/marker-realtime_gray__hexaMin.png') no-repeat 0 0;
+      }
+
+      .marker-realtime__wrap>div.marker-realtime--hexaPin:not(.marker-home, .line-dashed)::before {
+        width: 15px;
+        height: 14px;
+        bottom: -22px;
+        border-radius: 0;
+      }
+
+      .marker-realtime__wrap>div.marker-realtime--hexaPin.pin-color--sapGreen:not(.marker-home, .line-dashed)::before {
+        background: url('./dist/assets/images/icon/marker-realtime-hexaPin--sapGreen.png') no-repeat 0 0;
+      }
+
+      .marker-realtime__wrap>div.marker-realtime--hexaPin.pin-color--orange:not(.marker-home, .line-dashed)::before {
+        background: url('./dist/assets/images/icon/marker-realtime-hexaPin--orange.png') no-repeat 0 0;
+      }
+
+      .marker-realtime__wrap>div.marker-realtime--hexaPin.pin-color--gray:not(.marker-home, .line-dashed)::before {
+        background: url('./dist/assets/images/icon/marker-realtime-hexaPin--gray.png') no-repeat 0 0;
+      }
+
+      .marker-realtime__wrap>div.marker-realtime--hexaPin.pin-color--red:not(.marker-home, .line-dashed)::before {
+        background: url('./dist/assets/images/icon/marker-realtime-hexaPin--red.png') no-repeat 0 0;
+      }
+
+      .marker-realtime__line {
+        background-image: url(./dist/assets/images/etc/bg-line.png);
+      }
+
+      .is-active .marker-realtime__line .marker-realtime__body {
+        background-image: url(./dist/assets/images/etc/bg-line.png);
+        background-position: left 2.5px top;
+      }
+
+      /* 대상자 관련지역 */
+      /* .ralative-area{display: none;} */
+      .is-active .ralative-area,
+      .ralative-area.is-active {
+        display: block;
+      }
+
+      .ralative-area__link {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        text-decoration: none;
+      }
+
+      .ralative-area__hover-text {
+        display: none;
+        position: absolute;
+        left: 50%;
+        bottom: -11px;
+        width: max-content;
+        padding: 5px 6px;
+        font-size: 12px;
+        font-weight: 600;
+        border: 1px solid #000000;
+        background: #ffffff;
+        line-height: 100%;
+      }
+
+      .ralative-area__link:hover .ralative-area__hover-text {
+        display: block;
+      }
+
+      .ralative-area__link::before {
+        display: none;
+      }
+
+      .ralative-area__hover-text.is-active {
+        display: block;
+      }
+
+      .ralative-area__temp {
+        height: 100px;
+      }
+
+      .marker-home {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 36px;
+        background: url(./dist/assets/images/icon/marker-home.png);
+      }
+
+      .marker-home__temp {
+        height: 30px;
+      }
+
+      .marker-home-red {
+        width: 49px !important;
+        height: 56px !important;
+        background: url(./dist/assets/images/icon/marker-home-red.png) !important;
+      }
+
+      .marker-home-blue {
+        width: 25px !important;
+        height: 30px !important;
+        background: url(./dist/assets/images/icon/flag-is-active.png) !important;
+      }
+
+      .marker-realtime__pink {
+        background-color: #ea74bd !important;
+        border: 1px solid #e5008c !important;
+      }
+
+      .marker-realtime__sapGreen {
+        background-color: #538234;
+        border: 1px solid #376419;
+      }
+
+      .marker-realtime__header__pink {
+        border-bottom: 1px solid #e5008c !important;
+      }
+
+      .marker-realtime__pink .marker-realtime__header {
+        border-color: #e5008c;
+      }
+
+      .high-scale .marker-realtime__link-after::after {
+        display: none !important;
+      }
+
+      .marker-realtime .flag-time {
+        position: absolute;
+        left: 50%;
+        bottom: -24px;
+        width: auto;
+        padding: 3px;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 100%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+      }
+
+      .high-scale .marker-realtime__pink .marker-realtime__link::after {
+        display: none;
+      }
+
+      .flag {
+        z-index: 1;
+        width: 29px;
+      }
+
+      .icon-flag {
+        display: block;
+        min-width: 29px;
+        height: 27px;
+        padding: 0 2.5px !important;
+        background: #ffffff;
+        /* background: url(./dist/assets/images/icon/flag.png) no-repeat; */
+        text-decoration: none;
+        border-radius: 20px;
+        border: 3px solid #4666ca;
+        box-sizing: border-box;
+      }
+
+      .icon-flag span {
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        line-height: 22px;
+        font-weight: 600;
+        text-indent: -2.5px;
+        font-size: 12px;
+      }
+
+      .icon-flag::before {
+        position: absolute;
+        left: 50%;
+        bottom: -6px;
+        width: 17px;
+        height: 100%;
+        background: url(./dist/assets/images/icon/flag-is-active.png) no-repeat;
+        content: "";
+        transform: translateX(-50%);
+        background-position: bottom;
+        z-index: -1;
+      }
+
+      .icon-flag.is-active {
+        background-color: #4666ca;
+        /* background: url(./dist/assets/images/icon/flag-is-active.png) no-repeat; */
+      }
+
+      .icon-flag.is-active span:not(.flag-time) {
+        color: #ffffff !important;
+      }
+
+      /* SC_04_04 */
+      .icon-flag .flag-time {
+        position: absolute;
+        left: 50%;
+        bottom: -24px;
+        width: auto;
+        padding: 3px;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 100%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+      }
+
+
+      .line-dashed {
+        display: none;
+        position: absolute;
+        height: 5px;
+        background: url(./dist/assets/images/icon/line-double.svg);
+        background-size: cover;
+      }
+
+      .line-dashed.is-active {
+        display: block;
+      }
+
+      .is-active .line-dashed {
+        display: block;
+      }
+
+      .line-dashed.is-active.final {
+        position: absolute;
+        height: 11px;
+        background: url(./dist/assets/images/icon/line-double__arrow.svg);
+        background-size: cover;
+        background-position: right center;
+      }
+
+
+      .marker-cctv-point {
+        width: 25px;
+      }
+
+      .high-scale .marker-realtime__link .marker-realtime__bottom {
+        display: inline-block;
+        width: 100%;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+        line-height: 21px;
+      }
+    </style>
+
+    <h2 class="test-title">Pin</h2>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">재택위치 핀</h3>
+      <div class="marker-home__temp" style="position:relative;">
+
+        <div class="marker-home" style="position: absolute; z-index: 15;">
+          <a href="#none" class="marker-realtime__link"></a>
+        </div>
+
+        <div class="flag" style="position:absolute;top:0;left:45px; z-index:15;">
+          <!-- 선택 했을때 class에 is-active -->
+          <a href="#none" class="icon-flag icon-flag1"><span>2</span><span class="flag-time">01:10</span></a>
+        </div>
+
+        <div class="marker-home  marker-home-red ralative-area__link ralative-area ralative-area__negative is-active"
+          style="position:absolute; z-index:15; left:91px; top:-7px">
+          <a href="#none" class="marker-realtime__link is-active"><span></span></a>
+          <div class="ralative-area__hover-text ralative-area__hover-text">도로명) 강원도 홍천군 화촌면 서상로</br>
+            지번) 성산리 416-1
+          </div>
+        </div>
+
+
+        <div class="marker-cctv-point is-active" style="position:absolute; z-index:15; left:251px; top:95px;">
+          <a href="#none" class="marker-cctv-point__link">
+            <img src="./dist/assets/images/icon/icon-marker--cctv.png" alt="">
+          </a>
+        </div>
+
+      </div>
+
+      <div class="marker-home__temp" style="position:relative; height:100px;">
+        <div class="line-dashed is-active"
+          style="left: 0px;top: 70px;width:110px;transform: rotate(314deg);z-index:-1;"></div>
+        <div class="line-dashed is-active final"
+          style="left:85px;top: 70px;width: 85px;transform: rotate(314deg);z-index:-1;"></div>
+        <div class="demon-icon" style="left:183px; top: 60px; "></div>
+      </div>
+
+
+    </div>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">기본</h3>
+
+      <div class="marker-realtime__temp">
+
+        <!-- 기본 핀 -->
+        <div class="marker-realtime__wrap">
+          <!-- 클릭시 class에 is-active 추가해주세요 -->
+          <div style="position: absolute; z-index: 15;">
+            <div class="marker-realtime marker-realtime__sapGreen">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  신창원
+                </div>
+                <div class="marker-realtime__bottom">
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+
+        </div>
+        <!-- 기본  -->
+        <div class="marker-realtime__wrap is-twinkle">
+          <!-- 클릭시 class에 is-active 추가해주세요 -->
+          <div style="position: absolute; z-index: 15; left: 150px;">
+            <div class="marker-realtime marker-realtime__sapGreen">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  신창원
+                </div>
+                <div class="marker-realtime__bottom">
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="marker-realtime__wrap high-scale">
+          <div style="position: absolute; z-index: 15; left: 250px">
+            <div class="marker-realtime marker-realtime__sapGreen">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  박홍길동
+                </div>
+                <div class="marker-realtime__bottom">
+                  P
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="marker-realtime__wrap high-scale is-twinkle">
+          <!-- 클릭시 class에 is-active 추가해주세요 -->
+          <div style="position: absolute; z-index: 15; left: 280px; " class="pin-color--sapGreen">
+            <div class="marker-realtime marker-realtime__sapGreen">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  신창원
+                </div>
+                <div class="marker-realtime__bottom">
+                  P
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div class="marker-realtime__wrap max-scale">
+          <div style="position: absolute; z-index: 15; left: 320px">
+            <div class="marker-realtime marker-realtime__sapGreen">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  박홍길동
+                </div>
+                <div class="marker-realtime__bottom">
+                  P
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="marker-realtime__wrap max-scale is-twinkle">
+          <div style="position: absolute; z-index: 15; left: 340px">
+            <div class="marker-realtime marker-realtime__sapGreen">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  박홍길동
+                </div>
+                <div class="marker-realtime__bottom">
+                  P
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="marker-realtime__wrap">
+          <!-- 클릭시 class에 is-active 추가해주세요 -->
+          <div style="position: absolute; z-index: 15; left: 380px;" class="marker-realtime--hexaPin">
+            <div class="marker-realtime marker-realtime__sapGreen">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--center">고</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  신창원
+                </div>
+                <div class="marker-realtime__bottom">
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 기본 점멸(배터리 잔량 40% 미만 대상자)일때  -->
+        <div class="marker-realtime__wrap is-twinkle">
+          <!-- 클릭시 class에 is-active 추가, 점멸일때 is-twinkle 추가  -->
+          <div style="position: absolute; z-index: 15; left: 480px;" class="marker-realtime--hexaPin">
+            <div class="marker-realtime marker-realtime__sapGreen">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--center">고</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  신창원
+                </div>
+                <div class="marker-realtime__bottom">
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <!-- 기본 점멸(배터리 잔량 40% 미만 대상자)일때  -->
+
+        <!-- 고위험 육각별 :: 고축척일때 그린  -->
+        <div class="marker-realtime__wrap high-scale">
+          <!-- 클릭시 class에 is-active 추가해주세요 -->
+          <div style="position: absolute; z-index: 15; left: 590px">
+            <div class="marker-realtime marker-realtime__hexagon marker-realtime__hexagon--sapGreen">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  신창원
+                </div>
+                <div class="marker-realtime__bottom">
+                  P
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <!-- //고위험 육각별 ::고축척일때 그린 -->
+
+
+
+
+      </div>
+
+    </div>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">고위험 대상자 핀</h3>
+
+      <div class="marker-realtime__temp">
+        <div class="marker-realtime__wrap">
+          <!-- 클릭시 class에 is-active 추가해주세요 -->
+          <div style="position: absolute; z-index: 15;">
+            <div class="marker-realtime marker-realtime__red">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  박홍길동
+                </div>
+                <div class="marker-realtime__bottom">
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="marker-realtime__wrap is-twinkle">
+          <!-- 클릭시 class에 is-active 추가해주세요 -->
+          <div style="position: absolute; left: 150px; z-index: 15;">
+            <div class="marker-realtime marker-realtime__red ">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  박홍길동
+                </div>
+                <div class="marker-realtime__bottom">
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="marker-realtime__wrap high-scale">
+          <div style="position: absolute; z-index: 15; left: 250px">
+            <div class="marker-realtime marker-realtime__red">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  박홍길동
+                </div>
+                <div class="marker-realtime__bottom">
+                  P
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="marker-realtime__wrap max-scale">
+          <div style="position: absolute; z-index: 15; left: 300px">
+            <div class="marker-realtime marker-realtime__red">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  박홍길동
+                </div>
+                <div class="marker-realtime__bottom">
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">안심귀가 핀</h3>
+
+      <div class="marker-realtime__temp">
+        <div class="marker-realtime__wrap">
+          <div style="position: absolute; z-index: 15;">
+            <div class="marker-realtime marker-realtime__pink">
+
+              <div class="marker-realtime__header">
+                <span class="marker-realtime__header--left">안전</span>
+              </div>
+              <div class="marker-realtime__body">
+                박홍길동
+              </div>
+              <div class="marker-realtime__bottom">
+              </div>
+              <div class="flag-time">01:20</div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="marker-realtime__wrap high-scale">
+          <div style="position: absolute; z-index: 15; left: 150px">
+            <div class="marker-realtime marker-realtime__pink">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  박홍길동
+                </div>
+                <div class="marker-realtime__bottom">
+                  P
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="marker-realtime__wrap max-scale">
+          <div style="position: absolute; z-index: 15; left: 200px">
+            <div class="marker-realtime marker-realtime__pink">
+              <a href="#none" class="marker-realtime__link">
+                <div class="marker-realtime__header">
+                  <span class="marker-realtime__header--left">집중Ⅲ</span>
+                  <span class="marker-realtime__header--right">H</span>
+                </div>
+                <div class="marker-realtime__body">
+                  박홍길동
+                </div>
+                <div class="marker-realtime__bottom">
+                </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="guide-section-sub">
+      <h3 class="test-title">대상자 관련지역</h3>
+      <p class="test-text">긍정</p>
+
+      <div class="ralative-area__temp">
+        <div class="ralative-area ralative-area__positive">
+          <div class="ralative-area__inner">
+            <a class="ralative-area__link" href="#none" style="position: absolute;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="94" height="94">
+                <path fill-rule="evenodd" opacity=".659" fill="#D0D8AF"
+                  d="M47 0c25.957 0 47 21.043 47 47S72.957 94 47 94 0 72.957 0 47 21.043 0 47 0Z"></path>
+              </svg>
+              <div class="ralative-area__hover-text">[긍정] 엄마집</div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <p class="test-text">부정</p>
+      <div class="ralative-area__temp">
+        <div class="ralative-area ralative-area__negative">
+          <div class="ralative-area__inner">
+            <a class="ralative-area__link" href="#none" style="position: absolute;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+                <path fill-rule="evenodd" opacity=".659" fill="#FF787D"
+                  d="M30 0c16.568 0 30 13.431 30 30 0 16.568-13.432 30-30 30C13.431 60 0 46.568 0 30 0 13.431 13.431 0 30 0Z">
+                </path>
+              </svg>
+              <div class="ralative-area__hover-text">[긍정] 엄마집</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="test-text">POI변경 관리 메뉴에서 등록된 지물정보 중 공개된 건 레이어 출력</p>
+      <div class="ralative-area__temp" style=" position:relative; height: 200px;">
+        <div class="POI-area">
+          <svg height="150" width="200" style="position:absolute;">
+            <polygon points="100,10 200,110 170,150 123,204" style="fill:rgba(204,184,174,.55);"></polygon>
+          </svg>
+          <a class="POI-area__link" href="#none" style="position: absolute; top: 150px;left: 170px;">
+            <div class="POI-area__text">목화 어린이집</div>
+          </a>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+  </div>
+
+
+  </div>
+
+
+
+</body>
+
+<script src="./resource/js/lib/jquery-1.12.4.min.js"></script>
+<script src="./resource/js/lib/bootstrap.bundle.min.js"></script>
+<script src="./resource/js/sub.js"></script>
+
+</html>

@@ -1,0 +1,769 @@
+@import './helper/mixin';
+
+
+
+// .container{
+//     &-main{
+//         margin-bottom: 32.5rem;
+//     }
+//     &-core{
+//         height: 120rem;
+//     }
+// }
+
+/* 현재 이용중인 간병 서비스 */ 
+.care-service{
+    &__inner{
+        position: relative;
+        // height: 92rem;
+        height: auto;
+        padding: 9rem 5rem;
+        background: #4b62c3;
+    }
+    &__text{
+        &1{
+            margin-top: 9rem;
+            color:#ffffff;
+            font-size: 7rem;
+            text-align: center
+        }
+        &2{
+            margin-top: 5rem;
+            color:#b8bfe7;
+            font-size: 4.4rem;
+            text-align: center;
+        }
+    }
+    &__buttons{
+        display: flex;
+        width: 100%;
+        margin-top: 13rem;
+        background: #ffffff;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        box-shadow: 2rem 2rem 4rem rgba(84,93,131,.35);
+    }
+    &__button{
+        height: 20rem;
+        flex:1;
+        font : {
+            size: 7rem;
+            weight:600;
+        }
+        color:#3c50a2;
+        box-shadow: 2rem 2rem 4rem rgba(1,10,46,.15);
+    }
+    
+    &-icon{
+        &__list{
+            display: flex;
+            justify-content: center;
+            margin-top: 7rem;
+        }
+        width: 25.1rem;
+        height: 25.1rem;
+        margin: 0 2.5rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &:nth-child(1){
+            background-image: url(../image/main/icon-care-service01.png);
+        }
+        &:nth-child(2){
+            background-image: url(../image/main/icon-care-service02.png);
+        }
+        &:nth-child(3){
+            background-image: url(../image/main/icon-care-service03.png);
+        }
+    }
+}
+
+
+/* 동영상 콘텐츠 영역 */ 
+.video{
+    &-area{
+        &__inner{
+            // height: 80rem;
+            height: 0;
+            margin: 13rem 5rem 0 5rem;
+            padding-bottom: 53.48%;
+            background: #4b62c3;
+            border-radius: 3rem;
+        }
+    }
+    &-item{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+/* 컨텐츠 영역 */ 
+.look-service{
+    &__inner{
+        margin: 14rem 5rem 0 5rem;
+        height: 75.5rem;
+        border-radius: 3rem;
+        overflow: hidden;
+    }
+    .swiper{
+        &-pagination-fraction{
+            display: inline-block;
+            right:6rem;
+            bottom: 4.5rem;
+            left:auto;
+            width:12rem;
+            padding:  1.35rem 0;
+            background: rgba(0,0,0,0.3);
+            font-size: 3rem;
+            border-radius: 3.6rem;
+            line-height: 100%;
+            color:#ffffff;
+            span{
+                font-size: 3rem;
+                line-height: 100%;
+            }
+        }
+    }
+    &__vip{
+        height: 100%;
+        &__inner{
+            height: 100%;
+            padding: 8rem 9rem;
+            background: #e3e8fe url(../image/main/bg-vip.png) no-repeat right 4.7rem bottom;
+            background-size: 56.8rem 67.3rem;
+        }
+        &-link{
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width:100%;
+            height:100%;
+        }
+        &-title{
+            display: inline-block;
+            margin-bottom: 4rem;
+            padding:3rem 4rem;
+            font : {
+                size: 4.6rem;
+                weight:500;
+            }
+            background: #ffffff;
+            border-radius: 5.1rem;
+            line-height: 100%;
+        }
+        &-text{
+            display: block;
+            font : {
+                size: 6.4rem;
+                weight:500;
+            }
+            line-height: 8.8rem;
+        }
+        &-text2{
+            display: block;
+            margin-top: 3rem;
+            font-size: 4rem;
+            color:#333333;
+        }
+        .ui-button--icon__right{
+            height: auto;
+            margin-top: auto;
+            font-size: 4.2rem;
+            line-height: normal;
+            text-align: left;
+            color:#000000;
+            &::after{
+                display: inline-block;
+                width:1.8rem;
+                height:3.3rem; 
+                margin-left: 3rem;
+                background: url(../image/common/icon/icon_arrowRight.png);
+                background-size: cover;
+                content: "";
+            }
+        }
+    }
+}
+.with-vomi{
+    width: 100%;
+    height: 100%;
+    &__inner{
+        width: 100%;
+        height: 100%;
+        border-radius: 3rem;
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:100%;
+        padding: 7rem 9rem;
+        background: #e4ecfe;
+    }
+    &__review{
+        display: flex;
+        height:100%;
+        margin: -1.5rem;
+        &--card{
+            padding: 1.5rem;
+            &__inner{
+                padding: 5rem;
+                height:100%;
+                background: #ffffff;
+                border-radius: 1.5rem;
+                box-shadow: 1rem 1rem 1.5rem rgba(66,70,75,.1);
+            }
+        }
+        &--name{
+            margin-bottom: 4rem;
+            font : {
+                size: 4rem;
+                weight:500;
+            }
+        }
+        &--star{
+            display: flex;
+            align-items: center;
+            >i{
+                display: inline-block;
+                width:3.3rem;
+                height:3.2rem;
+                background: url(../image/common/icon-star.png);
+                background-size: 3.3rem 3.2rem;
+                &+i{
+                    margin-left: .7rem;
+                }
+            }
+            &-wrap{
+                display: flex;
+                align-items: center;
+                margin-bottom: 2.5rem;
+            }
+            img{
+                display: inline-block;
+                height:3.2rem;
+            }
+            span{
+                padding-left: 1rem;
+                font : {
+                    size: 3.6rem;
+                    weight:500;
+                }
+                color:#4b62c3;
+            }
+            &-num{
+                margin-left: 1.4rem;
+                font-size: 3.6rem;
+            }
+            
+        }
+        &--cont{
+            font : {
+                size: 4rem;
+                weight:400;
+            }
+            line-height: 5.6rem;
+            color:#555555;
+            letter-spacing: -1px;
+            @include ellipsis(5);
+        }
+    }
+}
+.slide-title{
+    &__wrap{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5rem;
+        .button-plus{
+            margin-left: auto;
+        }
+    }
+    font : {
+        size: 5.5rem;
+        weight: 600;
+    }
+    line-height: 100%;
+}
+.my-question{
+    width: 100%;
+    height: 100%;
+    &__inner{
+        width: 100%;
+        height: 100%;
+        border-radius: 3rem;
+        overflow: hidden;
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:100%;
+        padding: 7rem 9rem;
+        background: #e4ecfe;
+    }
+    &__q{
+        flex-direction: row-reverse;
+        &--img{
+            margin-left: 2rem;
+            background: url(../image/main/my-question__q.png);
+        }
+        &--text{
+            background: #4b62c3;
+            color:#ffffff;
+            &::before{
+                right: -1.2rem;
+                background: url(../image/main/icon-question__tail.png);
+            }
+        }
+    }
+    &__a{
+        margin-top: 4rem;
+        &--img{
+            margin-right: 2rem;
+            background: url(../image/main/my-question__a.png);
+        }
+        &--text{
+            background: #ffffff;
+            &::before{
+                left: -1.2rem;
+                background: url(../image/main/icon-answer__tail.png);
+            }
+        }
+        
+    }
+    &__q, &__a{
+        display: flex;
+        &--img{
+            width:13rem;
+            height:13rem;
+            background-size: 13rem;
+            flex:none;
+        }
+        &--text{
+            position: relative;
+            padding: 3rem 4rem;
+            border-radius: 3rem;
+            box-shadow: 1rem 1rem 1.5rem rgba(66,70,75,.1);
+            &__inner{
+                font-size: 4rem;
+                line-height: 6rem;
+                @include ellipsis(4);
+            }
+            &::before{
+                position: absolute;
+                top: .5rem;
+                width: 4.9rem;
+                height: 7.2rem;
+                background-size: 4.9rem 7.2rem;
+                content:"";
+            }
+        }
+    }
+}
+
+/** case2 */ 
+.care-enroll{
+    &-progress{
+        &__inner{
+            display: flex;
+        }
+    }
+    &-info{
+        margin-top: 12rem;
+        &__list{
+            display: flex;
+            &+&{
+                margin-top: 5.5rem;
+            }
+        }
+        &__title, &__text{
+            font-size: 5.4rem;
+        }
+        &__title{
+            width: 33.5rem;
+            color:#575c62;
+            flex: none;
+        }
+        &__text{
+            flex: 1;
+            text-align: right;
+
+            // case5 
+            &--s{
+                font-size: 5.6rem;
+                line-height: 9rem;
+            }
+        }
+    }
+    &-button{
+        margin-top: 9rem;
+    }
+}
+.index-case{
+    &-box{
+        padding: 13rem 5rem;
+        &__gray{
+            background: #f3f5fb;
+        }
+        &.look-service{
+            padding : {
+                top: 0;
+                bottom:0;
+            }
+        }
+        .look-service{
+            
+            &__inner{
+                margin: 0;
+                margin-top: 1rem;
+            }
+        }
+    }
+    &__title{
+        margin-bottom: 7rem;
+        font : {
+            size: 7.5rem;
+            weight:600;
+        }
+    }
+    &-item{
+        padding:8rem 9rem;
+        border-radius: 3rem;
+        overflow: hidden;
+        &__title{
+            font: {
+                size:6.4rem;
+                weight:500;
+            };
+        }
+        &__purple{
+            background: #e3e3fe;
+        }
+    }
+}
+.progress-step{
+    position: relative;
+    width: 31.1rem;
+    height: 35.9rem;
+    padding:5rem;
+    flex:1;
+    background-color: #e1e4ee;
+    background-repeat: no-repeat;
+    background-position: right 5rem bottom 5rem;
+    font : {
+        size: 5.5rem;
+        weight:500;
+    }
+    line-height:7rem;
+    color:#9196a5;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    &+&{
+        margin-left: 3.2rem;
+    }
+    &__matching{
+        background-image: url(../image/main/icon-matching.png);
+        background-size: 9.1rem 8.7rem;
+    }
+    &__waiting{
+        background-image: url(../image/main/icon-waiting.png);
+        background-size: 6.5rem 8.7rem;
+    }
+    &__doing{
+        background-image: url(../image/main/icon-doing.png);
+        background-size: 9.4rem 8.9rem;
+    }
+    &__end{
+        background-image: url(../image/main/icon-end.png);
+        background-size: 9.3rem 8.1rem;
+    }
+    &:not(.progress-step__end){
+        &::before{
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            right: -2.2rem;
+            width: 2.6rem;
+            height: 4.3rem;
+            background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='43'%3E%3Cpath fill='%23E1E4EE' fill-rule='evenodd' d='M24.753 20.036c1.332.771 1.332 2.693 0 3.464L3.028 42.413c-1.334.771-3.001-.191-3.001-1.731V2.855c0-1.541 1.667-2.503 3.001-1.733l21.725 18.914Z'/%3E%3C/svg%3E");
+            background-size: 2.6rem 4.3rem;
+            transform: translateY(-50%);
+            content:''
+        }
+    }
+    &:not(.progress-step__end){
+        &.is-active{
+            &::before{
+                background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='43'%3E%3Cpath fill='%234b62c3' fill-rule='evenodd' d='M24.753 20.036c1.332.771 1.332 2.693 0 3.464L3.028 42.413c-1.334.771-3.001-.191-3.001-1.731V2.855c0-1.541 1.667-2.503 3.001-1.733l21.725 18.914Z'/%3E%3C/svg%3E");
+            }
+            &.progress-step{
+                &__matching{
+                    background-image: url(../image/main/icon-matching__active.png);
+                }
+                &__waiting{
+                    background-image: url(../image/main/icon-waiting__active.png);
+                }
+                &__doing{
+                    background-image: url(../image/main/icon-doing__active.png);
+                }
+                &__end{
+                    background-image: url(../image/main/icon-end__active.png);
+                }
+            }
+        }
+    }
+    &.is-active{
+        background-color: #4b62c3;
+        color:#ffffff;
+        box-shadow: 2rem 2rem 4rem rgba(67,76,133,.35);
+        &.progress-step{
+            &__matching{
+                background-image: url(../image/main/icon-matching__active.png);
+            }
+            &__waiting{
+                background-image: url(../image/main/icon-waiting__active.png);
+            }
+            &__doing{
+                background-image: url(../image/main/icon-doing__active.png);
+            }
+            &__end{
+                background-image: url(../image/main/icon-end__active.png);
+            }
+        }
+    }
+    &:not(.progress-step__end){
+        &.is-past{
+            background-color: #ffffff;
+            color:#2e439b;
+            &::before{
+                background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='43'%3E%3Cpath fill='%23ffffff' fill-rule='evenodd' d='M24.753 20.036c1.332.771 1.332 2.693 0 3.464L3.028 42.413c-1.334.771-3.001-.191-3.001-1.731V2.855c0-1.541 1.667-2.503 3.001-1.733l21.725 18.914Z'/%3E%3C/svg%3E");
+            }
+            &.progress-step{
+                &__matching{
+                    background-image: url(../image/main/icon-matching__past.png);
+                }
+                &__waiting{
+                    background-image: url(../image/main/icon-waiting__past.png);
+                }
+                &__doing{
+                    background-image: url(../image/main/icon-doing__past.png);
+                }
+                &__end{
+                    background-image: url(../image/main/icon-end__past.png);
+                }
+            }
+        }
+    }
+}
+
+/* 보미쌤 지원 현황 */ 
+.carer{
+    &-list{
+        border-radius: 3rem;
+        box-shadow: 2rem 2rem 4rem rgba(67,76,133,.28);
+        overflow: hidden;
+        &+&{
+            margin-top: 12rem;
+        }
+        &__premium{
+            position: relative;
+            &::before{
+                position: absolute;
+                top: -3rem;
+                right:5.5rem;
+                width: 16rem;
+                height: 21.9rem;
+                background: url(../image/main/badge-premium.png);
+                background-size: cover;
+                content: "";
+                z-index: 2;
+            }
+        }
+        &.is-show{
+            .carer-detail__list--more{
+                display: flex;
+            }
+        }
+    }
+    &-content{
+        display: flex;
+        padding: 8rem;
+        box-sizing: border-box;
+    }
+    &-image{
+        @include d-flex-center;
+        width: 30rem;
+        height:40.1rem;
+        border-radius: 1rem;
+        flex:none;
+        overflow: hidden;
+        img{
+            max-height: 100%;
+            height:100%;
+        }
+    }
+    &-nsy{
+        font-size: 5.4rem;
+    }
+    &-name{
+        font: {
+            size:7rem;
+            weight:600;
+        };
+    }
+    &-info{
+        margin-left: 9rem;
+    }
+    &-detail{
+        margin-top: 5.5rem;        
+        &__list{
+            display: flex;
+            // &+&{
+            //     margin-top: -.5rem;
+            // }
+            &--more{
+                display: none;
+            }
+        }
+        &__title, &__text{
+            font-size: 5.6rem;
+        }
+        &__title{
+            width: 21.6rem;
+            color:#575c62;
+            flex: none;
+            line-height: 9.4rem;
+        }
+        &__text{
+            display: flex;
+            align-items: center;
+            flex: 1;
+            line-height: 9.4rem;
+            word-break: keep-all;
+            letter-spacing: -1px;
+            vertical-align: middle;
+            .badge{
+                display: inline-block;
+                width: auto;
+                height: auto;
+                margin-left: 3.9rem;
+                padding: .9rem 2rem;
+                font : {
+                    size: 4rem;
+                    weight:500;
+                }
+                color:#4b62c3;
+                background: #e1e4ee;
+                border-radius: 2.8rem;
+
+            }
+        }
+    }
+    &-cost{
+        margin-top: 7rem;
+        &__text{
+            font-size: 4.4rem;
+            color:#575c62;
+        }
+        &__num{
+            margin-top: 2rem;
+            font : {
+                size: 7.4rem;
+                weight:600;
+            }
+        }
+    }
+    &-buttons{
+        display: flex;
+    }
+    &-button{
+        width:100%;
+        height: 16rem;
+        background: #8999de;
+        color:#ffffff;
+        font : {
+            size: 6rem;
+            weight:500;
+        }
+        text-shadow: .5rem .5rem .3rem rgba(27,41,101,.3);
+        &__choice{
+            display: none;
+            background:  linear-gradient(0deg, #8999de 0%,  #8999de 60%,  rgba(97,122,176,.8) 100%);;
+        }
+        &__wish{
+            display: none;
+            width: 16.7rem;
+            flex: none;
+            background: #4a61c0;
+            i{
+                display: inline-block;
+                width: 7.4rem;
+                height: 7rem;
+                background: url(../image/main/icon-star.png);
+                background-size: cover;
+            }
+        }
+    }
+}
+
+/* 간병 기간 변경하기 팝업 */ 
+.care{
+    &-date{
+        &__list{
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            &+&{
+                margin-top: 8rem;
+            }
+        }
+        &__title, &__text{
+            font-size: 5.4rem;
+        }
+        
+        &__title{
+            width: 40rem;
+            color:#575c62;
+            flex:none;
+        }
+        &__button{
+            margin-left: auto;
+            flex:none;
+        }
+    }
+}
+
+/* 지원자 없음 */ 
+.no-carer{
+    &__inner{
+        margin-bottom: 5rem;
+    }
+    &__title{
+        font : {
+            size: 6.5;
+            weight:500;
+        }
+        line-height: 9rem;
+        text-align: center;
+    }
+    &__text{
+        margin-top: 6rem;
+        font-size: 5rem;
+        text-align: center;
+    }
+}
+.chooseCarer{
+    &__text{
+        font-size: 5rem;
+        line-height: 7rem;
+        &:nth-child(1){
+            margin-top: 11.5rem;
+        }
+        &+&{
+            margin-top: 8.5rem;
+        }
+    }
+}
+
+/** case3  */ 
+

@@ -1,0 +1,92 @@
+@import './helper/index';
+
+.container{
+    &-login{
+        background: url(../image/common/bg-login.jpg);
+        background-size: cover;
+    }
+}
+
+.login{
+    &-first{
+        display: flex;
+        flex-direction: column;
+        height:100%;
+        padding: 27.5rem 5rem 21.5rem;
+        &__title{
+            font: {
+                size: 13rem;
+                weight:100;
+            };
+            text-align: center;
+            line-height: 18.6rem;
+            strong{
+                font: {
+                    size: 13rem;
+                    weight:600;
+                };
+            }
+            span{
+                font: {
+                    size: 13rem;
+                    weight:500;
+                };
+            }
+        }
+        &__text{
+            margin-top: 9rem;
+            font : {
+                size: 5.8rem;
+            }
+            line-height: 9.4rem;
+            text-align: center;
+        }
+        &__bottom{
+            margin-top: auto;
+           
+            &--bottom{
+                margin-top: 16rem;
+                &-text{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    margin-bottom: 9rem;
+                    font-size: 4.4rem;
+                    text-align: center;
+                    &::before, &::after{
+                        display: inline-block;
+                        flex: 1;
+                        height:1px;
+                        background: #000000;
+                        content: '';
+                    }
+                    &::before{
+                        margin-right: 5rem;
+                    }
+                    &::after{
+                        margin-left: 5rem;
+                    }
+                }
+                .button{
+                    &-wrap{
+                        display: flex;
+                    }
+                }
+                button{
+                    @include d-flex-center;
+                    flex: 1;
+                    height: 18.5rem;
+                    font-size: 5rem;
+                    color:#333333;
+                    border-radius: 2rem;
+                    border: .3rem solid #e9eaec;
+                    background: #ffffff;
+                    &+button{
+                        margin-left: 4rem;
+                    }
+                }
+            }
+        }
+    }    
+    
+}

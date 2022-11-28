@@ -1,0 +1,439 @@
+@charset 'utf-8';
+@import './helper/mixin';
+
+
+// 
+.container{
+    &__sub{
+        padding: 0 5rem 10rem 5rem;
+        
+        &--p{
+            &-0{
+                padding:0;
+            }
+            &b{
+                &-0{
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    &-core{
+        &__flex{
+            display: flex;
+            flex-direction: column;
+            height:100%;
+        }
+    }
+}
+
+
+
+.sub{
+    /* sub-title */
+    &-title{
+        font: {
+            size:8rem;
+            weight:500;
+        }
+        text-align: center;
+        &2{
+            font-size: 6.6rem;
+            line-height: 10.2rem;
+            text-align: center;
+        }
+        &3{
+            margin-bottom: 9rem;
+            font-size: 5.5rem;
+        }
+        &4{
+            font-size: 4.6rem;
+        }
+        &__underline{
+            position: relative;
+            padding-bottom: 3.6rem;
+            margin-bottom: 7rem;
+            font: {
+                size:6.4rem;
+                weight:600;
+            };
+            &::before {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 0.4rem;
+                background: #000000;
+                content: "";
+            }
+        }
+    }
+    &-text{
+        font-size: 6rem;
+        line-height: 10rem;
+    }
+    /* sub-item */
+    &-item{
+        padding: 0 5rem;
+        &+&{
+            margin-top: 13rem;
+        }
+        &__title{
+            margin-bottom: 6rem;
+            font : {
+                size: 6rem;
+                weight:600;
+            }
+            &--des{
+                margin-left: 1rem;
+                font-size: 6rem;
+            }
+            &--subs{
+                display:flex;
+                justify-content:space-between;
+                font-size:5.4rem;
+                font-weight:600;
+            }
+        }
+        &__gray{
+            padding: 10rem 5rem;
+            background: #f6f8fb;
+        }
+        &__blue{
+            padding:12rem 8rem;
+            background-color:#4b62c3;
+        }
+        &__box{
+            position:relative;
+            &--gray{
+                padding:8rem;
+                background: #f3f5fb;
+            }
+            &--border{
+                padding:8rem;
+                border:1px solid #d8dce2;
+                border-radius: 3rem;
+            }
+            &--flex{
+                display: flex;
+                align-items: center;
+            }
+        }
+        &__btn{
+            &--view{
+                font-size:4.8rem;
+                color:#9196a5;
+            }
+        }
+    }
+    /* sub-list */ 
+    // &-list{
+        
+    // }
+    &-dl{
+        display: flex;
+        &+&{
+            margin-top: 4rem;
+        }
+        &__center{
+            align-items: center;
+        }
+    }
+    &-dt, &-dd{
+        font-size: 5.6rem;
+        letter-spacing: -1px;
+        *:not(button):not(.des-text2){
+            font-size: 5.6rem;
+            letter-spacing: -1px;
+        }
+    }
+    &-dt{
+        flex:none;
+        color:#575c62;
+        
+        &__width{
+            flex:none;
+        }
+    }
+    &-dd{
+        flex: 1;
+        &__right{
+            text-align: right;
+        }
+    }
+}
+
+.page-bottom{
+    margin-top: auto;
+    &__inner{
+        margin-top: 25rem;
+    }
+    &__padding{
+        padding: 0 5rem 10rem 5rem;
+    }
+}
+
+/* list */ 
+.ui-list{
+    &-dot{
+        li{
+            position: relative;
+        }
+    }
+    &-dashed{
+        li{
+            position: relative;
+            padding-left:2.7rem;
+            line-height: 7rem;
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                content:"-"
+            }
+        }
+    }
+}
+
+
+// 별점 indexCase5
+.star-rating {
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 20rem;
+    font-size:1.5em;
+    text-align:center;
+    border-radius: 2rem;
+    background: #f3f5fb;
+    input {
+        display:none;
+        &:checked ~ label{
+            background: url(../image/common/icon/icon-straRating__on.png);
+            background-size: 10.3rem 9.8rem;
+        }
+     }
+      label {
+        width: 10.3rem;
+        height: 9.8rem;
+        margin: 0 4rem;
+        background: url(../image/common/icon/icon-straRating.png);
+        background-size: 10.3rem 9.8rem;
+        cursor:pointer;
+    }
+}
+
+
+//입력 예
+.text{
+    &-ex{
+        margin-top: 4rem;
+        font-size: 5.5rem;
+        color:#9196a5;
+        &--small{
+            font-size:4.8rem;
+            line-height:1.5;
+        }
+    }
+}
+
+.ui-required{
+    color: #DD5458;
+    margin-left: 1rem;
+}
+
+.ui-txt--blue{
+    color: #4b62c3;
+    margin-left: 1rem;
+}
+
+
+//설명글
+.des-text{
+    &__inner{
+        padding: 5rem 6rem;
+        font-size: 4.8rem;
+        line-height: 8rem;
+        color:#9196a5;
+        background: #f3f5fb;
+        border-radius: 2rem;
+    }
+    &2{
+        font-size: 4.4rem;
+        color:#575c62;
+    }
+}
+
+//line-gray
+.line-gray{
+    &__xsmall{
+        width:calc(100% + 10rem);
+        margin-left: -5rem;
+        margin-right: -5rem;
+        height:.5rem;
+    }
+    &__small{
+        width:calc(100% + 10rem);
+        margin-left: -5rem;
+        margin-right: -5rem;
+        height:1rem;
+    }
+    &__large{
+        width:calc(100% + 10rem);
+        margin-left: -5rem;
+        margin-right: -5rem;
+    }
+}
+
+
+
+// 모달 리스트?
+.care{
+    &-date{
+        &__list{
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            &+&{
+                margin-top: 8rem;
+            }
+        }
+        &__title, &__text{
+            font-size: 5.4rem;
+        }
+        
+        &__title{
+            width: 40rem;
+            color:#575c62;
+            flex:none;
+            &--width{
+                &-418{
+                    width: 41.8rem;
+                }
+            }
+        }
+        &__button{
+            margin-left: auto;
+            flex:none;
+        }
+    }
+}
+ 
+
+// 총 합계금액
+.total{
+    &-cost{
+        &__list{
+            display: flex;
+            align-items: center;
+        }
+        &__title{
+            font-size: 5.5rem;
+        }
+        &__text{
+            flex:1;
+            text-align: right;
+            font: {
+                size: 7.8rem;
+                weight:600;
+            };
+        }
+        &__box{
+            &--inner{
+                margin-top: 8rem;
+                padding-top: 8rem;
+                border-top:.3rem solid #dfe0e2;
+            }
+        }
+    }
+}
+
+// date 박스
+.date{
+    &-box{
+        padding:5rem;
+    }
+}
+
+.js-datepicker-range{
+    .ui-button{
+        font-size:4.6rem;
+    }
+}
+
+//acordion
+.acordion{
+    &-notice{
+        &__btn{
+            position:relative;
+            display:block;
+            width:100%;
+            padding:8.5rem 6rem;
+            padding-right:16rem;
+            font-size:5.6rem;
+            font-weight:600;
+            color:#222;
+            background:url('../image/sub/icon/icon-down.png') no-repeat 95% center;
+            background-size:5.3rem 2.9rem;
+            border-bottom:1px solid #e9eaec;
+            line-height:1.2;
+            text-align:left;
+            &.is-click{
+                background:url('../image/sub/icon/icon-up--blue.png') no-repeat 95% center;
+                background-size:5.3rem 2.9rem;
+            }
+        }
+        &__view{
+            position:relative;
+            display:none;
+            padding:7.5rem 6rem;
+            font-size:4.8rem;
+            font-weight:500;
+            color:#222;
+            line-height:1.5;
+            background-color:#f6f8fb;
+        }
+        &--faq{
+            .acordion-notice{
+                &__btn{
+                    padding-left:14rem;
+                    &::before{
+                        position:absolute;
+                        top:8rem;
+                        left:6rem;
+                        margin-right:4.5rem;
+                        font-size:5.6rem;
+                        font-weight:600;
+                        color:#4b62c3;
+                        content:"Q"
+                    }
+                    &.is-click{
+                        & + .acordion-notice__view{
+                            &::before{
+                                top:6.5rem;
+                                transition:all .4s ease-in-out;
+                            }
+                        }
+                    }
+                }
+                &__view{
+                    padding-left:14rem;
+                    &::before{
+                        position:absolute;
+                        top:0;
+                        left:6rem;
+                        margin-right:4.5rem;
+                        font-size:5.6rem;
+                        font-weight:600;
+                        color:#f46b76;
+                        transition:all .4s ease-in-out;
+                        content:"A"
+                    }
+                }
+            }
+        }
+    }
+}

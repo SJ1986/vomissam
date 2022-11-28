@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <link rel="stylesheet" href="../resource/css/main.css">
+
+
+
+
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/main.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <!-- [include] header -->
+        <header data-include-file="../include/header.html" class="header-wrap js-include"></header>
+        <!-- //[include] header -->
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container container-main">
+
+            <div class="container__inner">
+
+                <div class="container-core">
+                    <div class="container-core__inner">
+
+                        <section class="index-case-box index-case-box__gray">
+                            <div class="index-case-box__inner">
+                                <div class="index-case__title">간병 신청 현황</div>
+                                <div class="care-enroll-progress">
+                                    <div class="care-enroll-progress__inner">
+                                        <!-- DD :: 진행중 일때 클래스에 is-active 붙고, 지나갔을떄는 is-past 붙습니다. -->
+                                        <div class="progress-step progress-step__matching is-past">매칭 중</div>
+                                        <div class="progress-step progress-step__waiting is-past">간병 <br>대기 중</div>
+                                        <div class="progress-step progress-step__doing is-active">간병 중</div>
+                                        <div class="progress-step progress-step__end">간병 종료</div>
+                                    </div>
+                                </div>
+                                <div class="care-enroll-info">
+                                    <div class="care-enroll-info__inner">
+                                        <dl class="care-enroll-info__list">
+                                            <dt class="care-enroll-info__title">환자명</dt>
+                                            <dd class="care-enroll-info__text">홍길동</dd>
+                                        </dl>
+                                        <dl class="care-enroll-info__list">
+                                            <dt class="care-enroll-info__title">간병기간</dt>
+                                            <dd class="care-enroll-info__text">2022.09.18 12시 ~ 2022.09.19 16시</dd>
+                                        </dl>
+                                        <dl class="care-enroll-info__list">
+                                            <dt class="care-enroll-info__title">간병비용</dt>
+                                            <dd class="care-enroll-info__text">￦ 1,312,000</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="care-enroll-button text-right ui-buttons">
+                                    <button type="button"
+                                        class="ui-button ui-button__height-s ui-button__border-blue font-weight__r"
+                                        data-toggle="modal" data-target="#vomiInfo">보미쌤 정보보기</button>
+                                    <button type="button"
+                                        class="ui-button ui-button__height-s ui-button__border-blue font-weight__r">보미노트
+                                        보기</button>
+                                </div>
+                            </div>
+                        </section>
+
+                       
+
+                        <section class="index-case-box my-question">
+                            <div class="my-question__inner">
+                                <a href="javascript:void(0)" class="my-question__link">
+
+                                    <div class="slide-title__wrap">
+                                        <span class="slide-title">나의 문의</span>
+                                        <button type="button" class="button-plus"></button>
+                                    </div>
+
+                                    <div class="my-question__review">
+                                        <div class="my-question__review--card">
+                                            <div class="my-question__review--card__inner">
+                                                <div class="my-question__q">
+                                                    <div class="my-question__q--img"></div>
+                                                    <div class="my-question__q--text">
+                                                        <div class="my-question__q--text__inner">
+                                                            간병서비스가 종료되는데 어떻게 하나요? 간병서비스가
+                                                            종료 되는데 어떻게 하나요?
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="my-question__a">
+                                                    <div class="my-question__a--img"></div>
+                                                    <div class="my-question__a--text">
+                                                        <div class="my-question__q--text__inner">
+                                                            간병 종료 버튼을 누르시고 안내대로 진행하세요. 간병 종료
+                                                            버튼을 누르시고 안내대로 진행하세요. 간병 종료 버튼을
+                                                            누르시고 안내대로 진행하세요. 간병 종료 버튼을 누르시고
+                                                            안내대로 진행하세요. 간병 종료 버튼을 누르시고 안내대로
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </a>
+                            </div>
+                        </section>
+
+                        <section class="index-case-box look-service">
+                            <div class="look-service__inner">
+                                <div class="look-service__vip">
+                                    <div class="look-service__vip__inner">
+                                        <a href="javascript:void(0)" class="look-service__vip-link">
+                                            <span class="look-service__vip-title">VIP 간병서비스</span>
+                                            <span class="look-service__vip-text">
+                                                업계최초! 유일! <br>
+                                                TCI 기질·성격검사로 <br>
+                                                간병인 인성검증
+                                            </span>
+                                            <span class="look-service__vip-text2">보미쌤 서비스 교육 수료 후 업무 진행</span>
+                                            <button type="button"
+                                                class="ui-button ui-button--icon ui-button--icon__right">자세히보기</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 모달 -->
+
+                        <!-- 보미쌤 정보보기 모달 -->
+                        <div class="modal fade" id="vomiInfo" tabindex="-1" style="z-index: 1050;"
+                            aria-labelledby="vomiInfoLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-auto ">
+                                <div class="modal-content modal-content__vomiInfo">
+                                    <div class="modal-header">
+                                        <div class="modal-title modal-title__font-l text-left mb-0">보미쌤 정보보기</div>
+                                    </div>
+                                    <div class="modal-body">
+                                        보미쌤 정보보기
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //보미쌤 정보보기 모달 -->
+
+
+
+
+
+                        <!-- // 모달 -->
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <!-- //container -->
+
+        <section class="quick-menu">
+            <div class="quick-menu__inner">
+                <button type="button" class="quick-menu__button quick-menu__button--enroll ">
+                    <i></i>
+                    <span class="quick-menu__button-text">간병신청</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--pay is-active">
+                    <i></i>
+                    <span class="quick-menu__button-text">결제관리</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--customer">
+                    <i></i>
+                    <span class="quick-menu__button-text">고객센터</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--my">
+                    <i></i>
+                    <span class="quick-menu__button-text">내정보관리</span>
+                </button>
+            </div>
+        </section>
+
+
+
+        <!-- footer -->
+        <!-- [include] footer -->
+        <footer data-include-file="../include/footer.html" class="footer-wrap js-include"></footer>
+        <!-- //[include] footer -->
+        <!-- //footer -->
+
+
+
+    </div>
+
+</body>
+<script>
+    // var lastScrollTop = 0;
+    // var delta = 5;
+    // var fixBox = document.querySelector('.quick_menu');
+    // var fixBoxHeight = fixBox.offsetHeight;
+    // var didScroll;
+    // //스크롤 이벤트 
+    // window.onscroll = function(e) {
+    //     didScroll = true;
+    // };
+
+    // //0.25초마다 스크롤 여부 체크하여 스크롤 중이면 hasScrolled() 호출
+    // setInterval(function(){
+    //     if(didScroll){
+    //         hasScrolled();
+    //         didScroll = false;
+    //     }
+    // }, 250);
+
+    // function hasScrolled(){
+    //     var nowScrollTop = window.scrollY;
+    //     if(Math.abs(lastScrollTop - nowScrollTop) <= delta){
+    //         return;
+    //     }
+    //     if(nowScrollTop > lastScrollTop && nowScrollTop > fixBoxHeight){
+    //         //Scroll down
+    //         fixBox.classList.remove('is-show');
+    //     }else{
+    //         if(nowScrollTop + window.innerHeight < document.body.offsetHeight){
+    //             //Scroll up
+    //             fixBox.classList.add('is-show');
+    //         }
+    //     }
+    //     lastScrollTop = nowScrollTop;
+    // }
+</script>
+
+</html>

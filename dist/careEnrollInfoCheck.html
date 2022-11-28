@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보미쌤</title>
+
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="../resource/css/reset.css">
+    <link rel="stylesheet" href="../resource/css/font.css">
+    <link rel="stylesheet" href="../resource/css/common.css">
+
+    <link rel="stylesheet" href="../resource/css/lib/swiper.min.css">
+    <link rel="stylesheet" href="../resource/css/lib/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../resource/css/ux-common.css">
+    <!-- //공통 css -->
+
+    <!-- 각 페이지 css -->
+    <link rel="stylesheet" href="../resource/css/enroll.css">
+    <!-- //각 페이지 css -->
+
+
+
+
+
+    <script type="text/javascript" src="../resource/js/lib/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../resource/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../resource/js/include.js"></script>
+    <script type="text/javascript" src="../resource/js/common.js"></script>
+    <script type="text/javascript" src="../resource/js/sub.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- skipNavigation -->
+        <div id="skipNavigation" title="스킵내비게이션">
+            <a href="#nav">메뉴 바로가기</a>
+            <a href="#">본문 바로가기</a>
+        </div>
+        <!-- //skipNavigation -->
+
+        <!-- header -->
+        <!-- [include] header -->
+        <header>
+            <div class="header__inner">
+                <div class="page-back">
+                    <div class="page-back__inner">
+                        <button type="button" class="ui-button ui-button__page--back"></button>
+                    </div>
+                </div>
+                <div class="header-title">
+                    <div class="header-title__inner">
+                        간병신청하기
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-alarm">
+                        <div class="header-alarm__inner">
+                            <button type="button" class="header-alarm__button"></button>
+                        </div>
+                    </div>
+                    <div class="header-hamberger">
+                        <div class="header-hamberger__inner">
+                            <button type="button" class="header-hamberger__button"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //[include] header -->
+        <!-- //header -->
+
+
+        <!-- container -->
+        <div class="container container__sub container__sub--enroll container__sub--pb-0">
+            <div class="container__inner">
+                <div class="container-core">
+                    <div class="container-core__inner container-core__flex">
+                        <section class="sub-content">
+
+                            <div class="enroll-box">
+                                <div class="enroll-box__inner">
+                                    <div class="enroll-title">환자의 특이 상태<span class="enroll-title__des">(중복 선택 가능)</span>
+                                    </div>
+                                    <div class="ui-buttons ui-buttons__thirds">
+                                        <button type="button"
+                                            class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">수면장애</button>
+                                        <button type="button"
+                                            class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">섬망</button>
+                                        <button type="button"
+                                            class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">욕창</button>
+                                        <button type="button"
+                                            class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">장루</button>
+                                        <button type="button"
+                                            class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">석션</button>
+                                        <button type="button"
+                                            class="ui-button ui-button__left ui-button__border-gray ui-button__font-xs ui-button__check--multi">치매</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="enroll-box">
+                                <div class="enroll-box__inner">
+                                    <div class="enroll-title">주보호자 연락처<span class="ui-required">(필수)</span></div>
+                                    <div class="ui-form ui-form__flex--row">
+                                        <div class="ui-form__cell width-370">연락처</div>
+                                        <div class="ui-form__cell flex">
+                                            <input type="text" class="ui-input " placeholder="연락처를 입력해 주세요">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="enroll-box">
+                                <div class="enroll-box__inner">
+                                    <div class="enroll-title">특별히 더 알아야 할 것이 있다면 작성해 주세요<span
+                                            class="enroll-title__des">(선택)</span></div>
+                                    <div class="ui-form">
+                                        <textarea name="" class="ui-textarea ui-textarea__height-265"
+                                            placeholder="내용을 입력해 주세요"></textarea>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </section>
+
+                        <section class="page-bottom">
+                            <div class="page-bottom__inner ui-buttons">
+                                <button type="button"
+                                    class="ui-button ui-button__border-gray ui-button__color-gray font-weight__m">이전</button>
+
+                                <button type="button"
+                                    class="ui-button ui-button__border-blue font-weight__m" data-toggle="modal" data-target="#careEnrollInfoCheck">입력 완료</button>
+                            </div>
+                        </section>
+
+                        <!-- 모달 -->
+                        <div class="modal fade" id="careEnrollInfoCheck" tabindex="-1" aria-labelledby="careEnrollInfoCheckLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-auto ">
+                                <div class="modal-content modal-content__modifyDate">
+                                    <div class="modal-header">
+                                        <div class="modal-title modal-title__font-l text-left mb-0">간병 신청 정보 확인</div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-core2 modal-core__py-0 pt-0">
+                                            <div class="modal-core2__title modal-core2__title-s mt-65">보호자님께서 입력하신 정보를 다시 한번 확인 합니다. <br>정보를 잘못 입력한 경우 수정이 가능합니다. 
+                                            </div>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">간병 비용</dt>
+                                                <dd class="care-date__text">₩ 1,550,000 (식사 포함)</dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">간병 형태</dt>
+                                                <dd class="care-date__text">시간제/병원</dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">간병 장소</dt>
+                                                <dd class="care-date__text">삼성서울병원</dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">작업 시작일</dt>
+                                                <dd class="care-date__text">2022/11/01</dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">작업 종료일</dt>
+                                                <dd class="care-date__text">2022/11/10</dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">간병 요일</dt>
+                                                <dd class="care-date__text">매주 월/수</dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">일간병시간</dt>
+                                                <dd class="care-date__text">10:00 ~ 18:00 (8시간)</dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">환자 정보</dt>
+                                                <dd class="care-date__text">홍길동 (남, 83세)</dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">진료과(진단명)</dt>
+                                                <dd class="care-date__text">심혈관내과</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">입원 병실</dt>
+                                                <dd class="care-date__text">일반실  815호</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">신장/몸무게</dt>
+                                                <dd class="care-date__text">171 Cm / 75 Kg</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">격리감염질한</dt>
+                                                <dd class="care-date__text">해당 없음</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">거동가능여부</dt>
+                                                <dd class="care-date__text">거동 불능</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">거동가능여부</dt>
+                                                <dd class="care-date__text">스스로 가능</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">화장실 이용</dt>
+                                                <dd class="care-date__text">기저귀</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">환자특이상태</dt>
+                                                <dd class="care-date__text">수면장애, 섬망</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                            <dl class="care-date__list">
+                                                <dt class="care-date__title care-date__title--width-418">보호자 요청</dt>
+                                                <dd class="care-date__text">요청 사항</dd>
+                                                <dd class="care-date__button"><button type="button" class="ui-button-modify">수정</button></dd>
+                                            </dl>
+                                        </div>
+                                        
+
+                                        <div class="modal-buttons modal-buttons__sticky mt-150">
+                                            <button type="button" class="ui-button ui-button__border-blue" data-dismiss="modal">이전</button>
+                                            <button type="button" class="ui-button ui-button__bg-blue">입력 완료</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //모달 -->
+
+                    </div>
+                </div><!-- //container-core -->
+            </div>
+
+        </div>
+        <!-- //container -->
+
+        <!-- quick-menu -->
+        <section class="quick-menu">
+            <div class="quick-menu__inner">
+                <!-- 전달사항 :: 선택 항목에 클래스 is-active 붙습니다. -->
+                <button type="button" class="quick-menu__button quick-menu__button--enroll ">
+                    <i></i>
+                    <span class="quick-menu__button-text">간병신청</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--pay is-active">
+                    <i></i>
+                    <span class="quick-menu__button-text">결제관리</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--customer">
+                    <i></i>
+                    <span class="quick-menu__button-text">고객센터</span>
+                </button>
+                <button type="button" class="quick-menu__button quick-menu__button--my">
+                    <i></i>
+                    <span class="quick-menu__button-text">내정보관리</span>
+                </button>
+            </div>
+        </section>
+        <!-- //quick-menu -->
+
+
+
+        <!-- footer -->
+        <!-- [include] footer -->
+        <footer data-include-file="../include/footer.html" class="footer-wrap js-include"></footer>
+        <!-- //[include] footer -->
+        <!-- //footer -->
+
+
+
+
+    </div>
+
+</body>
+<script>
+
+</script>
+
+</html>

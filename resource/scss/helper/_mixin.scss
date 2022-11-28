@@ -1,0 +1,245 @@
+// Break Point
+$n-xxs: 320px;
+$n-ns: 475px;
+$n-xs: 576px;
+$n-sm: 768px;
+$n-md: 1024px;
+$n-lg: 1280px;
+$n-ml: 1400px;
+$n-xl: 1600px;
+$n-17s: 1700px;
+$n-18s: 1800px;
+$n-19s: 1900px;
+$n-breakpoints: (
+  n-xxs: 320px,
+  // Extra small screen / phone
+  n-ns: 475px,
+  // Small screen / phone
+  n-xs: 576px,
+  // Small screen / phone
+  n-sm: 768px,
+  // Medium screen / tablet
+  n-md: 1024px,
+  // Large screen / desktop
+  n-lg: 1280px,
+  // Extra large screen / wide desktop
+  n-ml: 1400px,
+  n-xl: 1600px,
+  n-17s: 1700px,
+  n-18s: 1800px,
+  n-19s: 1900px
+);
+$container-max-widths: (
+  n-sm: 540px,
+  n-md: 720px,
+  n-lg: 960px,
+  n-xl: 1140px
+);
+$n-breakpoint: map-get($n-breakpoints, n-sm);
+
+$color-main : #4568a9;
+
+// Respond above.
+@mixin mobileS {
+    @media (min-width: #{$n-xxs}) {
+        @content;
+    }
+}
+@mixin mobileL {
+    @media (min-width: #{$n-xs}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media (min-width: #{$n-sm}) {
+        @content;
+    }
+}
+@mixin labtop {
+    @media (min-width: #{$n-md}) {
+        @content;
+    }
+}
+@mixin notbook {
+    @media (min-width: #{$n-lg}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$n-ml}) {
+        @content;
+    }
+}
+@mixin wideScr {
+    @media (min-width: #{$n-xl}) {
+        @content;
+    }
+}
+@mixin w17s {
+    @media (min-width: #{$n-17s}) {
+        @content;
+    }
+}
+@mixin w18s {
+    @media (min-width: #{$n-18s}) {
+        @content;
+    }
+}
+@mixin w19s {
+    @media (min-width: #{$n-19s}) {
+        @content;
+    }
+}
+@mixin media-breakpoint-up($breakpoint) {
+    // If the breakpoint exists in the map.
+    @if map-has-key($n-breakpoints, $breakpoint) {
+      // Get the breakpoint value.
+      $n-breakpoint-value: map-get($n-breakpoints, $breakpoint);
+      // Write the media query.
+      @media (min-width: $n-breakpoint-value) {
+        @content;
+      }
+    // If the breakpoint doesn't exist in the map.
+    } @else {
+      // Log a warning.
+      @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+  }
+  // Respond under.
+  @mixin media-breakpoint-down($breakpoint) {
+    // If the breakpoint exists in the map.
+    @if map-has-key($n-breakpoints, $breakpoint) {
+      // Get the breakpoint value.
+      $n-breakpoint-value: map-get($n-breakpoints, $breakpoint);
+      // Write the media query.
+      @media (max-width: ($n-breakpoint-value)) {
+        @content;
+      }
+    // If the breakpoint doesn't exist in the map.
+    } @else {
+      // Log a warning.
+      @warn 'Invalid breakpoint: #{$breakpoint}.';
+    }
+  }
+  //Respond between
+  @mixin media-breakpoint-only($lower, $upper) {
+    // If both the lower and upper breakpoints exist in the map.
+    @if map-has-key($n-breakpoints, $lower) and map-has-key($n-breakpoints, $upper) {
+      // Get the lower and upper breakpoints.
+      $n-lower-breakpoint: map-get($n-breakpoints, $lower);
+      $n-upper-breakpoint: map-get($n-breakpoints, $upper);
+      // Write the media query.
+      @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint)) {
+        @content;
+      }
+    // If one or both of the breakpoints don't exist.
+    } @else {
+      // If lower breakpoint is invalid.
+      @if (map-has-key($n-breakpoints, $lower) == false) {
+        // Log a warning.
+        @warn 'Your lower breakpoint was invalid: #{$lower}.';
+      }
+      // If upper breakpoint is invalid.
+      @if (map-has-key($n-breakpoints, $upper) == false) {
+        // Log a warning.
+        @warn 'Your upper breakpoint was invalid: #{$upper}.';
+      }
+    }
+  }
+
+@mixin pos($p:null, $t:null, $r:null, $b:null, $l:null){
+    position:$p;
+    top:$t + px;
+    right:$r + px;
+    bottom:$b + px;
+    left:$l + px;
+};
+@mixin d-block {
+    display:block;
+}
+@mixin d-grid {
+    display:grid;
+}
+@mixin d-flex {
+    display:flex;
+    -ms-display: flexbox;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display:-webkit-flex;
+}
+@mixin d-flex-extend{
+    display:flex;
+    -ms-display: flexbox;      /* Over IE10 */
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+}
+@mixin d-flex-center {
+    @include d-flex;
+    @include align-center;
+    @include justify-center;
+}
+@mixin align-center{
+    align-items:center;
+}
+@mixin align-start{
+    align-items:flex-start;
+}
+@mixin align-end{
+    align-items:flex-end;
+}
+@mixin justify-center{
+    justify-content:center;
+}
+@mixin justify-start{
+    justify-content:flex-start;
+}
+@mixin justify-end{
+    justify-content:flex-end;
+}
+@mixin font($s, $w){
+    font: {
+        size:$s + px;
+        weight:$w;
+    }
+}
+@mixin border($w, $s, $c , $r){
+    border: {
+        width:$w + px;
+        style:$s;
+        color:#{'#'} + $c;
+        radius:$r;
+    }
+    @content;
+}
+
+@mixin bgc($num){
+    background: {
+        color: #{$num};
+    }
+}
+
+@mixin ellipsis($lines: 1) {
+    @if ($lines==1) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    } @else {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: $lines;
+      -webkit-box-orient: vertical;
+    }
+ }
+
+
+ @mixin hidden {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    width:1px;
+    height:1px;
+    font-size:0;
+ }
