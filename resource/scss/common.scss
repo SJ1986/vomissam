@@ -119,6 +119,9 @@ html, body, .wrap{
     }
     &-core{
         height: 100%;
+        &__inner{
+            padding-bottom:32rem;
+        }
     }
 }
 
