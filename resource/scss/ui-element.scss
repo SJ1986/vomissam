@@ -30,6 +30,9 @@
 
 
 .sub{
+    &-content{
+        
+    }
     /* sub-title */
     &-title{
         font: {
@@ -270,19 +273,19 @@
 //line-gray
 .line-gray{
     &__xsmall{
-        width:calc(100% + 10rem);
+        width:calc(100% + 5rem);
         margin-left: -5rem;
         margin-right: -5rem;
         height:.5rem;
     }
     &__small{
-        width:calc(100% + 10rem);
+        width:calc(100% + 5rem);
         margin-left: -5rem;
         margin-right: -5rem;
         height:1rem;
     }
     &__large{
-        width:calc(100% + 10rem);
+        width:calc(100% + 5rem);
         margin-left: -5rem;
         margin-right: -5rem;
     }

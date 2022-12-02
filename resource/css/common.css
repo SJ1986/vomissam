@@ -281,6 +281,9 @@ html, body, .wrap {
 .container-core {
   height: 100%;
 }
+.container-core__inner {
+  padding-bottom: 32rem;
+}
 
 /** quick-menu */
 .quick-menu {
